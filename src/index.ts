@@ -1,35 +1,12 @@
-/**
- * Constants
- */
-import { API, CSS, EVENTS, MODERATION, STORAGE } from "./constants";
-import { BuzzcastingStorageManager } from "./manager";
-import { BuzzcastingStorageReader } from "./reader";
+export * from './enums';
 
-import {
-	anonymize,
-	attachedMedia,
-	attrs,
-	brandLogo,
-	camelCase,
-	camelize,
-	capitalizeFirstLetter,
-	clearContents,
-	deepMerge,
-	filterAttributes,
-	formatContent,
-	hashSum,
-	intToString,
-	numberFormatter,
-	randomValue,
-	rtl,
-	sanitize,
-	showModal,
-	shuffleMessages,
-	stringGen,
-	upDownColor,
-	widgetParams,
-} from "./utils";
-import Widget from "./widget";
+export * from './utils'
+
+declare global {
+  interface Window {
+    BuzzCasting: any;
+  }
+}
 
 /**
  * IModal
@@ -360,6 +337,12 @@ export declare interface IStorageOptions {
 	loglevel?: number;
 }
 
+export declare interface IAttachedMedia {
+  image?: string;
+  background: { backgroundimage?: string } | null;
+  video?: string;
+}
+
 declare global {
 	interface Window {
 		BuzzCasting: any;
@@ -367,36 +350,3 @@ declare global {
 }
 
 export type ApiData = ISeries & IMessages & ICloud;
-
-export {
-	anonymize,
-	API,
-	attachedMedia,
-	attrs,
-	brandLogo,
-	BuzzcastingStorageManager,
-	BuzzcastingStorageReader,
-	camelCase,
-	camelize,
-	capitalizeFirstLetter,
-	clearContents,
-	CSS,
-	deepMerge,
-	EVENTS,
-	filterAttributes,
-	formatContent,
-	hashSum,
-	intToString,
-	MODERATION,
-	numberFormatter,
-	randomValue,
-	rtl,
-	sanitize,
-	showModal,
-	shuffleMessages,
-	stringGen,
-	STORAGE,
-	upDownColor,
-	Widget,
-	widgetParams,
-};

@@ -1,5 +1,5 @@
 import type { IQuery, IStorageOptions } from '..'
-import { MODERATION } from '../constants'
+import { MODERATION } from '../enums'
 
 export function getKey(query: IQuery): string {
   let key = `${query.type}.${query.topics}`
@@ -60,20 +60,3 @@ export function moderation(options: IStorageOptions, query: IQuery): IQuery {
   return query
 }
 
-function awaitTimeout(delay: number, reason: string) {
-  return new Promise((resolve, reject) =>
-    setTimeout(
-      () => (reason === undefined ? resolve('ok') : reject(reason)),
-      delay,
-    ),
-  )
-}
-
-export function wrapPromise(promise: any, delay: number, reason: string) {
-  return Promise.race([promise, awaitTimeout(delay, reason)])
-}
-
-export function getParameterByName(key: string) {
-  const match = new RegExp(`[?&]${key}=([^&]*)`).exec(window.location.search)
-  return match && decodeURIComponent(match[1].replace(/\+/g, ' '))
-}

@@ -1,5 +1,5 @@
 import { IQuery } from "..";
-import { API, CSS } from "../constants";
+import { API, CSS } from "../enums";
 
 export const typeCss = (query: IQuery | undefined): string => {
 	switch (query?.type) {
