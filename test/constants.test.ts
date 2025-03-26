@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { STORAGE } from '../src/constants'
+import { STORAGE } from '../src/enums'
 
 describe('sTORAGE_DEXIE', () => {
   it('the constant STORAGE_DEXIE should equal "dexie"', () => {

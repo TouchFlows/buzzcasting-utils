@@ -19,7 +19,7 @@ export declare enum API {
 
 export declare type ApiData = ISeries & IMessages & ICloud;
 
-export declare function attachedMedia(message: IMessage): IAttachedMedia;
+export declare function attachedMedia(message: IMessage): IAttachedMedia_2;
 
 export declare function attrs(attributes: NamedNodeMap): any;
 
@@ -130,13 +130,36 @@ export declare function filterAttributes(attributes: NamedNodeMap): IFilteredAtt
 
 export declare function formatContent(message: IMessage, titleCss?: string): string;
 
+export declare const getGuid: () => string;
+
 export declare function getKey(query: IQuery): string;
 
 export declare function getParameterByName(key: string): string | null;
 
+export declare const getQueryParam: (param: string) => any;
+
 export declare function hashSum(o: any): string | any[];
 
-declare interface IAttachedMedia {
+export declare const html2json: (html: string) => {
+    node: string;
+    child: never[];
+};
+
+export declare const HTMLParser: (html: any, handler: any) => void;
+
+export declare const HTMLtoDOM: (html: string, doc: any) => any;
+
+export declare const HTMLtoXML: (html: string) => string;
+
+export declare interface IAttachedMedia {
+    image?: string;
+    background: {
+        backgroundimage?: string;
+    } | null;
+    video?: string;
+}
+
+declare interface IAttachedMedia_2 {
     image?: string;
     background: {
         backgroundimage?: string;
@@ -295,7 +318,7 @@ export declare interface IModal {
     timeout?: number;
 }
 
-export declare function intToString(num: any, digits: number): string;
+export declare const intToString: (num: any, digits?: number, abbreviate?: boolean, locale?: string) => string;
 
 export declare interface IPreference {
     id: string;
@@ -466,7 +489,17 @@ export declare interface IWidgets {
     widgets: IWidget[];
 }
 
+export declare const json2html: (json: any) => any;
+
 export declare const log: (level: number | undefined, message: any[]) => void;
+
+export declare const maxifyCss: (css: string) => string;
+
+export declare const maxifyHtml: (html: string) => string;
+
+export declare const minifyCss: (css: string) => void;
+
+export declare const minifyHtml: (html: string) => string;
 
 export declare enum MODERATION {
     APPROVED = "approved",
@@ -511,10 +544,12 @@ export declare function stringGen(): string;
 
 export declare const typeCss: (query: IQuery | undefined) => string;
 
+export declare const uniq: (length?: number, existing?: never[]) => string;
+
 export declare const upDownColor: (change: number) => "text-down text-xs" | "text-up text-xs" | "text-white text-xs";
 
 export declare function widgetParams(query: IQuery): IQuery;
 
-export declare function wrapPromise(promise: any, delay: number, reason: string): Promise<any>;
+export declare const wrapPromise: (promise: any, delay: number, reason: string) => Promise<any>;
 
 export { }
