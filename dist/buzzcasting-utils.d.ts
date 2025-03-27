@@ -37,6 +37,7 @@ import { IMessage } from './interfaces';
 import { IMessages } from './interfaces';
 import { IModal } from './interfaces';
 import { IQuery } from '../interfaces';
+import { IResponse } from './interfaces';
 import { IRotatingGlobe } from './interfaces';
 import { ISeries } from './interfaces';
 import { ISeriesConfig } from './interfaces';
@@ -337,6 +338,8 @@ export declare interface IPresentation {
 export declare interface IPresentations {
     presentations: IPresentation[];
 }
+
+export { IResponse }
 
 export { IRotatingGlobe }
 
