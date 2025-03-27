@@ -1,4 +1,20 @@
 
+## v1.3.3
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.2...v1.3.3)
+
+### 🩹 Fixes
+
+- IResponse ([79294b7](https://github.com/TouchFlows/buzzcasting-utils/commit/79294b7))
+
+### 🏡 Chore
+
+- **release:** V1.3.2 ([31a2612](https://github.com/TouchFlows/buzzcasting-utils/commit/31a2612))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.2
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.1...v1.3.2)
