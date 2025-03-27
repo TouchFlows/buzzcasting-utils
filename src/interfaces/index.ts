@@ -1,3 +1,7 @@
+import { ICloud } from "./ICloud";
+import { IMessages } from "./IMessages";
+import { ISeries } from "./ISeries";
+
 export * from "./ICardOptions";
 export * from "./ICloud";
 export * from "./ICloudInfluencers";
@@ -16,3 +20,5 @@ export * from "./ISeriesOptions";
 export * from "./IStorageOptions";
 export * from "./IQuery";
 export * from "./IWidgetSettings";
+
+export type ApiData = ISeries & IMessages & ICloud;

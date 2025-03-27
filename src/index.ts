@@ -2,6 +2,8 @@ export * from "./enums";
 
 export * from "./utils";
 
+export * from "./interfaces";
+
 declare global {
   interface Window {
     BuzzCasting: any;
@@ -67,7 +69,7 @@ export declare interface IPreferences {
   preferences: IPreference[];
 }
 
-import type {
+/*import type {
   ICardOptions,
   IAnimation,
   IAttachedMedia,
@@ -188,11 +190,9 @@ export {
   IBorders,
   ISphere,
   IArc,
-};
+};*/
 
 export enum ShapeType {
   MultiPolygon = "MultiPolygon",
   Polygon = "Polygon",
 }
-
-export type ApiData = ISeries & IMessages & ICloud;

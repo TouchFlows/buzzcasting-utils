@@ -54,6 +54,7 @@ import { IShow } from './interfaces';
 import { ISphere } from './interfaces';
 import { IStorageOptions } from './interfaces';
 import { IStorageOptions as IStorageOptions_2 } from '../interfaces';
+import { ITopic } from './interfaces';
 import { Label } from './interfaces';
 import { Land } from './interfaces';
 import { LandGeometry } from './interfaces';
@@ -378,6 +379,8 @@ export declare interface ISlides {
 export { ISphere }
 
 export { IStorageOptions }
+
+export { ITopic }
 
 export declare interface IWidget {
     id: string;
