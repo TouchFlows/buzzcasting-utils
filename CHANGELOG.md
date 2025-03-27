@@ -1,4 +1,20 @@
 
+## v1.3.4
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.3...v1.3.4)
+
+### 🩹 Fixes
+
+- Missing IQuery, IDynamis, IQuery exports ([5e457fd](https://github.com/TouchFlows/buzzcasting-utils/commit/5e457fd))
+
+### 🏡 Chore
+
+- **release:** V1.3.3 ([f4ad666](https://github.com/TouchFlows/buzzcasting-utils/commit/f4ad666))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.3
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.2...v1.3.3)
