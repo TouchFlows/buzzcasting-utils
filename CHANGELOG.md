@@ -1,4 +1,17 @@
 
+## v1.3.5
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.4...v1.3.5)
+
+### 🏡 Chore
+
+- **release:** V1.3.4 ([9cad8fa](https://github.com/TouchFlows/buzzcasting-utils/commit/9cad8fa))
+- Deps ([4b283db](https://github.com/TouchFlows/buzzcasting-utils/commit/4b283db))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.4
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.3...v1.3.4)
