@@ -1,4 +1,20 @@
 
+## v1.3.6
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.5...v1.3.6)
+
+### 🩹 Fixes
+
+- Change interfaces remove .d from filename ([26e8a68](https://github.com/TouchFlows/buzzcasting-utils/commit/26e8a68))
+
+### 🏡 Chore
+
+- **release:** V1.3.5 ([ebb1c6b](https://github.com/TouchFlows/buzzcasting-utils/commit/ebb1c6b))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.5
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.4...v1.3.5)
