@@ -1,3 +1,60 @@
+import { Countries } from './interfaces';
+import { CountriesGeometry } from './interfaces';
+import { IAnimation } from './interfaces';
+import { IArc } from './interfaces';
+import { IAttachedMedia } from './interfaces';
+import { IBorders } from './interfaces';
+import { IBrand } from './interfaces';
+import { ICardOptions } from './interfaces';
+import { ICloud } from './interfaces';
+import { ICloudBubbles } from './interfaces';
+import { ICloudConfig } from './interfaces';
+import { ICloudCss } from './interfaces';
+import { ICloudD3 } from './interfaces';
+import { ICloudDateFormat } from './interfaces';
+import { ICloudDimensions } from './interfaces';
+import { ICloudInfluencers } from './interfaces';
+import { ICloudInfluencersData } from './interfaces';
+import { ICloudKpi } from './interfaces';
+import { ICloudLegend } from './interfaces';
+import { ICloudOptions } from './interfaces';
+import { ICloudPie } from './interfaces';
+import { ICloudShow } from './interfaces';
+import { ICountries } from './interfaces';
+import { ICountry } from './interfaces';
+import { ICss } from './interfaces';
+import { ID3 } from './interfaces';
+import { ID3Bubbles } from './interfaces';
+import { ID3Data } from './interfaces';
+import { ID3Legend } from './interfaces';
+import { ID3Map } from './interfaces';
+import { ID3Options } from './interfaces';
+import { ID3Pie } from './interfaces';
+import { IDateFormat } from './interfaces';
+import { IEchartsLine } from './interfaces';
+import { ILand } from './interfaces';
+import { IMessage } from './interfaces';
+import { IMessages } from './interfaces';
+import { IModal } from './interfaces';
+import { IQuery } from '../interfaces';
+import { IRotatingGlobe } from './interfaces';
+import { ISeries } from './interfaces';
+import { ISeriesConfig } from './interfaces';
+import { ISeriesCss } from './interfaces';
+import { ISeriesD3 } from './interfaces';
+import { ISeriesData } from './interfaces';
+import { ISeriesDateFormat } from './interfaces';
+import { ISeriesOptions } from './interfaces';
+import { ISeriesShow } from './interfaces';
+import { IShow } from './interfaces';
+import { ISphere } from './interfaces';
+import { IStorageOptions } from './interfaces';
+import { IStorageOptions as IStorageOptions_2 } from '../interfaces';
+import { Label } from './interfaces';
+import { Land } from './interfaces';
+import { LandGeometry } from './interfaces';
+import { Transform } from './interfaces';
+
 export declare function anonymize(name: string): string;
 
 export declare enum API {
@@ -48,6 +105,10 @@ export declare const capitalizeFirstLetter: (prop: string) => string;
  * @param myNode
  */
 export declare function clearContents(myNode: HTMLElement): void;
+
+export { Countries }
+
+export { CountriesGeometry }
 
 declare enum CSS_2 {
     API = "color:white;background-color:grey;padding:0 4px 0 4px;border-radius:5px;",
@@ -151,13 +212,11 @@ export declare const HTMLtoDOM: (html: string, doc: any) => any;
 
 export declare const HTMLtoXML: (html: string) => string;
 
-export declare interface IAttachedMedia {
-    image?: string;
-    background: {
-        backgroundimage?: string;
-    } | null;
-    video?: string;
-}
+export { IAnimation }
+
+export { IArc }
+
+export { IAttachedMedia }
 
 declare interface IAttachedMedia_2 {
     image?: string;
@@ -167,33 +226,59 @@ declare interface IAttachedMedia_2 {
     video?: string;
 }
 
-export declare interface ICategory {
-    type: string;
-    data: string[];
-}
+export { IBorders }
 
-/**
- * Cloud
- */
-export declare interface ICloud {
-    labels: ILabel[];
-    current: any[];
-    previous: any[];
-    type: string;
-    total: number;
-    current_total: number;
-    previous_total: number;
-}
+export { IBrand }
 
-declare interface ICloudIndicators {
-    total: number;
-    positive: number;
-    negative: number;
-    neutral: number;
-    engagement: number;
-    reach: number;
-    velocity: number;
-}
+export { ICardOptions }
+
+export { ICloud }
+
+export { ICloudBubbles }
+
+export { ICloudConfig }
+
+export { ICloudCss }
+
+export { ICloudD3 }
+
+export { ICloudDateFormat }
+
+export { ICloudDimensions }
+
+export { ICloudInfluencers }
+
+export { ICloudInfluencersData }
+
+export { ICloudKpi }
+
+export { ICloudLegend }
+
+export { ICloudOptions }
+
+export { ICloudPie }
+
+export { ICloudShow }
+
+export { ICountries }
+
+export { ICountry }
+
+export { ICss }
+
+export { ID3 }
+
+export { ID3Bubbles }
+
+export { ID3Data }
+
+export { ID3Legend }
+
+export { ID3Map }
+
+export { ID3Options }
+
+export { ID3Pie }
 
 export declare interface IDashboard {
     id: string;
@@ -210,113 +295,21 @@ export declare interface IDashboards {
     dashboards: IDashboard[];
 }
 
-export declare interface IDynamics {
-    engagement?: number;
-    semrush_visits?: number;
-    potential_reach?: number;
-    facebook_engagement?: number;
-    facebook_insights_reach?: number;
-    facebook_insights_impressions?: number;
-    facebook_insights_link_clicks?: number;
-    facebook_reactions?: number;
-    facebook_shares?: number;
-    instagram_followers?: number;
-    instagram_likes?: number;
-    retweets?: number;
-    twitter_shares?: number;
-    twitter_bookmarks?: number;
-    twitter_followers?: number;
-    twitter_impressions?: number;
-    twitter_insights_retweets?: number;
-    twitter_likes?: number;
-    twitter_replies?: number;
-    twitter_video_views?: number;
-    total_comments?: number;
-    trending_score?: number;
-}
+export { IDateFormat }
+
+export { IEchartsLine }
 
 export declare interface IFilteredAttributes {
     [key: string]: string | object;
 }
 
-export declare interface IGeo {
-    latitude?: number;
-    longitude?: number;
-    zip?: string;
-    street: string;
-    city?: string;
-    country: string;
-}
+export { ILand }
 
-export declare interface IIndicators {
-    value: number;
-}
+export { IMessage }
 
-export declare interface ILabel {
-    label: string;
-    count: number;
-    info?: string;
-    current: ICloudIndicators;
-    previous?: ICloudIndicators;
-    percentage?: number;
-}
+export { IMessages }
 
-export declare interface IMedium {
-    type: string;
-    url: string;
-    width: number;
-    height: number;
-}
-
-export declare interface IMessage {
-    id: string;
-    published: string;
-    harvested: string;
-    utc: number;
-    expires: number;
-    channel: string;
-    type: string;
-    sender: ISender;
-    reply: string;
-    replyto: string;
-    page: string;
-    conversation: string;
-    title: string;
-    content: string;
-    sentiment: number;
-    link: string;
-    language?: string;
-    region?: string;
-    topics: ITopic[];
-    dynamics?: IDynamics;
-    geo?: IGeo;
-    media?: IMedium[];
-}
-
-export declare interface IMessages {
-    messages: IMessage[];
-    presentation?: string;
-    slide?: string;
-    title?: string;
-    dashboard?: string;
-    widget?: string;
-    topics?: string;
-}
-
-export declare interface IMetrics {
-    doc?: number;
-    previous?: number;
-    change?: number;
-}
-
-/**
- * IModal
- */
-export declare interface IModal {
-    showComponent: string;
-    props?: any;
-    timeout?: number;
-}
+export { IModal }
 
 export declare const intToString: (num: any, digits?: number, abbreviate?: boolean, locale?: string) => string;
 
@@ -345,135 +338,34 @@ export declare interface IPresentations {
     presentations: IPresentation[];
 }
 
-/**
- * Query
- */
-export declare interface IQuery {
-    [x: string]: any;
-    topics?: string;
-    presentation?: string;
-    dashboard: string;
-    widget: string;
-    labels?: string[];
-    compare?: string;
-    period?: number;
-    type?: "cloud" | "messages" | "series" | "preference" | "proxy" | "slide" | "dashboard" | "widget";
-    order?: "utc" | "reach" | "engagement" | "impressions";
-    media?: number;
-    dynamics?: number;
-    geo?: number;
-    delay?: string;
-    approved?: string;
-    moderation?: "realtime" | "delayed" | "approved" | "none";
-    hrm?: string;
-    before?: number;
-    since?: number;
-    hash?: string;
-    name?: string;
-    data?: any;
-}
+export { IRotatingGlobe }
 
-/**
- * API Response
- */
-export declare interface IResponse {
-    data: IDashboards | IMessages | ISeries | ICloud | ISlides | IPresentations | IPreferences | IWidgets | null;
-    message: string;
-    success: boolean;
-    query?: IQuery;
-}
+export { ISeries }
 
-/**
- * Messages
- */
-export declare interface ISender {
-    id?: string;
-    channel?: string;
-    title?: string;
-    name?: string;
-    avatar?: string;
-    bio?: string;
-    location?: string;
-    verified?: number;
-    following?: number;
-    followers?: number;
-    listed?: number;
-    favourites?: number;
-    messages?: number;
-    influence?: number;
-}
+export { ISeriesConfig }
 
-/**
- * Series Data
- */
-export declare interface ISeries {
-    topic: string;
-    title: string;
-    series: ISeriesData[];
-    category: ICategory;
-    metrics?: IMetrics;
-    indicators?: IIndicators;
-    timestamp?: number;
-}
+export { ISeriesCss }
 
-export declare interface ISeriesData {
-    name?: string;
-    label?: string;
-    current?: number[];
-    current_total?: number;
-    previous_total?: number;
-    previous?: number[];
-    current_category?: number;
-    previous_category?: number;
-}
+export { ISeriesD3 }
+
+export { ISeriesData }
+
+export { ISeriesDateFormat }
+
+export { ISeriesOptions }
+
+export { ISeriesShow }
+
+export { IShow }
 
 export declare interface ISlides {
     presentation: string;
     slides: any;
 }
 
-/**
- * Storage Options
- */
-export declare interface IStorageOptions {
-    app: string;
-    builder?: boolean;
-    domain?: string;
-    cdn?: string;
-    channel?: string;
-    presentation: string;
-    slide?: string;
-    slides?: string[];
-    display?: string;
-    monitor?: string;
-    version: string;
-    storage: string;
-    token?: string;
-    bearer?: string;
-    csrf?: string;
-    moderation?: string;
-    beforeTime?: string;
-    delay?: number;
-    period?: number;
-    retention?: number;
-    suspended?: boolean;
-    loglevel?: number;
-}
+export { ISphere }
 
-export declare interface ITopic {
-    message_id: string;
-    dashboard_id?: string;
-    widget_id?: string;
-    topic?: string;
-    engagement: number;
-    impressions: number;
-    reach: number;
-    sentiment: number;
-    title?: string;
-    utc?: number;
-    expires?: number;
-    visible?: number;
-}
+export { IStorageOptions }
 
 export declare interface IWidget {
     id: string;
@@ -490,6 +382,12 @@ export declare interface IWidgets {
 }
 
 export declare const json2html: (json: any) => any;
+
+export { Label }
+
+export { Land }
+
+export { LandGeometry }
 
 export declare const log: (level: number | undefined, message: any[]) => void;
 
@@ -509,7 +407,7 @@ export declare enum MODERATION {
     REALTIME = "realtime"
 }
 
-export declare function moderation(options: IStorageOptions, query: IQuery): IQuery;
+export declare function moderation(options: IStorageOptions_2, query: IQuery): IQuery;
 
 export declare function numberFormatter(num: number, digits: number): string;
 
@@ -526,6 +424,13 @@ export declare function rtl(message: IMessage): {
 
 export declare function sanitize(messages: IMessage[]): IMessage[];
 
+export declare enum ShapeType {
+    MultiPolygon = "MultiPolygon",
+    Polygon = "Polygon"
+}
+
+export declare function showModal(e: MouseEvent, widget: any, message: IMessage, options: any): void;
+
 export declare function shuffleMessages(messages: IMessage[]): IMessage[];
 
 export declare enum STORAGE {
@@ -541,6 +446,8 @@ export declare enum STORAGE {
  * @returns uid
  */
 export declare function stringGen(): string;
+
+export { Transform }
 
 export declare const typeCss: (query: IQuery | undefined) => string;
 

@@ -1,5 +1,5 @@
-import type { IQuery, IStorageOptions } from '..'
 import { MODERATION } from '../enums'
+import { IQuery, IStorageOptions } from '../interfaces'
 
 export function getKey(query: IQuery): string {
   let key = `${query.type}.${query.topics}`
