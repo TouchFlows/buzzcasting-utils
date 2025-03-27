@@ -31,12 +31,15 @@ import { ID3Map } from './interfaces';
 import { ID3Options } from './interfaces';
 import { ID3Pie } from './interfaces';
 import { IDateFormat } from './interfaces';
+import { IDynamics } from './interfaces';
 import { IEchartsLine } from './interfaces';
+import { ILabel } from './interfaces';
 import { ILand } from './interfaces';
 import { IMessage } from './interfaces';
 import { IMessages } from './interfaces';
 import { IModal } from './interfaces';
-import { IQuery } from '../interfaces';
+import { IQuery } from './interfaces';
+import { IQuery as IQuery_2 } from '../interfaces';
 import { IResponse } from './interfaces';
 import { IRotatingGlobe } from './interfaces';
 import { ISeries } from './interfaces';
@@ -194,7 +197,7 @@ export declare function formatContent(message: IMessage, titleCss?: string): str
 
 export declare const getGuid: () => string;
 
-export declare function getKey(query: IQuery): string;
+export declare function getKey(query: IQuery_2): string;
 
 export declare function getParameterByName(key: string): string | null;
 
@@ -298,11 +301,15 @@ export declare interface IDashboards {
 
 export { IDateFormat }
 
+export { IDynamics }
+
 export { IEchartsLine }
 
 export declare interface IFilteredAttributes {
     [key: string]: string | object;
 }
+
+export { ILabel }
 
 export { ILand }
 
@@ -338,6 +345,8 @@ export declare interface IPresentation {
 export declare interface IPresentations {
     presentations: IPresentation[];
 }
+
+export { IQuery }
 
 export { IResponse }
 
@@ -410,7 +419,7 @@ export declare enum MODERATION {
     REALTIME = "realtime"
 }
 
-export declare function moderation(options: IStorageOptions_2, query: IQuery): IQuery;
+export declare function moderation(options: IStorageOptions_2, query: IQuery_2): IQuery_2;
 
 export declare function numberFormatter(num: number, digits: number): string;
 
@@ -452,13 +461,13 @@ export declare function stringGen(): string;
 
 export { Transform }
 
-export declare const typeCss: (query: IQuery | undefined) => string;
+export declare const typeCss: (query: IQuery_2 | undefined) => string;
 
 export declare const uniq: (length?: number, existing?: never[]) => string;
 
 export declare const upDownColor: (change: number) => "text-down text-xs" | "text-up text-xs" | "text-white text-xs";
 
-export declare function widgetParams(query: IQuery): IQuery;
+export declare function widgetParams(query: IQuery_2): IQuery_2;
 
 export declare const wrapPromise: (promise: any, delay: number, reason: string) => Promise<any>;
 
