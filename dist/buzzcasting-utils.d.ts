@@ -1,65 +1,3 @@
-import { Countries } from './interfaces';
-import { CountriesGeometry } from './interfaces';
-import { IAnimation } from './interfaces';
-import { IArc } from './interfaces';
-import { IAttachedMedia } from './interfaces';
-import { IBorders } from './interfaces';
-import { IBrand } from './interfaces';
-import { ICardOptions } from './interfaces';
-import { ICloud } from './interfaces';
-import { ICloudBubbles } from './interfaces';
-import { ICloudConfig } from './interfaces';
-import { ICloudCss } from './interfaces';
-import { ICloudD3 } from './interfaces';
-import { ICloudDateFormat } from './interfaces';
-import { ICloudDimensions } from './interfaces';
-import { ICloudInfluencers } from './interfaces';
-import { ICloudInfluencersData } from './interfaces';
-import { ICloudKpi } from './interfaces';
-import { ICloudLegend } from './interfaces';
-import { ICloudOptions } from './interfaces';
-import { ICloudPie } from './interfaces';
-import { ICloudShow } from './interfaces';
-import { ICountries } from './interfaces';
-import { ICountry } from './interfaces';
-import { ICss } from './interfaces';
-import { ID3 } from './interfaces';
-import { ID3Bubbles } from './interfaces';
-import { ID3Data } from './interfaces';
-import { ID3Legend } from './interfaces';
-import { ID3Map } from './interfaces';
-import { ID3Options } from './interfaces';
-import { ID3Pie } from './interfaces';
-import { IDateFormat } from './interfaces';
-import { IDynamics } from './interfaces';
-import { IEchartsLine } from './interfaces';
-import { ILabel } from './interfaces';
-import { ILand } from './interfaces';
-import { IMessage } from './interfaces';
-import { IMessages } from './interfaces';
-import { IModal } from './interfaces';
-import { IQuery } from './interfaces';
-import { IQuery as IQuery_2 } from '../interfaces';
-import { IResponse } from './interfaces';
-import { IRotatingGlobe } from './interfaces';
-import { ISeries } from './interfaces';
-import { ISeriesConfig } from './interfaces';
-import { ISeriesCss } from './interfaces';
-import { ISeriesD3 } from './interfaces';
-import { ISeriesData } from './interfaces';
-import { ISeriesDateFormat } from './interfaces';
-import { ISeriesOptions } from './interfaces';
-import { ISeriesShow } from './interfaces';
-import { IShow } from './interfaces';
-import { ISphere } from './interfaces';
-import { IStorageOptions } from './interfaces';
-import { IStorageOptions as IStorageOptions_2 } from '../interfaces';
-import { ITopic } from './interfaces';
-import { Label } from './interfaces';
-import { Land } from './interfaces';
-import { LandGeometry } from './interfaces';
-import { Transform } from './interfaces';
-
 export declare function anonymize(name: string): string;
 
 export declare enum API {
@@ -81,7 +19,16 @@ export declare enum API {
 
 export declare type ApiData = ISeries & IMessages & ICloud;
 
+export declare interface AreaStyle {
+}
+
 export declare function attachedMedia(message: IMessage): IAttachedMedia_2;
+
+declare interface Attr_2 {
+    ['x:string']: string | string[];
+    class: string | string[];
+}
+export { Attr_2 as Attr }
 
 export declare function attrs(attributes: NamedNodeMap): any;
 
@@ -111,9 +58,56 @@ export declare const capitalizeFirstLetter: (prop: string) => string;
  */
 export declare function clearContents(myNode: HTMLElement): void;
 
-export { Countries }
+export declare interface CloudAttr {
+    "data-type"?: string;
+    component?: string;
+    "data-dashboard"?: string;
+    "data-widget": string;
+    "css-count"?: string[];
+    "css-host"?: string;
+    "kpi-name"?: string;
+    "config-abbreviate"?: string;
+    class?: string | string[];
+}
 
-export { CountriesGeometry }
+export declare interface Component {
+    path: string;
+    query: string;
+    node: string;
+    tag: string;
+    attr: MessagesAttr;
+}
+
+export declare interface Content {
+    editable?: boolean;
+    path: string;
+    query: string;
+    text: string;
+    node: string;
+    attr: MessagesAttr;
+}
+
+export declare interface Countries {
+    type: string;
+    geometries: CountriesGeometry[];
+}
+
+export declare interface CountriesGeometry {
+    type: Type;
+    arcs: Array<Array<number[] | number>>;
+    id?: string;
+    properties: CountryProperties;
+}
+
+export declare interface CountryObjects {
+    countries: Countries;
+    land: Land;
+}
+
+export declare interface CountryProperties {
+    name: string;
+    code: string;
+}
 
 declare enum CSS_2 {
     API = "color:white;background-color:grey;padding:0 4px 0 4px;border-radius:5px;",
@@ -198,7 +192,7 @@ export declare function formatContent(message: IMessage, titleCss?: string): str
 
 export declare const getGuid: () => string;
 
-export declare function getKey(query: IQuery_2): string;
+export declare function getKey(query: IQuery): string;
 
 export declare function getParameterByName(key: string): string | null;
 
@@ -217,11 +211,27 @@ export declare const HTMLtoDOM: (html: string, doc: any) => any;
 
 export declare const HTMLtoXML: (html: string) => string;
 
-export { IAnimation }
+export declare interface IAnimation {
+    items?: number;
+    interval: number;
+    animation: number;
+    speed?: '' | 'slow' | 'slower' | 'fast' | 'faster';
+    delay?: number;
+    parentTag?: string;
+}
 
-export { IArc }
+export declare interface IArc {
+    strokeStyle: string;
+    lineWidth: number;
+}
 
-export { IAttachedMedia }
+export declare interface IAttachedMedia {
+    image?: string;
+    background: {
+        backgroundimage?: string;
+    } | null;
+    video?: string;
+}
 
 declare interface IAttachedMedia_2 {
     image?: string;
@@ -231,59 +241,332 @@ declare interface IAttachedMedia_2 {
     video?: string;
 }
 
-export { IBorders }
+export declare interface IBorders {
+    strokeStyle: string;
+    lineWidth: number;
+}
 
-export { IBrand }
+export declare interface IBrand {
+    show?: boolean;
+    size?: string;
+}
 
-export { ICardOptions }
+export declare interface ICardAttributes {
+    'layout'?: 'base' | 'globe' | 'carousel';
+    'component': string;
+    'data-type': 'messages' | 'cloud' | 'series';
+    'data-order'?: string;
+    'data-dashboard': string;
+    'data-widget': string;
+    'css-body'?: string[];
+    'css-brand'?: string[];
+    'css-card'?: string[];
+    'css-date'?: string[];
+    'css-handle'?: string[];
+    'css-name'?: string[];
+    'date-format'?: string;
+    'time-format'?: string;
+    'show-brand'?: 'true' | 'false';
+    'show-kpi'?: 'true' | 'false';
+    'show-sender'?: 'true' | 'false';
+    'animation'?: string;
+    'interval'?: string;
+}
 
-export { ICloud }
+export declare interface ICardOptions {
+    animation?: IAnimation;
+    brand?: IBrand;
+    css?: ICss;
+    d3?: ID3;
+    dateformat?: IDateFormat;
+    show?: IShow;
+}
 
-export { ICloudBubbles }
+export declare interface ICategory {
+    type: string;
+    data: string[];
+}
 
-export { ICloudConfig }
+/**
+ * Cloud
+ */
+export declare interface ICloud {
+    labels: ILabel[];
+    current: any[];
+    previous: any[];
+    type: string;
+    total: number;
+    current_total: number;
+    previous_total: number;
+}
 
-export { ICloudCss }
+export declare interface ICloudBubbles {
+    size: number;
+    classlist: string;
+    force: number;
+    color: string;
+}
 
-export { ICloudD3 }
+export declare interface ICloudConfig {
+    fixed?: number;
+    abbreviate?: boolean;
+}
 
-export { ICloudDateFormat }
+export declare interface ICloudCss {
+    arrowdown?: string;
+    arrowup?: string;
+    backdrop?: string;
+    body?: string;
+    brand?: string;
+    change?: string;
+    chart?: string;
+    count?: string;
+    container?: string;
+    date?: string;
+    down?: string;
+    host?: string;
+    image?: string;
+    key?: string;
+    legend?: string;
+    title?: string;
+    up?: string;
+    widget?: string;
+    dark?: boolean;
+}
 
-export { ICloudDimensions }
+export declare interface ICloudD3 {
+    globe: {
+        colors: {
+            arc: string;
+            border: string;
+            country: string;
+            land: string;
+            sphere: string;
+        };
+        settings?: {
+            canvas?: string;
+            card?: string;
+            width?: number;
+            height?: number;
+        };
+    };
+}
 
-export { ICloudInfluencers }
+export declare interface ICloudDateFormat {
+    time?: string;
+    date?: string;
+}
 
-export { ICloudInfluencersData }
+export declare interface ICloudDimensions {
+    width: number;
+    height: number;
+}
 
-export { ICloudKpi }
+declare interface ICloudIndicators {
+    total: number;
+    positive: number;
+    negative: number;
+    neutral: number;
+    engagement: number;
+    reach: number;
+    velocity: number;
+}
 
-export { ICloudLegend }
+export declare interface ICloudInfluencers {
+    labels?: Label[];
+    title?: string;
+    current?: ICloudInfluencersData[];
+    previous?: ICloudInfluencersData[];
+    type: string;
+    total?: number;
+    current_total?: number;
+    previous_total?: number;
+}
 
-export { ICloudOptions }
+export declare interface ICloudInfluencersData {
+    color: string;
+    label: string;
+    avatar: string;
+    rank: number;
+    authors: string;
+    influencers: string;
+    total: number;
+    positive: number;
+    neutral: number;
+    negative: number;
+    potential_reach: number;
+    reach_per_result: number;
+    engagement: number;
+    engagement_per_result: number;
+    profile: string;
+    biography: string;
+    country: string;
+}
 
-export { ICloudPie }
+export declare interface ICloudKpi {
+    name: string;
+}
 
-export { ICloudShow }
+export declare interface ICloudLegend {
+    count?: {
+        width?: string;
+        height?: string;
+    };
+    key: {
+        width: string;
+    };
+    width: string;
+    position: string;
+    gap?: {
+        column: string;
+        row: string;
+    };
+    show: {
+        percentage: boolean;
+    };
+}
 
-export { ICountries }
+export declare interface ICloudOptions {
+    css?: ICloudCss;
+    d3?: ICloudD3;
+    dateformat?: ICloudDateFormat;
+    show?: ICloudShow;
+    config?: ICloudConfig;
+    colors?: string[];
+    dimensions?: ICloudDimensions;
+    pie?: ICloudPie;
+    kpi?: ICloudKpi;
+    legend?: ICloudLegend;
+    bubbles?: ICloudBubbles;
+}
 
-export { ICountry }
+export declare interface ICloudPie {
+    radius: {
+        inner: number;
+        outer: number;
+    };
+    animation: {
+        duration: number;
+    };
+}
 
-export { ICss }
+export declare interface ICloudShow {
+    brand?: boolean;
+    date?: boolean;
+}
 
-export { ID3 }
+export declare interface ICountries {
+    type: string;
+    objects: CountryObjects;
+    arcs: Array<Array<number[]>>;
+    bbox: number[];
+    transform: Transform;
+}
 
-export { ID3Bubbles }
+export declare interface ICountry {
+    fillStyle: string;
+}
 
-export { ID3Data }
+export declare interface ICss {
+    avatar?: string;
+    backdrop?: string;
+    body?: string;
+    brand?: string;
+    card?: string;
+    container?: string;
+    date?: string;
+    dynamics?: string;
+    handle?: string;
+    host?: string;
+    image?: string;
+    kpi?: string;
+    label?: string;
+    name?: string;
+    sender?: string;
+    title?: string;
+    video?: string;
+    widget?: string;
+    dark?: boolean;
+}
 
-export { ID3Legend }
+export declare interface ID3 {
+    globe: {
+        colors: {
+            arc: string;
+            border: string;
+            country: string;
+            land: string;
+            sphere: string;
+        };
+        settings?: {
+            canvas?: string;
+            card?: string;
+            width?: number;
+            height?: number;
+        };
+    };
+}
 
-export { ID3Map }
+export declare interface ID3Bubbles {
+    size: number;
+    force: number;
+    classlist?: string;
+    color?: string;
+}
 
-export { ID3Options }
+export declare interface ID3Data {
+    label: string;
+    count: number;
+    color: string;
+    radius?: number;
+    fill?: string;
+}
 
-export { ID3Pie }
+export declare interface ID3Legend {
+    count: {
+        width: string;
+    };
+    key: {
+        width: string;
+    };
+    legend: {
+        width: string;
+    };
+}
+
+export declare interface ID3Map {
+    radius: {
+        inner: number;
+        outer: number;
+    };
+    animation: {
+        duration: number;
+    };
+}
+
+export declare interface ID3Options {
+    colors: string[];
+    pie?: ID3Pie;
+    map?: ID3Map;
+    legend?: ID3Legend;
+    bubbles?: ID3Bubbles;
+    dimensions?: {
+        width: number;
+        height: number;
+    };
+    data: [ID3Data?];
+    total?: number;
+}
+
+export declare interface ID3Pie {
+    radius: {
+        inner: number;
+        outer: number;
+    };
+    animation: {
+        duration: number;
+    };
+}
 
 export declare interface IDashboard {
     id: string;
@@ -300,25 +583,148 @@ export declare interface IDashboards {
     dashboards: IDashboard[];
 }
 
-export { IDateFormat }
+export declare interface IDateFormat {
+    time?: string;
+    date?: string;
+}
 
-export { IDynamics }
+export declare interface IDynamics {
+    engagement?: number;
+    semrush_visits?: number;
+    potential_reach?: number;
+    facebook_engagement?: number;
+    facebook_insights_reach?: number;
+    facebook_insights_impressions?: number;
+    facebook_insights_link_clicks?: number;
+    facebook_reactions?: number;
+    facebook_shares?: number;
+    instagram_followers?: number;
+    instagram_likes?: number;
+    retweets?: number;
+    twitter_shares?: number;
+    twitter_bookmarks?: number;
+    twitter_followers?: number;
+    twitter_impressions?: number;
+    twitter_insights_retweets?: number;
+    twitter_likes?: number;
+    twitter_replies?: number;
+    twitter_video_views?: number;
+    total_comments?: number;
+    trending_score?: number;
+}
 
-export { IEchartsLine }
+export declare interface IEchartsLine {
+    color: string[];
+    xAxis: XAxis;
+    yAxis: YAxis;
+    series: Series[];
+}
 
 export declare interface IFilteredAttributes {
     [key: string]: string | object;
 }
 
-export { ILabel }
+export declare interface IGeo {
+    latitude?: number;
+    longitude?: number;
+    zip?: string;
+    street: string;
+    city?: string;
+    country: string;
+}
 
-export { ILand }
+export declare interface IIndicators {
+    value: number;
+}
 
-export { IMessage }
+export declare interface IJsonWidget {
+    node: string;
+    child: any[] | JsonChild[];
+    settings?: Settings;
+    template?: string;
+    label?: string;
+    tag?: string;
+}
 
-export { IMessages }
+export declare interface ILabel {
+    label: string;
+    count: number;
+    info?: string;
+    current: ICloudIndicators;
+    previous?: ICloudIndicators;
+    percentage?: number;
+}
 
-export { IModal }
+export declare interface ILand {
+    fillStyle: string;
+}
+
+export declare interface ILayout {
+    sections: Object | ISlideSections;
+    slide: ISlide;
+    widgets: Object | ISlideWidgets;
+    zones: Object | ISlideZones;
+}
+
+export declare interface IMedium {
+    type: string;
+    url: string;
+    width: number;
+    height: number;
+}
+
+export declare interface IMessage {
+    id: string;
+    published: string;
+    harvested: string;
+    utc: number;
+    expires: number;
+    channel: string;
+    type: string;
+    sender: ISender;
+    reply: string;
+    replyto: string;
+    page: string;
+    conversation: string;
+    title: string;
+    content: string;
+    sentiment: number;
+    link: string;
+    language?: string;
+    region?: string;
+    topics: ITopic[];
+    dynamics?: IDynamics;
+    geo?: IGeo;
+    media?: IMedium[];
+}
+
+/**
+ * Messages
+ */
+export declare interface IMessages {
+    messages: IMessage[];
+    presentation?: string;
+    slide?: string;
+    title?: string;
+    dashboard?: string;
+    widget?: string;
+    topics?: string;
+}
+
+export declare interface IMetrics {
+    doc?: number;
+    previous?: number;
+    change?: number;
+}
+
+/**
+ * IModal
+ */
+export declare interface IModal {
+    showComponent: string;
+    props?: any;
+    timeout?: number;
+}
 
 export declare const intToString: (num: any, digits?: number, abbreviate?: boolean, locale?: string) => string;
 
@@ -347,40 +753,343 @@ export declare interface IPresentations {
     presentations: IPresentation[];
 }
 
-export { IQuery }
+/**
+ * Query
+ */
+export declare interface IQuery {
+    [x: string]: any;
+    topics?: string;
+    presentation?: string;
+    dashboard: string;
+    widget: string;
+    labels?: string[];
+    compare?: string;
+    period?: number;
+    type?: "cloud" | "messages" | "series" | "preference" | "proxy" | "slide" | "dashboard" | "widget";
+    order?: "utc" | "reach" | "engagement" | "impressions";
+    media?: number;
+    dynamics?: number;
+    geo?: number;
+    delay?: string;
+    approved?: string;
+    moderation?: "realtime" | "delayed" | "approved" | "none";
+    hrm?: string;
+    before?: number;
+    since?: number;
+    hash?: string;
+    name?: string;
+    data?: any;
+}
 
-export { IResponse }
+/**
+ * API Response
+ */
+export declare interface IResponse {
+    data: IDashboards | IMessages | ISeries | ICloud | ISlides | IPresentations | IPreferences | IWidgets | null;
+    message: string;
+    success: boolean;
+    query?: IQuery;
+}
 
-export { IRotatingGlobe }
+export declare interface IRotatingGlobe {
+    country: ICountry;
+    land: ILand;
+    borders: IBorders;
+    sphere: ISphere;
+    arc: IArc;
+}
 
-export { ISeries }
+export declare interface ISender {
+    id?: string;
+    channel?: string;
+    title?: string;
+    name?: string;
+    avatar?: string;
+    bio?: string;
+    location?: string;
+    verified?: number;
+    following?: number;
+    followers?: number;
+    listed?: number;
+    favourites?: number;
+    messages?: number;
+    influence?: number;
+}
 
-export { ISeriesConfig }
+/**
+ * Series Data
+ */
+export declare interface ISeries {
+    topic: string;
+    title: string;
+    series: ISeriesData[];
+    category: ICategory;
+    metrics?: IMetrics;
+    indicators?: IIndicators;
+    timestamp?: number;
+}
 
-export { ISeriesCss }
+export declare interface ISeriesConfig {
+    fixed?: number;
+    abbreviate?: boolean;
+}
 
-export { ISeriesD3 }
+export declare interface ISeriesCss {
+    arrowdown?: string;
+    arrowup?: string;
+    backdrop?: string;
+    body?: string;
+    brand?: string;
+    change?: string;
+    count?: string;
+    container?: string;
+    date?: string;
+    down?: string;
+    host?: string;
+    image?: string;
+    title?: string;
+    up?: string;
+    widget?: string;
+    dark?: boolean;
+}
 
-export { ISeriesData }
+export declare interface ISeriesD3 {
+    globe: {
+        colors: {
+            arc: string;
+            border: string;
+            country: string;
+            land: string;
+            sphere: string;
+        };
+        settings?: {
+            canvas?: string;
+            card?: string;
+            width?: number;
+            height?: number;
+        };
+    };
+}
 
-export { ISeriesDateFormat }
+export declare interface ISeriesData {
+    name?: string;
+    label?: string;
+    current?: number[];
+    current_total?: number;
+    previous_total?: number;
+    previous?: number[];
+    current_category?: number;
+    previous_category?: number;
+}
 
-export { ISeriesOptions }
+export declare interface ISeriesDateFormat {
+    time?: string;
+    date?: string;
+}
 
-export { ISeriesShow }
+export declare interface ISeriesOptions {
+    css?: ISeriesCss;
+    d3?: ISeriesD3;
+    dateformat?: ISeriesDateFormat;
+    show?: ISeriesShow;
+    config?: ISeriesConfig;
+}
 
-export { IShow }
+export declare interface ISeriesShow {
+    brand?: boolean;
+    date?: boolean;
+}
+
+export declare interface IShow {
+    approve?: boolean;
+    avatar?: boolean;
+    brand?: boolean;
+    date?: boolean;
+    dynamics?: boolean;
+    kpi?: boolean;
+    sender?: boolean;
+    star?: boolean;
+    visible?: boolean;
+}
+
+export declare interface ISlide {
+    'label': string;
+    'cols': number;
+    'rows': number;
+    'width': string;
+    'height': string;
+    'backgrounds': string[];
+    'zones': string[];
+    'interval': string;
+    'animation': string;
+    'animation-speed': string;
+}
+
+export declare interface ISlideCloud {
+    'data-type'?: string;
+    'component'?: string;
+    'data-dashboard'?: string;
+    'data-widget': string;
+    'css-count'?: string[];
+    'css-host'?: string;
+    'kpi-name'?: string;
+    'config-abbreviate'?: string;
+    'class'?: string | string[];
+}
+
+export declare interface ISlideComponent {
+    path: string;
+    query: string;
+    node: string;
+    tag: string;
+    attr: ISlideMessages | ISlideSeries | ISlideCloud;
+}
+
+export declare interface ISlideContent {
+    editable: boolean;
+    path: string;
+    query: string;
+    node: string;
+    tag: string;
+    attr: Attr_2;
+}
+
+export declare interface ISlideMessages {
+    'layout'?: string;
+    'component'?: string;
+    'data-type'?: string;
+    'data-dashboard'?: string;
+    'data-widget'?: string;
+    'show-kpi'?: string;
+    'show-sender'?: string;
+    'css-date'?: string[];
+    'css-card'?: string[];
+    'css-body'?: string[];
+    'css-brand'?: string[];
+    'css-handle'?: string[];
+    'css-name'?: string[];
+    'date-format'?: string;
+    'animation'?: string;
+    'interval'?: string;
+    'show-brand'?: string;
+    'data-order'?: string;
+    'index'?: string;
+    'class'?: string | string[];
+    'edit'?: string;
+}
 
 export declare interface ISlides {
     presentation: string;
     slides: any;
 }
 
-export { ISphere }
+export declare interface ISlideSection {
+    'area': string;
+    'grid-area': string;
+    'widgets': string[];
+}
 
-export { IStorageOptions }
+export declare interface ISlideSections {
+    ['x:string']: ISlideSection;
+}
 
-export { ITopic }
+export declare interface ISlideSeries {
+    'data-type'?: string;
+    'data-widget': string;
+    'component'?: string;
+    'data-dashboard'?: string;
+    'css-arrow-down'?: string | string[];
+    'css-body'?: string | string[];
+    'css-brand'?: string | string[];
+    'css-change'?: string | string[];
+    'css-count'?: string | string[];
+    'css-down'?: string | string[];
+    'css-up'?: string | string[];
+    'class'?: string | string[];
+}
+
+export declare interface ISlideSettings {
+    contents: ISlideContent[];
+    component: ISlideComponent;
+}
+
+export declare interface ISlideWidget {
+    node: string;
+    child: SlideChild[];
+    settings: ISlideSettings;
+    template: string;
+    label: string;
+    tag: string;
+}
+
+export declare interface ISlideWidgets {
+    ['x:string']: string;
+}
+
+export declare interface ISlideZone {
+    'label': string;
+    'area': string;
+    'grid-area': string;
+    'grid-rows': string;
+    'grid-cols': string;
+    'gap-x': string;
+    'gap-y': string;
+    'padding': string;
+    'sections': string[];
+}
+
+export declare interface ISlideZones {
+    ['x:string']: ISlideZone[];
+}
+
+export declare interface ISphere {
+    strokeStyle: string;
+    lineWidth: number;
+    fillStyle: string;
+}
+
+/**
+ * Storage Options
+ */
+export declare interface IStorageOptions {
+    app: string;
+    builder?: boolean;
+    domain?: string;
+    cdn?: string;
+    channel?: string;
+    presentation: string;
+    slide?: string;
+    slides?: string[];
+    display?: string;
+    monitor?: string;
+    version: string;
+    storage: string;
+    token?: string;
+    bearer?: string;
+    csrf?: string;
+    moderation?: string;
+    beforeTime?: string;
+    delay?: number;
+    period?: number;
+    retention?: number;
+    suspended?: boolean;
+    loglevel?: number;
+}
+
+export declare interface ITopic {
+    message_id: string;
+    dashboard_id?: string;
+    widget_id?: string;
+    topic?: string;
+    engagement: number;
+    impressions: number;
+    reach: number;
+    sentiment: number;
+    title?: string;
+    utc?: number;
+    expires?: number;
+    visible?: number;
+}
 
 export declare interface IWidget {
     id: string;
@@ -392,23 +1101,87 @@ export declare interface IWidget {
     period?: string;
 }
 
+export declare interface IWidgetComponent {
+    path: string;
+    query: string;
+    node: string;
+    tag: string;
+    attr: ICardAttributes;
+}
+
+export declare interface IWidgetContent {
+    editable: boolean;
+    path: string;
+    query: string;
+    text: string;
+    node: string;
+}
+
 export declare interface IWidgets {
     widgets: IWidget[];
 }
 
+export declare interface IWidgetSettings {
+    label: string;
+    preview?: string;
+    contents?: IWidgetContent[];
+    component: IWidgetComponent;
+}
+
 export declare const json2html: (json: any) => any;
 
-export { Label }
+export declare interface JsonChild {
+    node: string;
+    tag: string;
+    attr: MessagesAttr | SeriesAttr;
+    child: JsonChild[];
+}
 
-export { Land }
+export declare interface Label {
+    label: string;
+    count: number;
+    info: string;
+}
 
-export { LandGeometry }
+export declare interface Land {
+    type: string;
+    geometries: LandGeometry[];
+}
+
+export declare interface LandGeometry {
+    type: Type;
+    arcs: Array<Array<number[]>>;
+}
 
 export declare const log: (level: number | undefined, message: any[]) => void;
 
 export declare const maxifyCss: (css: string) => string;
 
 export declare const maxifyHtml: (html: string) => string;
+
+export declare interface MessagesAttr {
+    layout?: string;
+    component?: string;
+    "data-type"?: string;
+    "data-dashboard"?: string;
+    "data-widget"?: string;
+    "show-kpi"?: string;
+    "show-sender"?: string;
+    "css-date"?: string[];
+    "css-card"?: string[];
+    "css-body"?: string[];
+    "css-brand"?: string[];
+    "css-handle"?: string[];
+    "css-name"?: string[];
+    "date-format"?: string;
+    animation?: string;
+    interval?: string;
+    "show-brand"?: string;
+    "data-order"?: string;
+    index?: string;
+    class?: string | string[];
+    edit?: string;
+}
 
 export declare const minifyCss: (css: string) => void;
 
@@ -422,7 +1195,7 @@ export declare enum MODERATION {
     REALTIME = "realtime"
 }
 
-export declare function moderation(options: IStorageOptions_2, query: IQuery_2): IQuery_2;
+export declare function moderation(options: IStorageOptions, query: IQuery): IQuery;
 
 export declare function numberFormatter(num: number, digits: number): string;
 
@@ -439,6 +1212,32 @@ export declare function rtl(message: IMessage): {
 
 export declare function sanitize(messages: IMessage[]): IMessage[];
 
+export declare interface Series {
+    data: number[];
+    type: string;
+    areaStyle: AreaStyle;
+}
+
+export declare interface SeriesAttr {
+    "data-type"?: string;
+    "data-widget": string;
+    component?: string;
+    "data-dashboard"?: string;
+    "css-arrow-down"?: string | string[];
+    "css-body"?: string | string[];
+    "css-brand"?: string | string[];
+    "css-change"?: string | string[];
+    "css-count"?: string | string[];
+    "css-down"?: string | string[];
+    "css-up"?: string | string[];
+    class?: string | string[];
+}
+
+export declare interface Settings {
+    contents: Content[];
+    component: Component;
+}
+
 export declare enum ShapeType {
     MultiPolygon = "MultiPolygon",
     Polygon = "Polygon"
@@ -447,6 +1246,12 @@ export declare enum ShapeType {
 export declare function showModal(e: MouseEvent, widget: any, message: IMessage, options: any): void;
 
 export declare function shuffleMessages(messages: IMessage[]): IMessage[];
+
+export declare interface SlideChild {
+    node: string;
+    tag: string;
+    attr: Attr_2;
+}
 
 export declare enum STORAGE {
     KEYVAL = "keyval",
@@ -462,16 +1267,34 @@ export declare enum STORAGE {
  */
 export declare function stringGen(): string;
 
-export { Transform }
+export declare interface Transform {
+    scale: number[];
+    translate: number[];
+}
 
-export declare const typeCss: (query: IQuery_2 | undefined) => string;
+export declare enum Type {
+    MultiPolygon = "MultiPolygon",
+    Polygon = "Polygon"
+}
+
+export declare const typeCss: (query: IQuery | undefined) => string;
 
 export declare const uniq: (length?: number, existing?: never[]) => string;
 
 export declare const upDownColor: (change: number) => "text-down text-xs" | "text-up text-xs" | "text-white text-xs";
 
-export declare function widgetParams(query: IQuery_2): IQuery_2;
+export declare function widgetParams(query: IQuery): IQuery;
 
 export declare const wrapPromise: (promise: any, delay: number, reason: string) => Promise<any>;
+
+export declare interface XAxis {
+    type: string;
+    boundaryGap: boolean;
+    data: string[];
+}
+
+export declare interface YAxis {
+    type: string;
+}
 
 export { }

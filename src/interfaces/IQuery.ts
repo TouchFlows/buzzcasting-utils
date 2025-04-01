@@ -9,7 +9,7 @@ export declare interface IQuery {
   widget: string;
   labels?: string[];
   compare?: string;
-  period?: number;
+  period?: string;
   type?:
     | "cloud"
     | "messages"
