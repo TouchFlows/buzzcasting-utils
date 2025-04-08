@@ -16,6 +16,7 @@ export interface ISlideSection {
 }
 
 export interface ISlide {
+	'id': string
 	'label': string
 	'cols': number
 	'rows': number

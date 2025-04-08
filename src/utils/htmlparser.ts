@@ -242,9 +242,9 @@ const fillAttrs = makeMap(
 // Special Elements (can contain anything)
 const special = makeMap("script,style");
 // @ts-ignore
-Array.prototype.last = function () {
-  return this[this.length - 1];
-};
+// Array.prototype.last = function () {
+//   return this[this.length - 1];
+// };
 
 export const HTMLParser = (html: any, handler: any): void => {
   let index,
@@ -253,9 +253,9 @@ export const HTMLParser = (html: any, handler: any): void => {
     stack: any[] = [],
     last = html;
   // @ts-ignore
-  stack.last = function () {
-    return this[this.length - 1];
-  };
+  // stack.last = function () {
+  //   return this[this.length - 1];
+  // };
 
   const parseEndTag = (_tag?: string, tagName?: string) => {
     let pos: number;
@@ -281,7 +281,9 @@ export const HTMLParser = (html: any, handler: any): void => {
 
     // Make sure we're not in a script or style element
     // @ts-ignore
-    if (!stack.last() || !special[stack.last()]) {
+    // 
+    // if (!stack.last() || !special[stack.last()]) {
+    if (!stack.at(-1) || !special[stack.at(-1)]) {
       // Comment
       if (html.indexOf("<!--") == 0) {
         index = html.indexOf("-->");
@@ -325,7 +327,7 @@ export const HTMLParser = (html: any, handler: any): void => {
       // @ts-ignore
       html = html.replace(
 				//@ts-ignore
-        new RegExp("([\\s\\S]*?)</" + stack.last() + "[^>]*>"),
+        new RegExp("([\\s\\S]*?)</" + stack.at(-1) + "[^>]*>"),
         function (_all: any, text: string) {
           text = text.replace(
             /<!--([\s\S]*?)-->|<!\[CDATA\[([\s\S]*?)]]>/g,
@@ -337,7 +339,7 @@ export const HTMLParser = (html: any, handler: any): void => {
         }
       );
       // @ts-ignore
-      parseEndTag("", stack.last());
+      parseEndTag("", stack.at(-1));
     }
 
     if (html == last) throw "Parse Error: " + html;
@@ -353,13 +355,13 @@ export const HTMLParser = (html: any, handler: any): void => {
     // @ts-ignore
     if (block[tagName]) {
       // @ts-ignore
-      while (stack.last() && inline[stack.last()]) {
+      while (stack.at(-1) && inline[stack.at(-1)]) {
         // @ts-ignore
-        parseEndTag("", stack.last());
+        parseEndTag("", stack.at(-1));
       }
     }
     // @ts-ignore
-    if (closeSelf[tagName] && stack.last() == tagName) {
+    if (closeSelf[tagName] && stack.at(-1) == tagName) {
       parseEndTag("", tagName);
     }
 
