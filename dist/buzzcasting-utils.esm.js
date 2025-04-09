@@ -133,14 +133,14 @@ function f(e, t) {
     n = t.charCodeAt(r), e = (e << 5) - e + n, e |= 0;
   return e < 0 ? e * -2 : e;
 }
-function y(e, t, r) {
+function I(e, t, r) {
   return Object.keys(t).sort().reduce(n, e);
   function n(o, a) {
     return _(o, t[a], a, r);
   }
 }
 function _(e, t, r, n) {
-  const o = f(f(f(e, r), I(t)), typeof t);
+  const o = f(f(f(e, r), y(t)), typeof t);
   if (t === null)
     return f(o, "null");
   if (t === void 0)
@@ -149,7 +149,7 @@ function _(e, t, r, n) {
     if (n.includes(t))
       return f(o, `[Circular]${r}`);
     n.push(t);
-    const a = y(o, t, n);
+    const a = I(o, t, n);
     if (!("valueOf" in t) || typeof t.valueOf != "function")
       return a;
     try {
@@ -160,7 +160,7 @@ function _(e, t, r, n) {
   }
   return f(o, t.toString());
 }
-function I(e) {
+function y(e) {
   return Object.prototype.toString.call(e);
 }
 function ie(e) {
@@ -227,15 +227,8 @@ const se = (e) => {
   "abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var"
 ), T = g("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr"), B = g(
   "checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected"
-), H = g("script,style");
-Array.prototype.last = function() {
-  return this[this.length - 1];
-};
-const D = (e, t) => {
+), H = g("script,style"), D = (e, t) => {
   let r, n, o, a = [], l = e;
-  a.last = function() {
-    return this[this.length - 1];
-  };
   const i = (c, s) => {
     let d;
     if (!s) d = 0;
@@ -249,7 +242,7 @@ const D = (e, t) => {
     }
   };
   for (; e; ) {
-    if (n = !0, !a.last() || !H[a.last()]) {
+    if (n = !0, !a.at(-1) || !H[a.at(-1)]) {
       if (e.indexOf("<!--") == 0 ? (r = e.indexOf("-->"), r >= 0 && (t.comment && t.comment(e.substring(4, r)), e = e.substring(r + 3), n = !1)) : e.indexOf("</") == 0 ? (o = e.match(E), o && (e = e.substring(o[0].length), o[0].replace(E, i), n = !1)) : e.indexOf("<") == 0 && (o = e.match(R), o && (e = e.substring(o[0].length), o[0].replace(R, u), n = !1)), n) {
         r = e.indexOf("<");
         let c = r < 0 ? e : e.substring(0, r);
@@ -258,23 +251,23 @@ const D = (e, t) => {
     } else
       e = e.replace(
         //@ts-ignore
-        new RegExp("([\\s\\S]*?)</" + a.last() + "[^>]*>"),
+        new RegExp("([\\s\\S]*?)</" + a.at(-1) + "[^>]*>"),
         function(c, s) {
           return s = s.replace(
             /<!--([\s\S]*?)-->|<!\[CDATA\[([\s\S]*?)]]>/g,
             "$1$2"
           ), t.chars && t.chars(s), "";
         }
-      ), i("", a.last());
+      ), i("", a.at(-1));
     if (e == l) throw "Parse Error: " + e;
     l = e;
   }
   i();
   function u(c, s, d, p) {
     if (s = s.toLowerCase(), C[s])
-      for (; a.last() && U[a.last()]; )
-        i("", a.last());
-    if (T[s] && a.last() == s && i("", s), p = S[s] || !!p, p || a.push(s), t.start) {
+      for (; a.at(-1) && U[a.at(-1)]; )
+        i("", a.at(-1));
+    if (T[s] && a.at(-1) == s && i("", s), p = S[s] || !!p, p || a.push(s), t.start) {
       const w = [];
       d.replace(M, function(j, A) {
         let O = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : B[A] ? A : "";
@@ -562,7 +555,7 @@ function ve(e) {
   }
   return e;
 }
-function ye(e, t) {
+function Ie(e, t) {
   var i;
   let r, n, o, a, l;
   switch (e.moderation) {
@@ -617,7 +610,7 @@ export {
   pe as maxifyHtml,
   ge as minifyCss,
   fe as minifyHtml,
-  ye as moderation,
+  Ie as moderation,
   he as numberFormatter,
   Ae as randomValue,
   De as rtl,

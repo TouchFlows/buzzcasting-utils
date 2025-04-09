@@ -913,6 +913,7 @@ export declare interface IShow {
 }
 
 export declare interface ISlide {
+    'id': string;
     'label': string;
     'cols': number;
     'rows': number;
