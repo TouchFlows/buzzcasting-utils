@@ -20,6 +20,7 @@ export interface ISeriesCss {
   down?: string
   host?: string
   image?: string
+  label?: string
   title?: string
   up?: string
   widget?: string
@@ -57,4 +58,5 @@ export interface ISeriesD3 {
 export interface ISeriesConfig {
   fixed?: number
   abbreviate?: boolean
+  label?:string
 }

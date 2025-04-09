@@ -378,7 +378,7 @@ const ce = (e) => {
   if (e.node === "root")
     return r;
 }, de = (e, t = 0, r = !0, n = "en") => {
-  if (e = Number.isNaN(e) ? e : parseFloat(e.replace(/[^0-9.]/g, "")), r === !1)
+  if (e = typeof e == "string" || e instanceof String ? parseFloat(e.replace(/[^0-9.]/g, "")) : e, r === !1)
     return e.toLocaleString(n);
   if (e < 1e3)
     return e = e.toString().replace(/[^0-9.]/g, "");
