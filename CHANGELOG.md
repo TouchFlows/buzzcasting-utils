@@ -1,4 +1,20 @@
 
+## v1.3.10
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.9...v1.3.10)
+
+### 🩹 Fixes
+
+- ISeriesOptions add label ([2b7847c](https://github.com/TouchFlows/buzzcasting-utils/commit/2b7847c))
+
+### 🏡 Chore
+
+- **release:** V1.3.9 ([157123b](https://github.com/TouchFlows/buzzcasting-utils/commit/157123b))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.9
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.8...v1.3.9)
