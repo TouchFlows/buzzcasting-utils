@@ -4,7 +4,10 @@ export const intToString = (
   abbreviate: boolean = true,
   locale: string = "en"
 ): string => {
-  num = Number.isNaN(num) ? num : parseFloat(num.replace(/[^0-9.]/g, ''));
+  num =
+    typeof num === "string" || num instanceof String
+      ? parseFloat(num.replace(/[^0-9.]/g, ""))
+      : num;
 
   if (abbreviate === false) {
     return num.toLocaleString(locale);

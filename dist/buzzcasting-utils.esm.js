@@ -219,9 +219,9 @@ const se = (e) => {
   let t = {}, r = e.split(",");
   for (let n = 0; n < r.length; n++) t[r[n]] = !0;
   return t;
-}, R = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/, E = /^<\/([-A-Za-z0-9_]+)[^>]*>/, M = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g, S = g(
+}, R = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/, E = /^<\/([-A-Za-z0-9_]+)[^>]*>/, M = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g, C = g(
   "area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr"
-), C = g(
+), S = g(
   "a,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video"
 ), U = g(
   "abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var"
@@ -264,10 +264,10 @@ const se = (e) => {
   }
   i();
   function u(c, s, d, p) {
-    if (s = s.toLowerCase(), C[s])
+    if (s = s.toLowerCase(), S[s])
       for (; a.at(-1) && U[a.at(-1)]; )
         i("", a.at(-1));
-    if (T[s] && a.at(-1) == s && i("", s), p = S[s] || !!p, p || a.push(s), t.start) {
+    if (T[s] && a.at(-1) == s && i("", s), p = C[s] || !!p, p || a.push(s), t.start) {
       const w = [];
       d.replace(M, function(j, A) {
         let O = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : B[A] ? A : "";
@@ -378,8 +378,7 @@ const ce = (e) => {
   if (e.node === "root")
     return r;
 }, de = (e, t = 0, r = !0, n = "en") => {
-  if (typeof e == "string" || e instanceof String) return e.toString().replace(/[^0-9.]/g, "");
-  if (r === !1)
+  if (e = Number.isNaN(e) ? e : parseFloat(e.replace(/[^0-9.]/g, "")), r === !1)
     return e.toLocaleString(n);
   if (e < 1e3)
     return e = e.toString().replace(/[^0-9.]/g, "");
