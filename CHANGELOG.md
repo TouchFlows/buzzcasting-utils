@@ -1,4 +1,20 @@
 
+## v1.3.9
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.8...v1.3.9)
+
+### 🩹 Fixes
+
+- Inttostring check type ([3551395](https://github.com/TouchFlows/buzzcasting-utils/commit/3551395))
+
+### 🏡 Chore
+
+- **release:** V1.3.8 ([050d3dd](https://github.com/TouchFlows/buzzcasting-utils/commit/050d3dd))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.8
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.7...v1.3.8)
