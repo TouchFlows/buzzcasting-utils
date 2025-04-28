@@ -303,6 +303,13 @@ export declare interface ICloud {
     previous_total: number;
 }
 
+export declare interface ICloudAnimation {
+    interval: number;
+    animation: number;
+    speed: string;
+    parentTag: string;
+}
+
 export declare interface ICloudBubbles {
     size: number;
     classlist: string;
@@ -432,6 +439,7 @@ export declare interface ICloudLegend {
 }
 
 export declare interface ICloudOptions {
+    animation?: ICloudAnimation;
     css?: ICloudCss;
     d3?: ICloudD3;
     dateformat?: ICloudDateFormat;
