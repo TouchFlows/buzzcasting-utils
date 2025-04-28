@@ -1,4 +1,20 @@
 
+## v1.3.12
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.11...v1.3.12)
+
+### 🩹 Fixes
+
+- ICloudOptions ([f524f00](https://github.com/TouchFlows/buzzcasting-utils/commit/f524f00))
+
+### 🏡 Chore
+
+- **release:** V1.3.11 ([fa125be](https://github.com/TouchFlows/buzzcasting-utils/commit/fa125be))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.11
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.10...v1.3.11)
