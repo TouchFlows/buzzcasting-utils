@@ -312,7 +312,7 @@ export declare interface ICloudBubbles {
 
 export declare interface ICloudConfig {
     items?: number;
-    chunck?: number;
+    chunk?: number;
     fixed?: number;
     abbreviate?: boolean;
 }

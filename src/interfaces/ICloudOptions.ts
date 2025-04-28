@@ -1,4 +1,5 @@
 export interface ICloudOptions {
+	animation?: ICloudAnimation
 	css?: ICloudCss
 	d3?: ICloudD3
 	dateformat?: ICloudDateFormat
@@ -10,6 +11,13 @@ export interface ICloudOptions {
 	kpi?: ICloudKpi
 	legend?: ICloudLegend
   bubbles?: ICloudBubbles
+}
+
+export interface ICloudAnimation {
+	interval: number,
+	animation: number,
+	speed: string,
+	parentTag: string
 }
 
 export interface ICloudDimensions {
