@@ -1,4 +1,4 @@
-var m = /* @__PURE__ */ ((e) => (e.MESSAGES = "messages", e.CLOUD = "cloud", e.SERIES = "series", e.TOPICS = "topics", e.WIDGET = "widget", e.WIDGETS = "widgets", e.DASHBOARD = "dashboard", e.DASHBOARDS = "dashboards", e.SLIDE = "slide", e.SLIDES = "slides", e.PRESENTATION = "presentation", e.PRESENTATIONS = "presentations", e.PREFERENCE = "preference", e.PREFERENCES = "preferences", e))(m || {}), h = /* @__PURE__ */ ((e) => (e.API = "color:white;background-color:grey;padding:0 4px 0 4px;border-radius:5px;", e.APP = "color:white;background-color:navy;padding:0 4px 0 4px;border-radius:5px;", e.BROADCAST = "color:navy;background-color:orange;padding:0 4px 0 4px;border-radius:5px;", e.CLOUD = "color:purple;background-color:mistyrose;padding:0 4px 0 4px;border-radius:5px;", e.DATA = "color:grey;background-color:lightskyblue;padding:0 4px 0 4px;border-radius:5px;", e.ERROR = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.GET_DATA = "color:black;background-color:lime;padding:0 4px 0 4px;border-radius:5px;", e.HIDE = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.KO = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.MESSAGES = "color:white;background-color:darkslateblue;padding:0 4px 0 4px;border-radius:5px;", e.NO_UPDATES = "color:grey;border:1px solid grey;padding:0 4px 0 4px;border-radius:5px;", e.NONE = "color:transparent;background-color:transparent;", e.OK = "color:black;background-color:lime;padding:0 4px 0 4px;border-radius:5px;", e.PRESENTATION = "color:white;background-color:darkred;padding:0 4px 0 4px;border-radius:5px;", e.SERIES = "color:purple;background-color:thistle;padding:0 4px 0 4px;border-radius:5px;", e.SLIDE = "color:black;background-color:yellow;padding:0 4px 0 4px;border-radius:5px;", e.STORAGE = "color:black;background-color:cyan;padding:0 4px 0 4px;border-radius:5px;", e.SUBSCRIBE = "color:white;background-color:dodgerblue;padding:0 4px 0 4px;border-radius:5px;", e.WIDGET = "color:gret;background-color:lemonchiffon;padding:0 4px 0 4px;border-radius:5px;", e.WS = "color:white;background-color:green;padding:0 4px 0 4px;border-radius:5px;", e))(h || {}), P = /* @__PURE__ */ ((e) => (e.ADD_SLIDE = "addSlide", e.APP_READY = "appReady", e.API_UPDATE = "apiUpdate", e.WS_API_REQUEST = "wsApiRequest", e.WS_API_RESPONSE = "wsApiResponse", e.WS_API_UPDATE = "wsApiRUpdate", e.APPROVE_MESSAGE = "approveMessage", e.CHANNEL = "channel", e.CLEAN_MESSAGES = "cleanMessages", e.CLOSE_MODAL = "closeModal", e.CLOSE_BUILDER_MODAL = "closeBuilderModal", e.DASHBOARD_LOAD = "loadDashboard", e.DASHBOARD_STORE = "storeDashboard", e.ERROR = "error", e.HIDE_MESSAGE = "hideMessage", e.HIDE_LABELS = "hideLabels", e.MAUPPUT_UPDATE = "layoutUpdate", e.PREV_SLIDE = "prevSlide", e.RELOAD_PRESENTATION = "reloadPresentation", e.SHOW_MODAL = "showModal", e.STAR_MESSAGE = "starMessage", e.GOTO_SLIDE = "gotoSlide", e.NEXT_SLIDE = "nextSlide", e.PREFERENCE_LOAD = "loadPreference", e.PREFERENCE_STORE = "storePreference", e.PAUSE_PRESENTATION = "pausePresentation", e.PRESENTATION_READY = "presentationReady", e.PRESENTATION_LOAD = "loadPresentation", e.PRESENTATION_STORE = "storePresentation", e.SHOW_BUILDER_MODAL = "showBuilderModal", e.SLIDE_DID_LOAD = "slideDidLoad", e.SLIDE_GOTO = "slideGoto", e.SLIDE_READY = "slideReady", e.SLIDE_LOAD = "loadSlide", e.SLIDE_STORE = "storeSlide", e.SLIDE_TRANSITIONER = "slideTransitioner", e.START_TRANSITIONER = "startTransitioner", e.STORAGE_INIT = "storageInit", e.SUBSCRIBE = "subscribe", e.SUSPEND_ACCOUNT = "suspendAccount", e.SWITCH_PRESENTATION = "switchPresentation", e.REMOVE_CLOUD = "removeCloud", e.UPDATE = "update", e.VERSION = "version", e.WIDGETS_CLEAR = "widgetsClear", e.WIDGET_LOAD = "widgetLoad", e.WIDGET_STORE = "widgetStore", e.WIDGET_UPDATE = "widgetUpdate", e))(P || {}), x = /* @__PURE__ */ ((e) => (e.APPROVED = "approved", e.BEFORE = "before", e.DELAYED = "delayed", e.NONE = "none", e.REALTIME = "realtime", e))(x || {}), k = /* @__PURE__ */ ((e) => (e.KEYVAL = "keyval", e.LOCAL = "local", e.SESSION = "session", e.DEXIE = "dexie", e.WINDOW = "window", e))(k || {});
+var m = /* @__PURE__ */ ((e) => (e.MESSAGES = "messages", e.CLOUD = "cloud", e.SERIES = "series", e.TOPICS = "topics", e.WIDGET = "widget", e.WIDGETS = "widgets", e.DASHBOARD = "dashboard", e.DASHBOARDS = "dashboards", e.SLIDE = "slide", e.SLIDES = "slides", e.PRESENTATION = "presentation", e.PRESENTATIONS = "presentations", e.PREFERENCE = "preference", e.PREFERENCES = "preferences", e))(m || {}), h = /* @__PURE__ */ ((e) => (e.API = "color:white;background-color:grey;padding:0 4px 0 4px;border-radius:5px;", e.APP = "color:white;background-color:navy;padding:0 4px 0 4px;border-radius:5px;", e.BROADCAST = "color:navy;background-color:orange;padding:0 4px 0 4px;border-radius:5px;", e.CLOUD = "color:purple;background-color:mistyrose;padding:0 4px 0 4px;border-radius:5px;", e.DATA = "color:grey;background-color:lightskyblue;padding:0 4px 0 4px;border-radius:5px;", e.ERROR = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.GET_DATA = "color:black;background-color:lime;padding:0 4px 0 4px;border-radius:5px;", e.HIDE = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.KO = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.MESSAGES = "color:white;background-color:darkslateblue;padding:0 4px 0 4px;border-radius:5px;", e.NO_UPDATES = "color:grey;border:1px solid grey;padding:0 4px 0 4px;border-radius:5px;", e.NONE = "color:transparent;background-color:transparent;", e.OK = "color:black;background-color:lime;padding:0 4px 0 4px;border-radius:5px;", e.PRESENTATION = "color:white;background-color:darkred;padding:0 4px 0 4px;border-radius:5px;", e.SERIES = "color:purple;background-color:thistle;padding:0 4px 0 4px;border-radius:5px;", e.SLIDE = "color:black;background-color:yellow;padding:0 4px 0 4px;border-radius:5px;", e.STORAGE = "color:black;background-color:cyan;padding:0 4px 0 4px;border-radius:5px;", e.SUBSCRIBE = "color:white;background-color:dodgerblue;padding:0 4px 0 4px;border-radius:5px;", e.WIDGET = "color:gret;background-color:lemonchiffon;padding:0 4px 0 4px;border-radius:5px;", e.WS = "color:white;background-color:green;padding:0 4px 0 4px;border-radius:5px;", e))(h || {}), v = /* @__PURE__ */ ((e) => (e.ADD_SLIDE = "addSlide", e.APP_READY = "appReady", e.API_UPDATE = "apiUpdate", e.WS_API_REQUEST = "wsApiRequest", e.WS_API_RESPONSE = "wsApiResponse", e.WS_API_UPDATE = "wsApiRUpdate", e.APPROVE_MESSAGE = "approveMessage", e.CHANNEL = "channel", e.CLEAN_MESSAGES = "cleanMessages", e.CLOSE_MODAL = "closeModal", e.CLOSE_BUILDER_MODAL = "closeBuilderModal", e.DASHBOARD_LOAD = "loadDashboard", e.DASHBOARD_STORE = "storeDashboard", e.ERROR = "error", e.HIDE_MESSAGE = "hideMessage", e.HIDE_LABELS = "hideLabels", e.MAUPPUT_UPDATE = "layoutUpdate", e.PREV_SLIDE = "prevSlide", e.RELOAD_PRESENTATION = "reloadPresentation", e.SHOW_MODAL = "showModal", e.STAR_MESSAGE = "starMessage", e.GOTO_SLIDE = "gotoSlide", e.NEXT_SLIDE = "nextSlide", e.PREFERENCE_LOAD = "loadPreference", e.PREFERENCE_STORE = "storePreference", e.PAUSE_PRESENTATION = "pausePresentation", e.PRESENTATION_READY = "presentationReady", e.PRESENTATION_LOAD = "loadPresentation", e.PRESENTATION_STORE = "storePresentation", e.SHOW_BUILDER_MODAL = "showBuilderModal", e.SLIDE_DID_LOAD = "slideDidLoad", e.SLIDE_GOTO = "slideGoto", e.SLIDE_READY = "slideReady", e.SLIDE_LOAD = "loadSlide", e.SLIDE_STORE = "storeSlide", e.SLIDE_TRANSITIONER = "slideTransitioner", e.START_TRANSITIONER = "startTransitioner", e.STORAGE_INIT = "storageInit", e.SUBSCRIBE = "subscribe", e.SUSPEND_ACCOUNT = "suspendAccount", e.SWITCH_PRESENTATION = "switchPresentation", e.REMOVE_CLOUD = "removeCloud", e.UPDATE = "update", e.VERSION = "version", e.WIDGETS_CLEAR = "widgetsClear", e.WIDGET_LOAD = "widgetLoad", e.WIDGET_STORE = "widgetStore", e.WIDGET_UPDATE = "widgetUpdate", e))(v || {}), x = /* @__PURE__ */ ((e) => (e.APPROVED = "approved", e.BEFORE = "before", e.DELAYED = "delayed", e.NONE = "none", e.REALTIME = "realtime", e))(x || {}), P = /* @__PURE__ */ ((e) => (e.KEYVAL = "keyval", e.LOCAL = "local", e.SESSION = "session", e.DEXIE = "dexie", e.WINDOW = "window", e))(P || {});
 function J(e) {
   const t = e.toUpperCase().split(/[\s_-]+/);
   return t.length > 0 ? (t.forEach((r, n) => {
@@ -39,7 +39,7 @@ function V(e) {
   const t = {};
   for (let r = 0; r < e.length; r++) {
     const n = e[r];
-    n.name !== "class" && (t[n.name] = L(n.value));
+    n.name !== "class" && (t[n.name] = k(n.value));
   }
   return t;
 }
@@ -90,7 +90,7 @@ function ee(e, t) {
 function te(e) {
   return e.replace(/^\w|[A-Z]|\b\w/g, (t, r) => r === 0 ? t.toLowerCase() : t.toUpperCase()).replace(/\s+/g, "");
 }
-function L(e) {
+function k(e) {
   return e.toLowerCase().split("-").reduce((t, r) => t + (r.charAt(0).toUpperCase() + r.slice(1)));
 }
 const re = (e) => e.charAt(0).toUpperCase() + e.slice(1);
@@ -98,29 +98,44 @@ function ne(e) {
   const t = document.createRange();
   t.selectNodeContents(e), t.deleteContents();
 }
-function $(e) {
+const oe = () => Math.floor(Math.random() * 16777215).toString(16), ae = () => {
+  var e = Math.round, t = Math.random, r = 255;
+  return "rgba(" + e(t() * r) + "," + e(t() * r) + "," + e(t() * r) + "," + t().toFixed(1) + ")";
+}, ie = () => {
+  var e = Math.round, t = Math.random, r = 255;
+  return "rgba(" + e(t() * r) + "," + e(t() * r) + "," + e(t() * r) + ", 0)";
+}, se = () => {
+  var e = Math.round, t = Math.random, r = 255;
+  return "rgba(" + e(t() * r) + "," + e(t() * r) + "," + e(t() * r) + ")";
+}, le = (e, t) => {
+  e = e.substring(e.indexOf("(") + 1, e.indexOf(")"));
+  let r = e.split(",");
+  return r = r.map((n) => parseFloat(n.trim()).toString()), e = "background-color: rgba(" + parseInt(r[0]) + "," + parseInt(r[1]) + "," + parseInt(r[2]) + "," + t + ");", e;
+};
+function L(e) {
   e.reduce(
     (t, r) => Object.keys(r).reduce(
       (n, o) => ({
         ...n,
-        [o]: o in t && typeof t[o] == "object" && t[o] !== null && typeof r[o] == "object" && r[o] !== null ? $([t[o], r[o]]) : r[o]
+        [o]: o in t && typeof t[o] == "object" && t[o] !== null && typeof r[o] == "object" && r[o] !== null ? L([t[o], r[o]]) : r[o]
       }),
       t
     ),
     {}
   );
 }
-function oe(e, t = "font-bold") {
+const ce = (e) => e.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+function de(e, t = "font-bold") {
   return `${(e == null ? void 0 : e.title.length) > 0 ? `<div class="${t}">${e.title}</div>` : ""}${e != null && e.content ? e.content.replace(/\n\n/g, `
 `).replace(/\n/g, "<br/>") : ""}`;
 }
-const ae = () => [b(2), b(1), b(1), b(1), b(3)].join("-"), b = (e) => {
+const ue = () => [b(2), b(1), b(1), b(1), b(3)].join("-"), b = (e) => {
   let t = "";
   for (let r = 0; r < e; r++)
     t += ((1 + Math.random()) * 65536 | 0).toString(16).substring(1);
   return t;
 };
-function v(e, t) {
+function $(e, t) {
   for (; e.length < t; )
     e = `0${e}`;
   return e;
@@ -140,7 +155,7 @@ function I(e, t, r) {
   }
 }
 function _(e, t, r, n) {
-  const o = f(f(f(e, r), y(t)), typeof t);
+  const o = f(f(f(e, r), M(t)), typeof t);
   if (t === null)
     return f(o, "null");
   if (t === void 0)
@@ -160,13 +175,13 @@ function _(e, t, r, n) {
   }
   return f(o, t.toString());
 }
-function y(e) {
+function M(e) {
   return Object.prototype.toString.call(e);
 }
-function ie(e) {
-  return v(_(0, e, "", []).toString(16), 8);
+function fe(e) {
+  return $(_(0, e, "", []).toString(16), 8);
 }
-const se = (e) => {
+const pe = (e) => {
   let t = "";
   return D(e, {
     start: function(r, n, o) {
@@ -185,7 +200,7 @@ const se = (e) => {
       t += `<!-- ${r} -->`;
     }
   }), t;
-}, le = (e, t) => {
+}, ge = (e, t) => {
   const r = g("html,head,body,title"), n = { link: "head", base: "head" };
   t ? t = t.ownerDocument || t.getOwnerDocument && t.getOwnerDocument() || t : typeof t < "u" ? t = new Document() : typeof document < "u" && document.implementation && document.implementation.createDocument && (t = document.implementation.createDocument("", "", null));
   const o = [];
@@ -219,15 +234,15 @@ const se = (e) => {
   let t = {}, r = e.split(",");
   for (let n = 0; n < r.length; n++) t[r[n]] = !0;
   return t;
-}, R = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/, E = /^<\/([-A-Za-z0-9_]+)[^>]*>/, M = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g, C = g(
+}, R = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/, E = /^<\/([-A-Za-z0-9_]+)[^>]*>/, y = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g, S = g(
   "area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr"
-), S = g(
+), C = g(
   "a,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video"
 ), U = g(
   "abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var"
-), T = g("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr"), B = g(
+), B = g("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr"), T = g(
   "checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected"
-), H = g("script,style"), D = (e, t) => {
+), G = g("script,style"), D = (e, t) => {
   let r, n, o, a = [], l = e;
   const i = (c, s) => {
     let d;
@@ -242,7 +257,7 @@ const se = (e) => {
     }
   };
   for (; e; ) {
-    if (n = !0, !a.at(-1) || !H[a.at(-1)]) {
+    if (n = !0, !a.at(-1) || !G[a.at(-1)]) {
       if (e.indexOf("<!--") == 0 ? (r = e.indexOf("-->"), r >= 0 && (t.comment && t.comment(e.substring(4, r)), e = e.substring(r + 3), n = !1)) : e.indexOf("</") == 0 ? (o = e.match(E), o && (e = e.substring(o[0].length), o[0].replace(E, i), n = !1)) : e.indexOf("<") == 0 && (o = e.match(R), o && (e = e.substring(o[0].length), o[0].replace(R, u), n = !1)), n) {
         r = e.indexOf("<");
         let c = r < 0 ? e : e.substring(0, r);
@@ -264,13 +279,13 @@ const se = (e) => {
   }
   i();
   function u(c, s, d, p) {
-    if (s = s.toLowerCase(), S[s])
+    if (s = s.toLowerCase(), C[s])
       for (; a.at(-1) && U[a.at(-1)]; )
         i("", a.at(-1));
-    if (T[s] && a.at(-1) == s && i("", s), p = C[s] || !!p, p || a.push(s), t.start) {
+    if (B[s] && a.at(-1) == s && i("", s), p = S[s] || !!p, p || a.push(s), t.start) {
       const w = [];
-      d.replace(M, function(j, A) {
-        let O = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : B[A] ? A : "";
+      d.replace(y, function(j, A) {
+        let O = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : T[A] ? A : "";
         w.push({
           name: A,
           value: O,
@@ -281,13 +296,13 @@ const se = (e) => {
     }
   }
 };
-function G(e) {
+function H(e) {
   return `"${e}"`;
 }
 function W(e) {
   return e.replace(/<\?xml.*\?>\n/, "").replace(/<!doctype.*\>\n/, "").replace(/<!DOCTYPE.*\>\n/, "");
 }
-const ce = (e) => {
+const be = (e) => {
   e = W(e);
   const t = [], r = {
     node: "root",
@@ -363,7 +378,7 @@ const ce = (e) => {
   let n = "";
   if (e.attr && (n = Object.keys(e.attr).map(function(o) {
     let a = e.attr[o];
-    return Array.isArray(a) && (a = a.join(" ")), `${o}=${G(a)}`;
+    return Array.isArray(a) && (a = a.join(" ")), `${o}=${H(a)}`;
   }).join(" "), n !== "" && (n = ` ${n}`)), e.node === "element") {
     let o = e.tag;
     if (t.indexOf(o) > -1)
@@ -377,7 +392,7 @@ const ce = (e) => {
     return `<!-- ${e.text} -->`;
   if (e.node === "root")
     return r;
-}, de = (e, t = 0, r = !0, n = "en") => {
+}, he = (e, t = 0, r = !0, n = "en") => {
   if (e = typeof e == "string" || e instanceof String ? parseFloat(e.replace(/[^0-9.]/g, "")) : e, r === !1)
     return e.toLocaleString(n);
   if (e < 1e3)
@@ -394,7 +409,7 @@ const ce = (e) => {
   for (a = o.length - 1; a > 0 && !(e >= o[a].v); a--)
     ;
   return (e / o[a].v).toFixed(t).replace(/\.0+$|(\.[0-9]*[1-9])0+$/, "$1") + o[a].s;
-}, ue = (e = 0, t) => {
+}, me = (e = 0, t) => {
   switch (!0) {
     case e > 3:
       console.debug(...t);
@@ -409,14 +424,14 @@ const ce = (e) => {
       console.error(...t);
       break;
   }
-}, fe = (e) => e.replace(/\<\!--\s*?[^\s?\[][\s\S]*?--\>/g, "").replace(/\>\s*\</g, "><").replace(/\t/g, ""), pe = (e) => e.replace(/\>\</g, `>
-<`), ge = (e) => {
+}, xe = (e) => e.replace(/\<\!--\s*?[^\s?\[][\s\S]*?--\>/g, "").replace(/\>\s*\</g, "><").replace(/\t/g, ""), Ae = (e) => e.replace(/\>\</g, `>
+<`), De = (e) => {
   e.replace(/\/\*.*\*\/|\/\*[\s\S]*?\*\/|\n|\t|\v|\s{2,}/g, "").replace(/\s*\{\s*/g, "{").replace(/\s*\}\s*/g, "}").replace(/\s*\:\s*/g, ":").replace(/\s*\;\s*/g, ";").replace(/\s*\,\s*/g, ",").replace(/\s*\~\s*/g, "~").replace(/\s*\>\s*/g, ">").replace(/\s*\+\s*/g, "+").replace(/\s*\!\s*/g, "!");
-}, be = (e) => e.replace(/\,/g, ", ").replace(/\{/g, ` {
+}, we = (e) => e.replace(/\,/g, ", ").replace(/\{/g, ` {
 	`).replace(/\}/g, `}
 `).replace(/\;/g, `;
 	`);
-function he(e, t) {
+function Oe(e, t) {
   const r = [
     { value: 1, symbol: "" },
     { value: 1e3, symbol: "K" },
@@ -431,18 +446,18 @@ function he(e, t) {
     ;
   return (e / r[o].value).toFixed(t).replace(n, "$1") + r[o].symbol;
 }
-function me(e) {
+function Re(e) {
   const t = RegExp(`[?&]${e}=([^&]*)`).exec(window.location.search);
   return t && decodeURIComponent(t[1].replace(/\+/g, " ")) || null;
 }
-const xe = (e) => new Proxy(new URLSearchParams(window.location.search), {
+const Ee = (e) => new Proxy(new URLSearchParams(window.location.search), {
   // @ts-ignore
   get: (r, n) => r.get(n)
 })[e];
-function Ae(e) {
+function _e(e) {
   return e[Math.floor(Math.random() * e.length)];
 }
-function De(e) {
+function ve(e) {
   switch (e.language) {
     case "ar":
       return {
@@ -453,7 +468,7 @@ function De(e) {
       return {};
   }
 }
-function we(e) {
+function Pe(e) {
   const t = window.BuzzCasting.getOptions().suspended ?? !1;
   return e.forEach((r) => {
     var n;
@@ -494,13 +509,13 @@ function we(e) {
     }
   }), e;
 }
-function Oe(e, t, r, n) {
+function ke(e, t, r, n) {
   e.stopPropagation(), t.showModal({
     showComponent: "card-modal",
     props: { data: r, options: n }
   });
 }
-function Re(e) {
+function Le(e) {
   const t = [...e];
   for (let r = t.length - 1; r > 0; r--) {
     const n = Math.floor(Math.random() * (r + 1));
@@ -508,13 +523,13 @@ function Re(e) {
   }
   return t;
 }
-function Ee() {
+function $e() {
   let e = "";
   const t = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   for (let r = 0; r < 7; r++) e += t.charAt(Math.floor(Math.random() * t.length));
   return e;
 }
-const _e = (e) => {
+const Ie = (e) => {
   switch (e == null ? void 0 : e.type) {
     case m.MESSAGES:
       return h.MESSAGES;
@@ -527,12 +542,12 @@ const _e = (e) => {
   }
 }, Y = (e = 6) => Math.random().toString(36).substring(2, e + 2), K = (e, t = []) => !t.find(function(n) {
   return n === e;
-}), Pe = (e, t = []) => {
+}), Me = (e, t = []) => {
   let n = 0, o = "";
   for (; o == "" && n < 100; )
     o = Y(e), K(o, t) || (o = "", n++);
   return o;
-}, ke = (e) => {
+}, ye = (e) => {
   switch (!0) {
     case e < 0:
       return "text-down text-xs";
@@ -541,12 +556,12 @@ const _e = (e) => {
     default:
       return "text-white text-xs";
   }
-}, Le = (e, t, r) => Promise.race([e, Z(t, r)]), Z = (e, t) => new Promise((r, n) => setTimeout(() => t === void 0 ? r("ok") : n(t), e));
-function $e(e) {
+}, Se = (e, t, r) => Promise.race([e, Z(t, r)]), Z = (e, t) => new Promise((r, n) => setTimeout(() => t === void 0 ? r("ok") : n(t), e));
+function Ce(e) {
   let t = `${e.type}.${e.topics}`;
   return e.order && (t += `.${e.order}`), e.period && (t += `.${e.period}`), t;
 }
-function ve(e) {
+function Ue(e) {
   var t;
   if (e.widget === void 0) {
     const r = (t = e.topics) == null ? void 0 : t.split("-");
@@ -554,7 +569,7 @@ function ve(e) {
   }
   return e;
 }
-function Ie(e, t) {
+function Be(e, t) {
   var i;
   let r, n, o, a, l;
   switch (e.moderation) {
@@ -576,50 +591,56 @@ var X = /* @__PURE__ */ ((e) => (e.MultiPolygon = "MultiPolygon", e.Polygon = "P
 export {
   m as API,
   h as CSS,
-  P as EVENTS,
+  v as EVENTS,
   D as HTMLParser,
-  le as HTMLtoDOM,
-  se as HTMLtoXML,
+  ge as HTMLtoDOM,
+  pe as HTMLtoXML,
   x as MODERATION,
-  k as STORAGE,
+  le as RGBAchangeA,
+  P as STORAGE,
   Q as ShapeType,
   X as Type,
   J as anonymize,
   z as attachedMedia,
   N as attrs,
   ee as brandLogo,
-  L as camelCase,
+  k as camelCase,
   V as camelCasedProps,
   te as camelize,
   re as capitalizeFirstLetter,
   ne as clearContents,
-  $ as deepMerge,
+  L as deepMerge,
+  ce as escape,
   q as filterAttributes,
-  oe as formatContent,
-  ae as getGuid,
-  $e as getKey,
-  me as getParameterByName,
-  xe as getQueryParam,
-  ie as hashSum,
-  ce as html2json,
-  de as intToString,
+  de as formatContent,
+  ue as getGuid,
+  Ce as getKey,
+  Re as getParameterByName,
+  Ee as getQueryParam,
+  fe as hashSum,
+  be as html2json,
+  he as intToString,
   F as json2html,
-  ue as log,
-  be as maxifyCss,
-  pe as maxifyHtml,
-  ge as minifyCss,
-  fe as minifyHtml,
-  Ie as moderation,
-  he as numberFormatter,
-  Ae as randomValue,
-  De as rtl,
-  we as sanitize,
-  Oe as showModal,
-  Re as shuffleMessages,
-  Ee as stringGen,
-  _e as typeCss,
-  Pe as uniq,
-  ke as upDownColor,
-  ve as widgetParams,
-  Le as wrapPromise
+  me as log,
+  we as maxifyCss,
+  Ae as maxifyHtml,
+  De as minifyCss,
+  xe as minifyHtml,
+  Be as moderation,
+  Oe as numberFormatter,
+  oe as randomColor,
+  se as randomRGB,
+  ie as randomRGBA,
+  ae as randomRGBAfull,
+  _e as randomValue,
+  ve as rtl,
+  Pe as sanitize,
+  ke as showModal,
+  Le as shuffleMessages,
+  $e as stringGen,
+  Ie as typeCss,
+  Me as uniq,
+  ye as upDownColor,
+  Ue as widgetParams,
+  Se as wrapPromise
 };

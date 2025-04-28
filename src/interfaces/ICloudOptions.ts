@@ -107,7 +107,7 @@ export interface ICloudD3 {
 
 export interface ICloudConfig {
 	items?: number
-	chunck?: number
+	chunk?: number
 	fixed?: number
 	abbreviate?: boolean
 }

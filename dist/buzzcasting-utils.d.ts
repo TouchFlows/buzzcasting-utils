@@ -135,6 +135,9 @@ export { CSS_2 as CSS }
 
 export declare function deepMerge(objs: any): void;
 
+declare const escape_2: (htmlStr: string) => string;
+export { escape_2 as escape }
+
 export declare enum EVENTS {
     ADD_SLIDE = "addSlide",
     APP_READY = "appReady",
@@ -308,6 +311,8 @@ export declare interface ICloudBubbles {
 }
 
 export declare interface ICloudConfig {
+    items?: number;
+    chunck?: number;
     fixed?: number;
     abbreviate?: boolean;
 }
@@ -1202,12 +1207,22 @@ export declare function moderation(options: IStorageOptions, query: IQuery): IQu
 
 export declare function numberFormatter(num: number, digits: number): string;
 
+export declare const randomColor: () => string;
+
+export declare const randomRGB: () => string;
+
+export declare const randomRGBA: () => string;
+
+export declare const randomRGBAfull: () => string;
+
 /**
  * Get a random item from an array
  * @param array
  * @returns
  */
 export declare function randomValue(array: string | any[]): number;
+
+export declare const RGBAchangeA: (str: string, opacity: string) => string;
 
 export declare function rtl(message: IMessage): {
     [key: string]: string;
