@@ -1,4 +1,20 @@
 
+## v1.3.14
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.13...v1.3.14)
+
+### 🩹 Fixes
+
+- Interface file ([2a91494](https://github.com/TouchFlows/buzzcasting-utils/commit/2a91494))
+
+### 🏡 Chore
+
+- **release:** V1.3.13 ([0cc6e46](https://github.com/TouchFlows/buzzcasting-utils/commit/0cc6e46))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.13
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.12...v1.3.13)
