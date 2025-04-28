@@ -1,4 +1,20 @@
 
+## v1.3.13
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.12...v1.3.13)
+
+### 🩹 Fixes
+
+- Animations in ICloudOptions ([d33d1b5](https://github.com/TouchFlows/buzzcasting-utils/commit/d33d1b5))
+
+### 🏡 Chore
+
+- **release:** V1.3.12 ([bfbba8c](https://github.com/TouchFlows/buzzcasting-utils/commit/bfbba8c))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.12
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.11...v1.3.12)
