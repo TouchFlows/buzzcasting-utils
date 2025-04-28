@@ -832,6 +832,7 @@ export declare interface ISeries {
 export declare interface ISeriesConfig {
     fixed?: number;
     abbreviate?: boolean;
+    label?: string;
 }
 
 export declare interface ISeriesCss {
@@ -847,6 +848,7 @@ export declare interface ISeriesCss {
     down?: string;
     host?: string;
     image?: string;
+    label?: string;
     title?: string;
     up?: string;
     widget?: string;
