@@ -18,6 +18,7 @@ export declare interface IStorageOptions {
   bearer?: string;
   csrf?: string;
   moderation?: string;
+  nonce?: string
   beforeTime?: string;
   delay?: number;
   period?: number;

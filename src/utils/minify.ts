@@ -10,7 +10,7 @@ export const maxifyHtml = (html: string) => {
 }
 
 export const minifyCss = (css: string) => {
-	css
+	return css
 		.replace(/\/\*.*\*\/|\/\*[\s\S]*?\*\/|\n|\t|\v|\s{2,}/g, '')
 		.replace(/\s*\{\s*/g, '{')
 		.replace(/\s*\}\s*/g, '}')
