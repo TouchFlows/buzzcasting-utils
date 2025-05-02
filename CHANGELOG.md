@@ -1,4 +1,20 @@
 
+## v1.3.15
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.14...v1.3.15)
+
+### 🩹 Fixes
+
+- Minify interface, events enum ([54967ee](https://github.com/TouchFlows/buzzcasting-utils/commit/54967ee))
+
+### 🏡 Chore
+
+- **release:** V1.3.14 ([625c364](https://github.com/TouchFlows/buzzcasting-utils/commit/625c364))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.14
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.13...v1.3.14)
