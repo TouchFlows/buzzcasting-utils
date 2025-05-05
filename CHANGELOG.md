@@ -1,4 +1,20 @@
 
+## v1.4.1
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.4.0...v1.4.1)
+
+### 🩹 Fixes
+
+- Slide events ([5ea416a](https://github.com/TouchFlows/buzzcasting-utils/commit/5ea416a))
+
+### 🏡 Chore
+
+- **release:** V1.4.0 ([8e770b5](https://github.com/TouchFlows/buzzcasting-utils/commit/8e770b5))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.4.0
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.15...v1.4.0)
