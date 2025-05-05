@@ -1,4 +1,20 @@
 
+## v1.5.1
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.5.0...v1.5.1)
+
+### 🩹 Fixes
+
+- IResponse interface - added IImages ([530d0e1](https://github.com/TouchFlows/buzzcasting-utils/commit/530d0e1))
+
+### 🏡 Chore
+
+- **release:** V1.5.0 ([dad3cc2](https://github.com/TouchFlows/buzzcasting-utils/commit/dad3cc2))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.5.0
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.4.1...v1.5.0)
