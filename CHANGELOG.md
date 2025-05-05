@@ -1,4 +1,20 @@
 
+## v1.5.0
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.4.1...v1.5.0)
+
+### 🚀 Enhancements
+
+- Reorg interfaces ([a3b9f73](https://github.com/TouchFlows/buzzcasting-utils/commit/a3b9f73))
+
+### 🏡 Chore
+
+- **release:** V1.4.1 ([72feec4](https://github.com/TouchFlows/buzzcasting-utils/commit/72feec4))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.4.1
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.4.0...v1.4.1)
