@@ -3,10 +3,10 @@
  */
 export declare interface IQuery {
   [x: string]: any;
+  widget: string;
   topics?: string;
   presentation?: string;
-  dashboard?: string;
-  widget?: string;
+  dashboard?: string;  
   labels?: string[];
   compare?: string;
   period?: number;
