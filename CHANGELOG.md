@@ -1,4 +1,20 @@
 
+## v1.4.0
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.15...v1.4.0)
+
+### 🚀 Enhancements
+
+- Images enum ([67ad386](https://github.com/TouchFlows/buzzcasting-utils/commit/67ad386))
+
+### 🏡 Chore
+
+- **release:** V1.3.15 ([ae857b1](https://github.com/TouchFlows/buzzcasting-utils/commit/ae857b1))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.3.15
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.3.14...v1.3.15)
