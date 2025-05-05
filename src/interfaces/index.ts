@@ -7,18 +7,25 @@ export * from "./ICloud";
 export * from "./ICloudInfluencers";
 export * from "./ICloudOptions";
 export * from "./ICountries";
+export * from "./IDashboards";
 export * from "./ID3Options";
 export * from "./IEchartsLine";
+export * from "./IImages"
 export * from "./IJsonWidget";
 export * from "./ILayout";
 export * from "./IMessages";
 export * from "./IModal";
+export * from "./IPreferences"
+export * from "./IPresentations"
 export * from "./IResponse"
 export * from "./IRotatingGlobe";
 export * from "./ISeries";
 export * from "./ISeriesOptions";
+export * from "./ISlides"
 export * from "./IStorageOptions";
 export * from "./IQuery";
+export * from "./IWidgets";
 export * from "./IWidgetSettings";
+export * from "./ShapeType"
 
 export type ApiData = ISeries & IMessages & ICloud;
