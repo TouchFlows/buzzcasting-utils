@@ -1,4 +1,20 @@
 
+## v1.5.3
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.5.2...v1.5.3)
+
+### 🩹 Fixes
+
+- IQuery interface ([5d7c8cd](https://github.com/TouchFlows/buzzcasting-utils/commit/5d7c8cd))
+
+### 🏡 Chore
+
+- **release:** V1.5.2 ([997fdc1](https://github.com/TouchFlows/buzzcasting-utils/commit/997fdc1))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.5.2
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.5.1...v1.5.2)
