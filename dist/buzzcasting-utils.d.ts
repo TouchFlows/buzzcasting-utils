@@ -798,10 +798,10 @@ export declare interface IPresentations {
  */
 export declare interface IQuery {
     [x: string]: any;
+    widget: string;
     topics?: string;
     presentation?: string;
     dashboard?: string;
-    widget?: string;
     labels?: string[];
     compare?: string;
     period?: number;
