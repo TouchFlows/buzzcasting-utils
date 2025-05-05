@@ -1,5 +1,5 @@
-import type { ICloud, IMessages, IQuery, ISeries } from ".";
-import { IDashboards, ISlides, IPresentations, IPreferences, IWidgets } from "..";
+import type { ICloud, IDashboards, IImages, IMessages, IPreferences, IPresentations, IQuery, ISeries, ISlides, IWidgets } from ".";
+
 
 /**
  * API Response
@@ -7,6 +7,7 @@ import { IDashboards, ISlides, IPresentations, IPreferences, IWidgets } from "..
 export declare interface IResponse {
   data:
     | IDashboards
+    | IImages
     | IMessages
     | ISeries
     | ICloud
