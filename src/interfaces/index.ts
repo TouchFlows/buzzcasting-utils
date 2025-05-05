@@ -2,6 +2,7 @@ import { ICloud } from "./ICloud";
 import { IMessages } from "./IMessages";
 import { ISeries } from "./ISeries";
 
+export * from "./IApiResponse"
 export * from "./ICardOptions";
 export * from "./ICloud";
 export * from "./ICloudInfluencers";

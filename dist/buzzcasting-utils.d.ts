@@ -818,7 +818,7 @@ export declare interface IQuery {
  * API Response
  */
 export declare interface IResponse {
-    data: IDashboards | IMessages | ISeries | ICloud | ISlides | IPresentations | IPreferences | IWidgets | null;
+    data: IDashboards | IImages | IMessages | ISeries | ICloud | ISlides | IPresentations | IPreferences | IWidgets | null;
     message: string;
     success: boolean;
     query?: IQuery;
