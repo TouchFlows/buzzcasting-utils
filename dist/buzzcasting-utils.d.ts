@@ -148,8 +148,11 @@ export declare enum EVENTS {
     APPROVE_MESSAGE = "approveMessage",
     CHANNEL = "channel",
     CLEAN_MESSAGES = "cleanMessages",
-    CLOSE_MODAL = "closeModal",
+    CLOSE_BUILDER_DIALOG = "closeBuilderDialog",
     CLOSE_BUILDER_MODAL = "closeBuilderModal",
+    CLOSE_MODAL = "closeModal",
+    CSS_SET = "setCss",
+    CSS_STORE = "storeCss",
     DASHBOARD_LOAD = "loadDashboard",
     DASHBOARD_STORE = "storeDashboard",
     ERROR = "error",
@@ -158,7 +161,6 @@ export declare enum EVENTS {
     MAUPPUT_UPDATE = "layoutUpdate",
     PREV_SLIDE = "prevSlide",
     RELOAD_PRESENTATION = "reloadPresentation",
-    SHOW_MODAL = "showModal",
     STAR_MESSAGE = "starMessage",
     GOTO_SLIDE = "gotoSlide",
     NEXT_SLIDE = "nextSlide",
@@ -168,7 +170,9 @@ export declare enum EVENTS {
     PRESENTATION_READY = "presentationReady",
     PRESENTATION_LOAD = "loadPresentation",
     PRESENTATION_STORE = "storePresentation",
+    SHOW_BUILDER_DIALOG = "showBuilderDialog",
     SHOW_BUILDER_MODAL = "showBuilderModal",
+    SHOW_MODAL = "showModal",
     SLIDE_DID_LOAD = "slideDidLoad",
     SLIDE_GOTO = "slideGoto",
     SLIDE_READY = "slideReady",
@@ -1084,6 +1088,7 @@ export declare interface IStorageOptions {
     bearer?: string;
     csrf?: string;
     moderation?: string;
+    nonce?: string;
     beforeTime?: string;
     delay?: number;
     period?: number;
@@ -1199,7 +1204,7 @@ export declare interface MessagesAttr {
     edit?: string;
 }
 
-export declare const minifyCss: (css: string) => void;
+export declare const minifyCss: (css: string) => string;
 
 export declare const minifyHtml: (html: string) => string;
 
