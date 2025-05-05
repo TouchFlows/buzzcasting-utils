@@ -5,8 +5,8 @@ export declare interface IQuery {
   [x: string]: any;
   topics?: string;
   presentation?: string;
-  dashboard: string;
-  widget: string;
+  dashboard?: string;
+  widget?: string;
   labels?: string[];
   compare?: string;
   period?: number;

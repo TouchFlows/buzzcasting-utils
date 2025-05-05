@@ -230,6 +230,13 @@ export declare interface IAnimation {
     parentTag?: string;
 }
 
+export declare interface IApiResponse {
+    data: IDashboard[] | IImage[] | IMessage[] | ISeries | ICloud | ISlide[] | IPresentation[] | IPreference[] | IWidget[] | null;
+    message: string;
+    success: boolean;
+    query?: IQuery;
+}
+
 export declare interface IArc {
     strokeStyle: string;
     lineWidth: number;
