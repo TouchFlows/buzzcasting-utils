@@ -1,20 +1,21 @@
 export declare function anonymize(name: string): string;
 
 export declare enum API {
-    MESSAGES = "messages",
     CLOUD = "cloud",
-    SERIES = "series",
-    TOPICS = "topics",
-    WIDGET = "widget",
-    WIDGETS = "widgets",
     DASHBOARD = "dashboard",
     DASHBOARDS = "dashboards",
-    SLIDE = "slide",
-    SLIDES = "slides",
+    IMAGES = "images",
+    MESSAGES = "messages",
+    PREFERENCE = "preference",
+    PREFERENCES = "preferences",
     PRESENTATION = "presentation",
     PRESENTATIONS = "presentations",
-    PREFERENCE = "preference",
-    PREFERENCES = "preferences"
+    SERIES = "series",
+    SLIDE = "slide",
+    SLIDES = "slides",
+    TOPICS = "topics",
+    WIDGET = "widget",
+    WIDGETS = "widgets"
 }
 
 export declare type ApiData = ISeries & IMessages & ICloud;
