@@ -1,4 +1,21 @@
 
+## v1.5.6
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.5.5...v1.5.6)
+
+### 🩹 Fixes
+
+- Added images in dexie storage ([ba254e7](https://github.com/TouchFlows/buzzcasting-utils/commit/ba254e7))
+- More event names in enum ([9b67f6e](https://github.com/TouchFlows/buzzcasting-utils/commit/9b67f6e))
+
+### 🏡 Chore
+
+- **release:** V1.5.5 ([6b6bfe1](https://github.com/TouchFlows/buzzcasting-utils/commit/6b6bfe1))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.5.5
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.5.4...v1.5.5)
