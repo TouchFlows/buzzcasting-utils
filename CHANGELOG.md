@@ -1,4 +1,20 @@
 
+## v1.6.0
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.5.6...v1.6.0)
+
+### 🚀 Enhancements
+
+- Hwa & await-element functions ([40e0af1](https://github.com/TouchFlows/buzzcasting-utils/commit/40e0af1))
+
+### 🏡 Chore
+
+- **release:** V1.5.6 ([8cad8e2](https://github.com/TouchFlows/buzzcasting-utils/commit/8cad8e2))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.5.6
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.5.5...v1.5.6)
