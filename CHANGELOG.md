@@ -1,4 +1,20 @@
 
+## v1.6.1
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.0...v1.6.1)
+
+### 🩹 Fixes
+
+- Title in formatContent may be null ([89b4959](https://github.com/TouchFlows/buzzcasting-utils/commit/89b4959))
+
+### 🏡 Chore
+
+- **release:** V1.6.0 ([61cd9f2](https://github.com/TouchFlows/buzzcasting-utils/commit/61cd9f2))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.6.0
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.5.6...v1.6.0)
