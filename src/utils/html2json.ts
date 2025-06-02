@@ -37,7 +37,7 @@ export const html2json = (html: string) => {
           let value: any = attr.value;
           //let flat: boolean = true
 
-          // has multi attibutes
+          // has multi attributes
           // make it array of attribute
           if (value.match(/ /)) {
             if (
@@ -84,15 +84,15 @@ export const html2json = (html: string) => {
     end: function (tag: any) {
       //debug(tag)
       // merge into parent tag
-			//@ts-ignore
+      //@ts-ignore
       const node = bufArray.shift();
       if (node.tag !== tag) console.error("invalid state: mismatch end tag");
 
       if (bufArray.length === 0) {
-				//@ts-ignore
+        //@ts-ignore
         results.child.push(node);
       } else {
-				//@ts-ignore
+        //@ts-ignore
         const parent = bufArray[0];
         if (parent.child === undefined) {
           parent.child = [];
@@ -100,7 +100,7 @@ export const html2json = (html: string) => {
         parent.child.push(node);
       }
     },
-		//@ts-ignore
+    //@ts-ignore
     chars: function (text) {
       //debug(text)
       let node = {
@@ -108,10 +108,10 @@ export const html2json = (html: string) => {
         text: text,
       };
       if (bufArray.length === 0) {
-				//@ts-ignore
+        //@ts-ignore
         results.child.push(node);
       } else {
-				//@ts-ignore
+        //@ts-ignore
         const parent = bufArray[0];
         if (parent.child === undefined) {
           parent.child = [];
@@ -119,14 +119,14 @@ export const html2json = (html: string) => {
         parent.child.push(node);
       }
     },
-		//@ts-ignore
+    //@ts-ignore
     comment: function (text) {
       //debug(text)
       const node = {
         node: "comment",
         text: text,
       };
-			//@ts-ignore
+      //@ts-ignore
       const parent = bufArray[0];
       if (parent.child === undefined) {
         parent.child = [];
@@ -159,7 +159,7 @@ export const json2html = (json: any) => {
   let child = "";
   if (json.child) {
     child = json.child
-		//@ts-ignore
+      //@ts-ignore
       .map(function (c) {
         return json2html(c);
       })

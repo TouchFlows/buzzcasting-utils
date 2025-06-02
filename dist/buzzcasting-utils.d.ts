@@ -33,6 +33,8 @@ export { Attr_2 as Attr }
 
 export declare function attrs(attributes: NamedNodeMap): any;
 
+export declare const awaitElement: (selector: string) => Promise<unknown>;
+
 export declare function brandLogo(channel: string, size: string): string;
 
 /**
@@ -218,6 +220,8 @@ export declare function getParameterByName(key: string): string | null;
 export declare const getQueryParam: (param: string) => any;
 
 export declare function hashSum(o: any): string | any[];
+
+export declare const hasHWA: () => boolean;
 
 export declare const html2json: (html: string) => {
     node: string;
