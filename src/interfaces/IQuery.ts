@@ -6,7 +6,8 @@ export declare interface IQuery {
   widget: string;
   topics?: string;
   presentation?: string;
-  dashboard?: string;  
+  dashboard?: string;
+  limit?: number;
   labels?: string[];
   compare?: string;
   period?: number;
@@ -32,4 +33,5 @@ export declare interface IQuery {
   hash?: string;
   name?: string;
   data?: any;
+  locale: string;
 }

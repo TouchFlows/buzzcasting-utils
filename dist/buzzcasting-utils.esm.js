@@ -134,7 +134,7 @@ function P(e) {
 }
 const de = (e) => e.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 function ue(e, t = "font-bold") {
-  return `${(e == null ? void 0 : e.title.length) > 0 ? `<div class="${t}">${e.title}</div>` : ""}${e != null && e.content ? e.content.replace(/\n\n/g, `
+  return `${(e == null ? void 0 : e.title) !== null ? `<div class="${t}">${e.title}</div>` : ""}${e != null && e.content ? e.content.replace(/\n\n/g, `
 `).replace(/\n/g, "<br/>") : ""}`;
 }
 const fe = () => [b(2), b(1), b(1), b(1), b(3)].join("-"), b = (e) => {

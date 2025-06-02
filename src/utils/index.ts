@@ -16,6 +16,7 @@ export * from "./html2json";
 export * from "./htmlparser";
 export * from "./hwa";
 export * from "./int-to-string";
+export * from "./is-empty";
 export * from "./log";
 export * from "./minify";
 export * from "./number-formatter";
