@@ -1,4 +1,20 @@
 
+## v1.6.3
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.2...v1.6.3)
+
+### 🩹 Fixes
+
+- Locale in card options ([4b41094](https://github.com/TouchFlows/buzzcasting-utils/commit/4b41094))
+
+### 🏡 Chore
+
+- **release:** V1.6.2 ([0d5845f](https://github.com/TouchFlows/buzzcasting-utils/commit/0d5845f))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.6.2
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.1...v1.6.2)
