@@ -282,25 +282,26 @@ export declare interface IBrand {
 }
 
 export declare interface ICardAttributes {
-    'layout'?: 'base' | 'globe' | 'carousel';
-    'component': string;
-    'data-type': 'messages' | 'cloud' | 'series';
-    'data-order'?: string;
-    'data-dashboard': string;
-    'data-widget': string;
-    'css-body'?: string[];
-    'css-brand'?: string[];
-    'css-card'?: string[];
-    'css-date'?: string[];
-    'css-handle'?: string[];
-    'css-name'?: string[];
-    'date-format'?: string;
-    'time-format'?: string;
-    'show-brand'?: 'true' | 'false';
-    'show-kpi'?: 'true' | 'false';
-    'show-sender'?: 'true' | 'false';
-    'animation'?: string;
-    'interval'?: string;
+    layout?: "base" | "globe" | "carousel";
+    component: string;
+    "data-type": "messages" | "cloud" | "series";
+    "data-order"?: string;
+    "data-dashboard": string;
+    "data-widget": string;
+    "data-limit"?: string;
+    "css-body"?: string[];
+    "css-brand"?: string[];
+    "css-card"?: string[];
+    "css-date"?: string[];
+    "css-handle"?: string[];
+    "css-name"?: string[];
+    "date-format"?: string;
+    "time-format"?: string;
+    "show-brand"?: "true" | "false";
+    "show-kpi"?: "true" | "false";
+    "show-sender"?: "true" | "false";
+    animation?: string;
+    interval?: string;
 }
 
 export declare interface ICardOptions {
@@ -815,6 +816,7 @@ export declare interface IQuery {
     topics?: string;
     presentation?: string;
     dashboard?: string;
+    limit?: number;
     labels?: string[];
     compare?: string;
     period?: number;
@@ -832,6 +834,7 @@ export declare interface IQuery {
     hash?: string;
     name?: string;
     data?: any;
+    locale: string;
 }
 
 /**
@@ -851,6 +854,8 @@ export declare interface IRotatingGlobe {
     sphere: ISphere;
     arc: IArc;
 }
+
+export declare const isEmpty: (obj: Object) => boolean;
 
 export declare interface ISender {
     id?: string;
@@ -1347,6 +1352,8 @@ export declare enum Type {
 export declare const typeCss: (query: IQuery | undefined) => string;
 
 export declare const uniq: (length?: number, existing?: never[]) => string;
+
+export declare const unique: (arr: any) => unknown[];
 
 export declare const upDownColor: (change: number) => "text-down text-xs" | "text-up text-xs" | "text-white text-xs";
 
