@@ -1,4 +1,20 @@
 
+## v1.6.4
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.3...v1.6.4)
+
+### 🩹 Fixes
+
+- Layout:update interface & storage options : locale ([dfd3b21](https://github.com/TouchFlows/buzzcasting-utils/commit/dfd3b21))
+
+### 🏡 Chore
+
+- **release:** V1.6.3 ([b47adbe](https://github.com/TouchFlows/buzzcasting-utils/commit/b47adbe))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.6.3
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.2...v1.6.3)
