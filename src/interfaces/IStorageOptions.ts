@@ -18,11 +18,12 @@ export declare interface IStorageOptions {
   bearer?: string;
   csrf?: string;
   moderation?: string;
-  nonce?: string
+  nonce?: string;
   beforeTime?: string;
   delay?: number;
   period?: number;
   retention?: number;
   suspended?: boolean;
   loglevel?: number;
+  locale: string;
 }

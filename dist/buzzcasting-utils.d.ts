@@ -238,7 +238,7 @@ export declare interface IAnimation {
     items?: number;
     interval: number;
     animation: number;
-    speed?: '' | 'slow' | 'slower' | 'fast' | 'faster';
+    speed?: "" | "slow" | "slower" | "fast" | "faster";
     delay?: number;
     parentTag?: string;
 }
@@ -627,6 +627,7 @@ export declare interface IDashboards {
 export declare interface IDateFormat {
     time?: string;
     date?: string;
+    locale?: string;
 }
 
 export declare interface IDynamics {
