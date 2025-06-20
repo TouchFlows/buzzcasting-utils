@@ -26,7 +26,7 @@ export declare interface AreaStyle {
 export declare function attachedMedia(message: IMessage): IAttachedMedia_2;
 
 declare interface Attr_2 {
-    ['x:string']: string | string[];
+    ["x:string"]: string | string[];
     class: string | string[];
 }
 export { Attr_2 as Attr }
@@ -974,29 +974,29 @@ export declare interface IShow {
 }
 
 export declare interface ISlide {
-    'id': string;
-    'label': string;
-    'cols': number;
-    'rows': number;
-    'width': string;
-    'height': string;
-    'backgrounds': string[];
-    'zones': string[];
-    'interval': string;
-    'animation': string;
-    'animation-speed': string;
+    id: string;
+    label: string;
+    cols: number;
+    rows: number;
+    width: string;
+    height: string;
+    backgrounds: string[];
+    zones: string[];
+    interval: string;
+    animation: string;
+    "animation-speed": string;
 }
 
 export declare interface ISlideCloud {
-    'data-type'?: string;
-    'component'?: string;
-    'data-dashboard'?: string;
-    'data-widget': string;
-    'css-count'?: string[];
-    'css-host'?: string;
-    'kpi-name'?: string;
-    'config-abbreviate'?: string;
-    'class'?: string | string[];
+    "data-type"?: string;
+    component?: string;
+    "data-dashboard"?: string;
+    "data-widget": string;
+    "css-count"?: string[];
+    "css-host"?: string;
+    "kpi-name"?: string;
+    "config-abbreviate"?: string;
+    class?: string | string[];
 }
 
 export declare interface ISlideComponent {
@@ -1017,27 +1017,27 @@ export declare interface ISlideContent {
 }
 
 export declare interface ISlideMessages {
-    'layout'?: string;
-    'component'?: string;
-    'data-type'?: string;
-    'data-dashboard'?: string;
-    'data-widget'?: string;
-    'show-kpi'?: string;
-    'show-sender'?: string;
-    'css-date'?: string[];
-    'css-card'?: string[];
-    'css-body'?: string[];
-    'css-brand'?: string[];
-    'css-handle'?: string[];
-    'css-name'?: string[];
-    'date-format'?: string;
-    'animation'?: string;
-    'interval'?: string;
-    'show-brand'?: string;
-    'data-order'?: string;
-    'index'?: string;
-    'class'?: string | string[];
-    'edit'?: string;
+    layout?: string;
+    component?: string;
+    "data-type"?: string;
+    "data-dashboard"?: string;
+    "data-widget"?: string;
+    "show-kpi"?: string;
+    "show-sender"?: string;
+    "css-date"?: string[];
+    "css-card"?: string[];
+    "css-body"?: string[];
+    "css-brand"?: string[];
+    "css-handle"?: string[];
+    "css-name"?: string[];
+    "date-format"?: string;
+    animation?: string;
+    interval?: string;
+    "show-brand"?: string;
+    "data-order"?: string;
+    index?: string;
+    class?: string | string[];
+    edit?: string;
 }
 
 export declare interface ISlides {
@@ -1046,28 +1046,28 @@ export declare interface ISlides {
 }
 
 export declare interface ISlideSection {
-    'area': string;
-    'grid-area': string;
-    'widgets': string[];
+    area: string;
+    "grid-area": string;
+    widgets: string[];
 }
 
 export declare interface ISlideSections {
-    ['x:string']: ISlideSection;
+    ["x:string"]: ISlideSection;
 }
 
 export declare interface ISlideSeries {
-    'data-type'?: string;
-    'data-widget': string;
-    'component'?: string;
-    'data-dashboard'?: string;
-    'css-arrow-down'?: string | string[];
-    'css-body'?: string | string[];
-    'css-brand'?: string | string[];
-    'css-change'?: string | string[];
-    'css-count'?: string | string[];
-    'css-down'?: string | string[];
-    'css-up'?: string | string[];
-    'class'?: string | string[];
+    "data-type"?: string;
+    "data-widget": string;
+    component?: string;
+    "data-dashboard"?: string;
+    "css-arrow-down"?: string | string[];
+    "css-body"?: string | string[];
+    "css-brand"?: string | string[];
+    "css-change"?: string | string[];
+    "css-count"?: string | string[];
+    "css-down"?: string | string[];
+    "css-up"?: string | string[];
+    class?: string | string[];
 }
 
 export declare interface ISlideSettings {
@@ -1085,23 +1085,23 @@ export declare interface ISlideWidget {
 }
 
 export declare interface ISlideWidgets {
-    ['x:string']: string;
+    ["x:string"]: string;
 }
 
 export declare interface ISlideZone {
-    'label': string;
-    'area': string;
-    'grid-area': string;
-    'grid-rows': string;
-    'grid-cols': string;
-    'gap-x': string;
-    'gap-y': string;
-    'padding': string;
-    'sections': string[];
+    label: string;
+    area: string;
+    "grid-area": string;
+    "grid-rows": string;
+    "grid-cols": string;
+    "gap-x": string;
+    "gap-y": string;
+    padding: string;
+    sections: string[];
 }
 
 export declare interface ISlideZones {
-    ['x:string']: ISlideZone[];
+    ["x:string"]: ISlideZone[];
 }
 
 export declare interface ISphere {
@@ -1137,6 +1137,7 @@ export declare interface IStorageOptions {
     retention?: number;
     suspended?: boolean;
     loglevel?: number;
+    locale: string;
 }
 
 export declare interface ITopic {

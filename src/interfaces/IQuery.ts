@@ -33,5 +33,5 @@ export declare interface IQuery {
   hash?: string;
   name?: string;
   data?: any;
-  locale: string;
+  locale?: string;
 }
