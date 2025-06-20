@@ -1,4 +1,20 @@
 
+## v1.6.5
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.4...v1.6.5)
+
+### 🩹 Fixes
+
+- Locale param optional in IQuery ([cba6fae](https://github.com/TouchFlows/buzzcasting-utils/commit/cba6fae))
+
+### 🏡 Chore
+
+- **release:** V1.6.4 ([793dd92](https://github.com/TouchFlows/buzzcasting-utils/commit/793dd92))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.6.4
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.3...v1.6.4)
