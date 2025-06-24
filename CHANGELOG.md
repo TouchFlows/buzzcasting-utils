@@ -1,4 +1,20 @@
 
+## v1.6.6
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.5...v1.6.6)
+
+### 🩹 Fixes
+
+- Dynamics linkedin kpi interface ([7358753](https://github.com/TouchFlows/buzzcasting-utils/commit/7358753))
+
+### 🏡 Chore
+
+- **release:** V1.6.5 ([7e6bca0](https://github.com/TouchFlows/buzzcasting-utils/commit/7e6bca0))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.6.5
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.4...v1.6.5)
