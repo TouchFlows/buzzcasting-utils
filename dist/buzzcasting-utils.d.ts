@@ -630,8 +630,11 @@ export declare interface IDateFormat {
     locale?: string;
 }
 
-export declare interface IDynamics {
+declare interface IDynamics {
     engagement?: number;
+    video_views?: number;
+    sentiment?: 0;
+    reach?: number;
     semrush_visits?: number;
     potential_reach?: number;
     facebook_engagement?: number;
@@ -640,6 +643,10 @@ export declare interface IDynamics {
     facebook_insights_link_clicks?: number;
     facebook_reactions?: number;
     facebook_shares?: number;
+    linkedin_impressions?: number;
+    linkedin_likes?: number;
+    linkedin_shares?: number;
+    linkedin_clicks?: number;
     instagram_followers?: number;
     instagram_likes?: number;
     retweets?: number;

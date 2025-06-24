@@ -2,7 +2,7 @@ import { ICloud } from "./ICloud";
 import { IMessages } from "./IMessages";
 import { ISeries } from "./ISeries";
 
-export * from "./IApiResponse"
+export * from "./IApiResponse";
 export * from "./ICardOptions";
 export * from "./ICloud";
 export * from "./ICloudInfluencers";
@@ -10,23 +10,24 @@ export * from "./ICloudOptions";
 export * from "./ICountries";
 export * from "./IDashboards";
 export * from "./ID3Options";
+export * from "./IDynamics";
 export * from "./IEchartsLine";
-export * from "./IImages"
+export * from "./IImages";
 export * from "./IJsonWidget";
 export * from "./ILayout";
 export * from "./IMessages";
 export * from "./IModal";
-export * from "./IPreferences"
-export * from "./IPresentations"
-export * from "./IResponse"
+export * from "./IPreferences";
+export * from "./IPresentations";
+export * from "./IResponse";
 export * from "./IRotatingGlobe";
 export * from "./ISeries";
 export * from "./ISeriesOptions";
-export * from "./ISlides"
+export * from "./ISlides";
 export * from "./IStorageOptions";
 export * from "./IQuery";
 export * from "./IWidgets";
 export * from "./IWidgetSettings";
-export * from "./ShapeType"
+export * from "./ShapeType";
 
 export type ApiData = ISeries & IMessages & ICloud;
