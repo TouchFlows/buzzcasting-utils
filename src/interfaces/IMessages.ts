@@ -1,3 +1,5 @@
+import { IDynamics } from "./IDynamics";
+
 /**
  * Messages
  */
@@ -66,33 +68,6 @@ export declare interface ITopic {
   utc?: number;
   expires?: number;
   visible?: number;
-}
-
-
-
-export declare interface IDynamics {
-  engagement?: number;
-  semrush_visits?: number;
-  potential_reach?: number;
-  facebook_engagement?: number;
-  facebook_insights_reach?: number;
-  facebook_insights_impressions?: number;
-  facebook_insights_link_clicks?: number;
-  facebook_reactions?: number;
-  facebook_shares?: number;
-  instagram_followers?: number;
-  instagram_likes?: number;
-  retweets?: number;
-  twitter_shares?: number;
-  twitter_bookmarks?: number;
-  twitter_followers?: number;
-  twitter_impressions?: number;
-  twitter_insights_retweets?: number;
-  twitter_likes?: number;
-  twitter_replies?: number;
-  twitter_video_views?: number;
-  total_comments?: number;
-  trending_score?: number;
 }
 
 export declare interface IGeo {
