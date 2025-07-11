@@ -4,6 +4,7 @@ export const intToString = (
   abbreviate: boolean = true,
   locale: string = "en"
 ): string => {
+  if (num === undefined) return "";
   num =
     typeof num === "string" || num instanceof String
       ? parseFloat(num.replace(/[^0-9.]/g, ""))
@@ -14,7 +15,8 @@ export const intToString = (
   }
 
   if (num < 1000) {
-    return (num = num.toString().replace(/[^0-9.]/g, ""));
+    // MTM: remove .toString())
+    return (num = ("" + num).replace(/[^0-9.]/g, ""));
   }
 
   num = num.toString().replace(/[^0-9.]/g, "");

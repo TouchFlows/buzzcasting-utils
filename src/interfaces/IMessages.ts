@@ -18,6 +18,7 @@ export declare interface IMessage {
   published: string;
   harvested: string;
   utc: number;
+  timestamp?: number;
   expires: number;
   channel: string;
   type: string;

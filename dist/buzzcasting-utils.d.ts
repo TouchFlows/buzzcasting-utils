@@ -630,7 +630,7 @@ export declare interface IDateFormat {
     locale?: string;
 }
 
-declare interface IDynamics {
+export declare interface IDynamics {
     engagement?: number;
     video_views?: number;
     sentiment?: 0;

@@ -23,7 +23,7 @@ function q(e) {
   const t = {};
   for (let r = 0; r < e.length; r++) {
     const n = e.item(r);
-    n != null && n.name && (t[n.name] = n.value);
+    n?.name && (t[n.name] = n.value);
   }
   return t;
 }
@@ -134,7 +134,7 @@ function P(e) {
 }
 const de = (e) => [...new Set(e)], ue = (e) => e.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 function fe(e, t = "font-bold") {
-  return `${(e == null ? void 0 : e.title) !== null ? `<div class="${t}">${e.title}</div>` : ""}${e != null && e.content ? e.content.replace(/\n\n/g, `
+  return `${e?.title !== null ? `<div class="${t}">${e.title}</div>` : ""}${e?.content ? e.content.replace(/\n\n/g, `
 `).replace(/\n/g, "<br/>") : ""}`;
 }
 const pe = () => [b(2), b(1), b(1), b(1), b(3)].join("-"), b = (e) => {
@@ -156,14 +156,14 @@ function f(e, t) {
     n = t.charCodeAt(r), e = (e << 5) - e + n, e |= 0;
   return e < 0 ? e * -2 : e;
 }
-function S(e, t, r) {
+function y(e, t, r) {
   return Object.keys(t).sort().reduce(n, e);
   function n(o, a) {
     return L(o, t[a], a, r);
   }
 }
 function L(e, t, r, n) {
-  const o = f(f(f(e, r), y(t)), typeof t);
+  const o = f(f(f(e, r), S(t)), typeof t);
   if (t === null)
     return f(o, "null");
   if (t === void 0)
@@ -172,7 +172,7 @@ function L(e, t, r, n) {
     if (n.includes(t))
       return f(o, `[Circular]${r}`);
     n.push(t);
-    const a = S(o, t, n);
+    const a = y(o, t, n);
     if (!("valueOf" in t) || typeof t.valueOf != "function")
       return a;
     try {
@@ -183,7 +183,7 @@ function L(e, t, r, n) {
   }
   return f(o, t.toString());
 }
-function y(e) {
+function S(e) {
   return Object.prototype.toString.call(e);
 }
 function ge(e) {
@@ -480,14 +480,13 @@ function ke(e) {
       return {};
   }
 }
-function Se(e) {
+function ye(e) {
   const t = window.BuzzCasting.getOptions().suspended ?? !1;
   return e.forEach((r) => {
-    var n;
-    if (t ? r.content = "License suspended, please contact your Sales Representative to restore service" : r.content = ((n = r.content) == null ? void 0 : n.replace(
+    if (t ? r.content = "License suspended, please contact your Sales Representative to restore service" : r.content = r.content?.replace(
       /(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)((\?.*)?)/g,
       ""
-    )) || "", r.sender !== null)
+    ) || "", r.sender !== null)
       switch (!0) {
         case r.sender.title === "Unknown author":
           r.sender.title = "", r.sender.name = "";
@@ -516,12 +515,12 @@ function Se(e) {
         influence: 0
       };
     if (r.sender.title === "" && r.link !== "") {
-      const o = new URL(r.link);
-      r.sender.title = o.hostname.replace("www.", "");
+      const n = new URL(r.link);
+      r.sender.title = n.hostname.replace("www.", "");
     }
   }), e;
 }
-function ye(e, t, r, n) {
+function Se(e, t, r, n) {
   e.stopPropagation(), t.showModal({
     showComponent: "card-modal",
     props: { data: r, options: n }
@@ -542,7 +541,7 @@ function $e() {
   return e;
 }
 const Ce = (e) => {
-  switch (e == null ? void 0 : e.type) {
+  switch (e?.type) {
     case h.MESSAGES:
       return m.MESSAGES;
     case h.SERIES:
@@ -574,19 +573,17 @@ function Te(e) {
   return e.order && (t += `.${e.order}`), e.period && (t += `.${e.period}`), t;
 }
 function He(e) {
-  var t;
   if (e.widget === void 0) {
-    const r = (t = e.topics) == null ? void 0 : t.split("-");
-    r && r.length > 1 ? (e.dashboard = r ? r[0] : "", e.widget = r ? r[1] : "") : (e.widget = e.topics, e.dashboard = e.slide);
+    const t = e.topics?.split("-");
+    t && t.length > 1 ? (e.dashboard = t ? t[0] : "", e.widget = t ? t[1] : "") : (e.widget = e.topics, e.dashboard = e.slide);
   }
   return e;
 }
 function We(e, t) {
-  var i;
   let r, n, o, a, l;
   switch (e.moderation) {
     case x.BEFORE:
-      r = /* @__PURE__ */ new Date(), n = (i = e.beforeTime) == null ? void 0 : i.split(":"), o = Number.parseInt(n ? n[0] : "00"), a = Number.parseInt(n ? n[1] : "00"), l = Number.parseInt(n ? n[2] : "00"), t.before = r.setHours(o, a, l, 0) / 1e3, t.period || (t.period = r.getDay() === 1 ? 72 : 24);
+      r = /* @__PURE__ */ new Date(), n = e.beforeTime?.split(":"), o = Number.parseInt(n ? n[0] : "00"), a = Number.parseInt(n ? n[1] : "00"), l = Number.parseInt(n ? n[2] : "00"), t.before = r.setHours(o, a, l, 0) / 1e3, t.period || (t.period = r.getDay() === 1 ? 72 : 24);
       break;
     case x.DELAYED:
       e.delay && e.delay > 0 && (t.delay = `${e.delay}`);
@@ -649,8 +646,8 @@ export {
   ie as randomRGBAfull,
   Pe as randomValue,
   ke as rtl,
-  Se as sanitize,
-  ye as showModal,
+  ye as sanitize,
+  Se as showModal,
   Me as shuffleMessages,
   $e as stringGen,
   Ce as typeCss,
