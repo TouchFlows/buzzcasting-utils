@@ -1,4 +1,20 @@
 
+## v1.6.9
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.8...v1.6.9)
+
+### 🩹 Fixes
+
+- IQuery widget obligatory ([8637f13](https://github.com/TouchFlows/buzzcasting-utils/commit/8637f13))
+
+### 🏡 Chore
+
+- **release:** V1.6.8 ([e9dc048](https://github.com/TouchFlows/buzzcasting-utils/commit/e9dc048))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.6.8
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.7...v1.6.8)
