@@ -145,6 +145,7 @@ export declare enum EVENTS {
     ADD_SLIDE = "addSlide",
     APP_READY = "appReady",
     API_UPDATE = "apiUpdate",
+    BACKGROUND_UPDATE = "backgroundUpdate",
     WS_API_REQUEST = "wsApiRequest",
     WS_API_RESPONSE = "wsApiResponse",
     WS_API_UPDATE = "wsApiRUpdate",
@@ -154,6 +155,8 @@ export declare enum EVENTS {
     CLOSE_BUILDER_DIALOG = "closeBuilderDialog",
     CLOSE_BUILDER_MODAL = "closeBuilderModal",
     CLOSE_MODAL = "closeModal",
+    COLOR_UPDATE = "colorUpdate",
+    COMPONENT_INDEX = "componentIndex",
     CSS_SET = "setCss",
     CSS_STORE = "storeCss",
     DASHBOARD_LOAD = "loadDashboard",
@@ -202,6 +205,7 @@ export declare enum EVENTS {
     UPLOAD_COMPLETED = "uploadCompleted",
     VERSION = "version",
     WIDGETS_CLEAR = "widgetsClear",
+    WIDGET_DID_UPDATE = "widgetDidUpdate",
     WIDGET_LOAD = "widgetLoad",
     WIDGET_STORE = "widgetStore",
     WIDGET_UPDATE = "widgetUpdate"
@@ -740,6 +744,7 @@ export declare interface IMessage {
     published: string;
     harvested: string;
     utc: number;
+    timestamp?: number;
     expires: number;
     channel: string;
     type: string;
@@ -820,7 +825,7 @@ export declare interface IPresentations {
  */
 export declare interface IQuery {
     [x: string]: any;
-    widget: string;
+    widget?: string;
     topics?: string;
     presentation?: string;
     dashboard?: string;
