@@ -1,4 +1,24 @@
 
+## v1.7.0
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.9...v1.7.0)
+
+### 🚀 Enhancements
+
+- Interface simprovements ([9e7fa5e](https://github.com/TouchFlows/buzzcasting-utils/commit/9e7fa5e))
+
+### 🩹 Fixes
+
+- ILayoutSlide / ApiResponse ([4030e09](https://github.com/TouchFlows/buzzcasting-utils/commit/4030e09))
+
+### 🏡 Chore
+
+- **release:** V1.6.9 ([6b51d8f](https://github.com/TouchFlows/buzzcasting-utils/commit/6b51d8f))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.6.9
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.8...v1.6.9)
