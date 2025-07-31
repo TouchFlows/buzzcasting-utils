@@ -19,7 +19,8 @@ export declare interface IQuery {
     | "proxy"
     | "slide"
     | "dashboard"
-    | "widget";
+    | "widget"
+    | "presentations";
   order?: "utc" | "reach" | "engagement" | "impressions";
   media?: number;
   dynamics?: number;

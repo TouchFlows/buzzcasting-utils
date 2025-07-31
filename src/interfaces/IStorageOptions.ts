@@ -3,27 +3,28 @@
  */
 export declare interface IStorageOptions {
   app: string;
+  bearer?: string;
+  beforeTime?: string;
   builder?: boolean;
-  domain?: string;
   cdn?: string;
   channel?: string;
+  csrf?: string;
+  delay?: number;
+  display?: string;
+  domain?: string;
+  html?: string;
+  locale: string;
+  loglevel?: number;
+  moderation?: string;
+  monitor?: string;
+  nonce?: string;
+  period?: number;
   presentation: string;
+  retention?: number;
   slide?: string;
   slides?: string[];
-  display?: string;
-  monitor?: string;
-  version: string;
   storage: string;
-  token?: string;
-  bearer?: string;
-  csrf?: string;
-  moderation?: string;
-  nonce?: string;
-  beforeTime?: string;
-  delay?: number;
-  period?: number;
-  retention?: number;
   suspended?: boolean;
-  loglevel?: number;
-  locale: string;
+  token?: string;
+  version: string;
 }

@@ -69,6 +69,7 @@ export declare interface ITopic {
   utc?: number;
   expires?: number;
   visible?: number;
+  approved?: number;
 }
 
 export declare interface IGeo {

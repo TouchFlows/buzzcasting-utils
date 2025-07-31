@@ -1,21 +1,21 @@
 export interface ILayout {
-  sections: Object | ISlideSections;
-  slide: ISlide;
-  widgets: Object | ISlideWidgets;
-  zones: Object | ISlideZones;
+  sections: Object | ILayoutSections;
+  slide: ILayoutSlide;
+  widgets: Object | ILayoutWidgets;
+  zones: Object | ILayoutZones;
 }
 
-export interface ISlideSections {
-  ["x:string"]: ISlideSection;
+export interface ILayoutSections {
+  ["x:string"]: ILayoutSection;
 }
 
-export interface ISlideSection {
+export interface ILayoutSection {
   area: string;
   "grid-area": string;
   widgets: string[];
 }
 
-export interface ISlide {
+export interface ILayoutSlide {
   id: string;
   label: string;
   cols: number;
@@ -29,36 +29,36 @@ export interface ISlide {
   "animation-speed": string;
 }
 
-export interface ISlideWidgets {
+export interface ILayoutWidgets {
   ["x:string"]: string;
 }
 
-export interface ISlideWidget {
+export interface ILayoutWidget {
   node: string;
-  child: SlideChild[];
-  settings: ISlideSettings;
+  child: IWidgetChild[];
+  settings: ILayoutSettings;
   template: string;
   label: string;
   tag: string;
 }
 
-export interface SlideChild {
+export interface IWidgetChild {
   node: string;
   tag: string;
-  attr: Attr;
+  attr: IWidgetChildAttr;
 }
 
-export interface Attr {
+export interface IWidgetChildAttr {
   ["x:string"]: string | string[];
   class: string | string[];
 }
 
-export interface ISlideSettings {
-  contents: ISlideContent[];
-  component: ISlideComponent;
+export interface ILayoutSettings {
+  contents: ILayoutContent[];
+  component: ILayoutComponent;
 }
 
-export interface ISlideContent {
+export interface ILayoutContent {
   editable: boolean;
   path: string;
   query: string;
@@ -67,15 +67,15 @@ export interface ISlideContent {
   attr: Attr;
 }
 
-export interface ISlideComponent {
+export interface ILayoutComponent {
   path: string;
   query: string;
   node: string;
   tag: string;
-  attr: ISlideMessages | ISlideSeries | ISlideCloud;
+  attr: ILayoutMessages | ILayoutSeries | ILayoutCloud;
 }
 
-export interface ISlideMessages {
+export interface ILayoutMessages {
   layout?: string;
   component?: string;
   "data-type"?: string;
@@ -99,7 +99,7 @@ export interface ISlideMessages {
   edit?: string;
 }
 
-export interface ISlideSeries {
+export interface ILayoutSeries {
   "data-type"?: string;
   "data-widget": string;
   component?: string;
@@ -114,7 +114,7 @@ export interface ISlideSeries {
   class?: string | string[];
 }
 
-export interface ISlideCloud {
+export interface ILayoutCloud {
   "data-type"?: string;
   component?: string;
   "data-dashboard"?: string;
@@ -126,11 +126,11 @@ export interface ISlideCloud {
   class?: string | string[];
 }
 
-export interface ISlideZones {
-  ["x:string"]: ISlideZone[];
+export interface ILayoutZones {
+  ["x:string"]: ILayoutZone[];
 }
 
-export interface ISlideZone {
+export interface ILayoutZone {
   label: string;
   area: string;
   "grid-area": string;

@@ -5,6 +5,7 @@ export interface ICardOptions {
   d3?: ID3;
   dateformat?: IDateFormat;
   show?: IShow;
+  debug?: boolean;
 }
 
 export interface IAnimation {
