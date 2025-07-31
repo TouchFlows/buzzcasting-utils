@@ -1,7 +1,7 @@
 import { ICloud } from "./ICloud";
 import { IDashboard } from "./IDashboards";
 import { IImage } from "./IImages";
-import { ISlide } from "./ILayout";
+import { ILayoutSlide } from "./ILayout";
 import { IMessage } from "./IMessages";
 import { IPreference } from "./IPreferences";
 import { IPresentation } from "./IPresentations";
@@ -16,7 +16,7 @@ export declare interface IApiResponse {
     | IMessage[]
     | ISeries
     | ICloud
-    | ISlide[]
+    | ILayoutSlide[]
     | IPresentation[]
     | IPreference[]
     | IWidget[]

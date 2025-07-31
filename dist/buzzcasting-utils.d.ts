@@ -25,12 +25,6 @@ export declare interface AreaStyle {
 
 export declare function attachedMedia(message: IMessage): IAttachedMedia_2;
 
-declare interface Attr_2 {
-    ["x:string"]: string | string[];
-    class: string | string[];
-}
-export { Attr_2 as Attr }
-
 export declare function attrs(attributes: NamedNodeMap): any;
 
 export declare const awaitElement: (selector: string) => Promise<unknown>;
@@ -248,7 +242,7 @@ export declare interface IAnimation {
 }
 
 export declare interface IApiResponse {
-    data: IDashboard[] | IImage[] | IMessage[] | ISeries | ICloud | ISlide[] | IPresentation[] | IPreference[] | IWidget[] | null;
+    data: IDashboard[] | IImage[] | IMessage[] | ISeries | ICloud | ILayoutSlide[] | IPresentation[] | IPreference[] | IWidget[] | null;
     message: string;
     success: boolean;
     query?: IQuery;
@@ -315,6 +309,7 @@ export declare interface ICardOptions {
     d3?: ID3;
     dateformat?: IDateFormat;
     show?: IShow;
+    debug?: boolean;
 }
 
 export declare interface ICategory {
@@ -726,10 +721,136 @@ export declare interface ILand {
 }
 
 export declare interface ILayout {
-    sections: Object | ISlideSections;
-    slide: ISlide;
-    widgets: Object | ISlideWidgets;
-    zones: Object | ISlideZones;
+    sections: Object | ILayoutSections;
+    slide: ILayoutSlide;
+    widgets: Object | ILayoutWidgets;
+    zones: Object | ILayoutZones;
+}
+
+export declare interface ILayoutCloud {
+    "data-type"?: string;
+    component?: string;
+    "data-dashboard"?: string;
+    "data-widget": string;
+    "css-count"?: string[];
+    "css-host"?: string;
+    "kpi-name"?: string;
+    "config-abbreviate"?: string;
+    class?: string | string[];
+}
+
+export declare interface ILayoutComponent {
+    path: string;
+    query: string;
+    node: string;
+    tag: string;
+    attr: ILayoutMessages | ILayoutSeries | ILayoutCloud;
+}
+
+export declare interface ILayoutContent {
+    editable: boolean;
+    path: string;
+    query: string;
+    node: string;
+    tag: string;
+    attr: Attr;
+}
+
+export declare interface ILayoutMessages {
+    layout?: string;
+    component?: string;
+    "data-type"?: string;
+    "data-dashboard"?: string;
+    "data-widget"?: string;
+    "show-kpi"?: string;
+    "show-sender"?: string;
+    "css-date"?: string[];
+    "css-card"?: string[];
+    "css-body"?: string[];
+    "css-brand"?: string[];
+    "css-handle"?: string[];
+    "css-name"?: string[];
+    "date-format"?: string;
+    animation?: string;
+    interval?: string;
+    "show-brand"?: string;
+    "data-order"?: string;
+    index?: string;
+    class?: string | string[];
+    edit?: string;
+}
+
+export declare interface ILayoutSection {
+    area: string;
+    "grid-area": string;
+    widgets: string[];
+}
+
+export declare interface ILayoutSections {
+    ["x:string"]: ILayoutSection;
+}
+
+export declare interface ILayoutSeries {
+    "data-type"?: string;
+    "data-widget": string;
+    component?: string;
+    "data-dashboard"?: string;
+    "css-arrow-down"?: string | string[];
+    "css-body"?: string | string[];
+    "css-brand"?: string | string[];
+    "css-change"?: string | string[];
+    "css-count"?: string | string[];
+    "css-down"?: string | string[];
+    "css-up"?: string | string[];
+    class?: string | string[];
+}
+
+export declare interface ILayoutSettings {
+    contents: ILayoutContent[];
+    component: ILayoutComponent;
+}
+
+export declare interface ILayoutSlide {
+    id: string;
+    label: string;
+    cols: number;
+    rows: number;
+    width: string;
+    height: string;
+    backgrounds: string[];
+    zones: string[];
+    interval: string;
+    animation: string;
+    "animation-speed": string;
+}
+
+export declare interface ILayoutWidget {
+    node: string;
+    child: IWidgetChild[];
+    settings: ILayoutSettings;
+    template: string;
+    label: string;
+    tag: string;
+}
+
+export declare interface ILayoutWidgets {
+    ["x:string"]: string;
+}
+
+export declare interface ILayoutZone {
+    label: string;
+    area: string;
+    "grid-area": string;
+    "grid-rows": string;
+    "grid-cols": string;
+    "gap-x": string;
+    "gap-y": string;
+    padding: string;
+    sections: string[];
+}
+
+export declare interface ILayoutZones {
+    ["x:string"]: ILayoutZone[];
 }
 
 export declare interface IMedium {
@@ -799,6 +920,7 @@ export declare interface IPreference {
     id: string;
     value?: string;
     update?: number;
+    type?: string;
 }
 
 export declare interface IPreferences {
@@ -833,7 +955,7 @@ export declare interface IQuery {
     labels?: string[];
     compare?: string;
     period?: number;
-    type?: "cloud" | "messages" | "series" | "preference" | "proxy" | "slide" | "dashboard" | "widget";
+    type?: "cloud" | "messages" | "series" | "preference" | "proxy" | "slide" | "dashboard" | "widget" | "presentations";
     order?: "utc" | "reach" | "engagement" | "impressions";
     media?: number;
     dynamics?: number;
@@ -985,135 +1107,9 @@ export declare interface IShow {
     visible?: boolean;
 }
 
-export declare interface ISlide {
-    id: string;
-    label: string;
-    cols: number;
-    rows: number;
-    width: string;
-    height: string;
-    backgrounds: string[];
-    zones: string[];
-    interval: string;
-    animation: string;
-    "animation-speed": string;
-}
-
-export declare interface ISlideCloud {
-    "data-type"?: string;
-    component?: string;
-    "data-dashboard"?: string;
-    "data-widget": string;
-    "css-count"?: string[];
-    "css-host"?: string;
-    "kpi-name"?: string;
-    "config-abbreviate"?: string;
-    class?: string | string[];
-}
-
-export declare interface ISlideComponent {
-    path: string;
-    query: string;
-    node: string;
-    tag: string;
-    attr: ISlideMessages | ISlideSeries | ISlideCloud;
-}
-
-export declare interface ISlideContent {
-    editable: boolean;
-    path: string;
-    query: string;
-    node: string;
-    tag: string;
-    attr: Attr_2;
-}
-
-export declare interface ISlideMessages {
-    layout?: string;
-    component?: string;
-    "data-type"?: string;
-    "data-dashboard"?: string;
-    "data-widget"?: string;
-    "show-kpi"?: string;
-    "show-sender"?: string;
-    "css-date"?: string[];
-    "css-card"?: string[];
-    "css-body"?: string[];
-    "css-brand"?: string[];
-    "css-handle"?: string[];
-    "css-name"?: string[];
-    "date-format"?: string;
-    animation?: string;
-    interval?: string;
-    "show-brand"?: string;
-    "data-order"?: string;
-    index?: string;
-    class?: string | string[];
-    edit?: string;
-}
-
 export declare interface ISlides {
     presentation: string;
     slides: any;
-}
-
-export declare interface ISlideSection {
-    area: string;
-    "grid-area": string;
-    widgets: string[];
-}
-
-export declare interface ISlideSections {
-    ["x:string"]: ISlideSection;
-}
-
-export declare interface ISlideSeries {
-    "data-type"?: string;
-    "data-widget": string;
-    component?: string;
-    "data-dashboard"?: string;
-    "css-arrow-down"?: string | string[];
-    "css-body"?: string | string[];
-    "css-brand"?: string | string[];
-    "css-change"?: string | string[];
-    "css-count"?: string | string[];
-    "css-down"?: string | string[];
-    "css-up"?: string | string[];
-    class?: string | string[];
-}
-
-export declare interface ISlideSettings {
-    contents: ISlideContent[];
-    component: ISlideComponent;
-}
-
-export declare interface ISlideWidget {
-    node: string;
-    child: SlideChild[];
-    settings: ISlideSettings;
-    template: string;
-    label: string;
-    tag: string;
-}
-
-export declare interface ISlideWidgets {
-    ["x:string"]: string;
-}
-
-export declare interface ISlideZone {
-    label: string;
-    area: string;
-    "grid-area": string;
-    "grid-rows": string;
-    "grid-cols": string;
-    "gap-x": string;
-    "gap-y": string;
-    padding: string;
-    sections: string[];
-}
-
-export declare interface ISlideZones {
-    ["x:string"]: ISlideZone[];
 }
 
 export declare interface ISphere {
@@ -1127,29 +1123,30 @@ export declare interface ISphere {
  */
 export declare interface IStorageOptions {
     app: string;
+    bearer?: string;
+    beforeTime?: string;
     builder?: boolean;
-    domain?: string;
     cdn?: string;
     channel?: string;
+    csrf?: string;
+    delay?: number;
+    display?: string;
+    domain?: string;
+    html?: string;
+    locale: string;
+    loglevel?: number;
+    moderation?: string;
+    monitor?: string;
+    nonce?: string;
+    period?: number;
     presentation: string;
+    retention?: number;
     slide?: string;
     slides?: string[];
-    display?: string;
-    monitor?: string;
-    version: string;
     storage: string;
-    token?: string;
-    bearer?: string;
-    csrf?: string;
-    moderation?: string;
-    nonce?: string;
-    beforeTime?: string;
-    delay?: number;
-    period?: number;
-    retention?: number;
     suspended?: boolean;
-    loglevel?: number;
-    locale: string;
+    token?: string;
+    version: string;
 }
 
 export declare interface ITopic {
@@ -1165,6 +1162,7 @@ export declare interface ITopic {
     utc?: number;
     expires?: number;
     visible?: number;
+    approved?: number;
 }
 
 export declare interface IWidget {
@@ -1175,6 +1173,17 @@ export declare interface IWidget {
     custom_filters?: any;
     creation_date?: string;
     period?: string;
+}
+
+export declare interface IWidgetChild {
+    node: string;
+    tag: string;
+    attr: IWidgetChildAttr;
+}
+
+export declare interface IWidgetChildAttr {
+    ["x:string"]: string | string[];
+    class: string | string[];
 }
 
 export declare interface IWidgetComponent {
@@ -1332,12 +1341,6 @@ export declare enum ShapeType {
 export declare function showModal(e: MouseEvent, widget: any, message: IMessage, options: any): void;
 
 export declare function shuffleMessages(messages: IMessage[]): IMessage[];
-
-export declare interface SlideChild {
-    node: string;
-    tag: string;
-    attr: Attr_2;
-}
 
 export declare enum STORAGE {
     KEYVAL = "keyval",
