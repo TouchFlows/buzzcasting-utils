@@ -55,6 +55,7 @@ export interface IShow {
   sender?: boolean;
   star?: boolean;
   visible?: boolean;
+  debug?: boolean;
 }
 
 export interface ID3 {
