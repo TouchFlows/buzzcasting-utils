@@ -1105,6 +1105,7 @@ export declare interface IShow {
     sender?: boolean;
     star?: boolean;
     visible?: boolean;
+    debug?: boolean;
 }
 
 export declare interface ISlides {
