@@ -1,4 +1,20 @@
 
+## v1.8.0
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.7.0...v1.8.0)
+
+### 🚀 Enhancements
+
+- Widget settings and options moved from buzzcasting-app ([72217dd](https://github.com/TouchFlows/buzzcasting-utils/commit/72217dd))
+
+### 🏡 Chore
+
+- **release:** V1.7.0 ([dc83d43](https://github.com/TouchFlows/buzzcasting-utils/commit/dc83d43))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.7.0
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.6.9...v1.7.0)
