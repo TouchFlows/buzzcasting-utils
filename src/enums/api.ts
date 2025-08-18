@@ -1,4 +1,5 @@
 export enum API {
+  CARDS = "cards",
   CLOUD = "cloud",
   DASHBOARD = "dashboard",
   DASHBOARDS = "dashboards",
