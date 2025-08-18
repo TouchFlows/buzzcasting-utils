@@ -1,4 +1,20 @@
 
+## v1.8.2
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.1...v1.8.2)
+
+### 🩹 Fixes
+
+- Sanitize & remove settings/options ([05108aa](https://github.com/TouchFlows/buzzcasting-utils/commit/05108aa))
+
+### 🏡 Chore
+
+- **release:** V1.8.1 ([f9a2228](https://github.com/TouchFlows/buzzcasting-utils/commit/f9a2228))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.8.1
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.0...v1.8.1)
