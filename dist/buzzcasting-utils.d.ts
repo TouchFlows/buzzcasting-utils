@@ -172,7 +172,7 @@ export declare enum EVENTS {
     NEXT_SLIDE = "nextSlide",
     PREFERENCE_LOAD = "loadPreference",
     PREFERENCE_STORE = "storePreference",
-    PREFEENCE_UPDATED = "preferenceUpdated",
+    PREFERENCE_UPDATED = "preferenceUpdated",
     PAUSE_PRESENTATION = "pausePresentation",
     PRESENTATION_READY = "presentationReady",
     PRESENTATION_LOAD = "loadPresentation",
@@ -1141,7 +1141,7 @@ export declare interface IStorageOptions {
     delay?: number;
     display?: string;
     domain?: string;
-    html?: string;
+    html?: boolean;
     locale: string;
     loglevel?: number;
     moderation?: string;
@@ -1150,6 +1150,7 @@ export declare interface IStorageOptions {
     period?: number;
     presentation: string;
     retention?: number;
+    shadow?: boolean;
     slide?: string;
     slides?: string[];
     storage: string;
