@@ -1,4 +1,20 @@
 
+## v1.8.3
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.2...v1.8.3)
+
+### 🩹 Fixes
+
+- Interface IStorage ([fb1d2af](https://github.com/TouchFlows/buzzcasting-utils/commit/fb1d2af))
+
+### 🏡 Chore
+
+- **release:** V1.8.2 ([f706f96](https://github.com/TouchFlows/buzzcasting-utils/commit/f706f96))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.8.2
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.1...v1.8.2)
