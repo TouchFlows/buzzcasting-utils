@@ -34,7 +34,7 @@ export enum EVENTS {
   NEXT_SLIDE = "nextSlide",
   PREFERENCE_LOAD = "loadPreference",
   PREFERENCE_STORE = "storePreference",
-  PREFEENCE_UPDATED = "preferenceUpdated",
+  PREFERENCE_UPDATED = "preferenceUpdated",
   PAUSE_PRESENTATION = "pausePresentation",
   PRESENTATION_READY = "presentationReady",
   PRESENTATION_LOAD = "loadPresentation",

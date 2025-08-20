@@ -1,6 +1,7 @@
 export declare function anonymize(name: string): string;
 
 export declare enum API {
+    CARDS = "cards",
     CLOUD = "cloud",
     DASHBOARD = "dashboard",
     DASHBOARDS = "dashboards",

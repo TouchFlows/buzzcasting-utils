@@ -12,7 +12,7 @@ export declare interface IStorageOptions {
   delay?: number;
   display?: string;
   domain?: string;
-  html?: string;
+  html?: boolean;
   locale: string;
   loglevel?: number;
   moderation?: string;
@@ -21,6 +21,7 @@ export declare interface IStorageOptions {
   period?: number;
   presentation: string;
   retention?: number;
+  shadow?: boolean;
   slide?: string;
   slides?: string[];
   storage: string;
