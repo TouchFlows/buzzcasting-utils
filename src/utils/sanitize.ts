@@ -6,7 +6,8 @@ export function sanitize(messages: IMessage[]): IMessage[] {
   );
   filteredMessages.forEach((message: IMessage) => {
     // remove all links
-    if (window["BuzzCasting"].getOptions().suspended === true) {
+    //
+    if (window.__bc.opts.suspended === true) {
       message.content =
         "License suspended, please contact your Sales Representative to restore service";
     } else {

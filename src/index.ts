@@ -6,6 +6,8 @@ export * from "./interfaces";
 
 declare global {
   interface Window {
-    BuzzCasting: any;
+    __bc: {
+      opts: any;
+    };
   }
 }

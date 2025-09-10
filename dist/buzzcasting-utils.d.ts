@@ -141,10 +141,8 @@ export declare enum EVENTS {
     APP_READY = "appReady",
     API_UPDATE = "apiUpdate",
     BACKGROUND_UPDATE = "backgroundUpdate",
+    BUILDER_PREVIEW = "builderPreview",
     COMPONENT_UPDATE = "componentUpdate",
-    WS_API_REQUEST = "wsApiRequest",
-    WS_API_RESPONSE = "wsApiResponse",
-    WS_API_UPDATE = "wsApiRUpdate",
     APPROVE_MESSAGE = "approveMessage",
     CHANNEL = "channel",
     CLEAN_MESSAGES = "cleanMessages",
@@ -210,7 +208,10 @@ export declare enum EVENTS {
     WIDGET_DID_UPDATE = "widgetDidUpdate",
     WIDGET_LOAD = "widgetLoad",
     WIDGET_STORE = "widgetStore",
-    WIDGET_UPDATE = "widgetUpdate"
+    WIDGET_UPDATE = "widgetUpdate",
+    WS_API_REQUEST = "wsApiRequest",
+    WS_API_RESPONSE = "wsApiResponse",
+    WS_API_UPDATE = "wsApiRUpdate"
 }
 
 export declare function filterAttributes(attributes: NamedNodeMap): IFilteredAttributes;
