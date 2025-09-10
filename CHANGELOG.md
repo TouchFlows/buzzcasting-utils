@@ -1,4 +1,20 @@
 
+## v1.8.5
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.4...v1.8.5)
+
+### 🩹 Fixes
+
+- Remove window.BuzzCasting from sanitize ([7d582d7](https://github.com/TouchFlows/buzzcasting-utils/commit/7d582d7))
+
+### 🏡 Chore
+
+- **release:** V1.8.4 ([88452b0](https://github.com/TouchFlows/buzzcasting-utils/commit/88452b0))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.8.4
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.3...v1.8.4)
