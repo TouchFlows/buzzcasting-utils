@@ -2,10 +2,11 @@ export interface ICardOptions {
   animation?: IAnimation;
   brand?: IBrand;
   css?: ICss;
-  globe?: IGlobe;
   dateformat?: IDateFormat;
-  show?: IShow;
   debug?: boolean;
+  globe?: IGlobe;
+  locale?: string;
+  show?: IShow;
 }
 
 export interface IAnimation {

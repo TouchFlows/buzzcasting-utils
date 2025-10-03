@@ -317,7 +317,7 @@ export declare interface ICardOptions {
     animation?: IAnimation;
     brand?: IBrand;
     css?: ICss;
-    globe: IGlobe;
+    globe?: IGlobe;
     dateformat?: IDateFormat;
     show?: IShow;
     debug?: boolean;
@@ -525,6 +525,7 @@ export declare interface ICss {
     brand?: string;
     card?: string;
     container?: string;
+    dark?: boolean;
     date?: string;
     dynamics?: string;
     handle?: string;
@@ -538,7 +539,6 @@ export declare interface ICss {
     title?: string;
     video?: string;
     widget?: string;
-    dark?: boolean;
 }
 
 export declare interface ID3Bubbles {
@@ -677,17 +677,15 @@ export declare interface IGeo {
 }
 
 export declare interface IGlobe {
-    globe: {
-        arc: string;
-        border: string;
-        country: string;
-        land: string;
-        sphere: string;
-        canvas?: string;
-        card?: string;
-        width?: number;
-        height?: number;
-    };
+    arc: string;
+    border: string;
+    country: string;
+    land: string;
+    sphere: string;
+    canvas?: string;
+    card?: string;
+    width?: number;
+    height?: number;
 }
 
 export declare interface IImage {

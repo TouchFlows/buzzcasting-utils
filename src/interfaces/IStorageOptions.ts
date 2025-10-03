@@ -12,7 +12,12 @@ export interface IStorageOptions {
   delay?: number;
   display?: string;
   domain?: string;
+  favorite?: boolean;
+  firefox?: boolean;
+  generateCss?: boolean;
   html?: boolean;
+  interval?: number;
+  link?: string;
   locale: string;
   loglevel?: number;
   moderation?: string;
@@ -26,6 +31,8 @@ export interface IStorageOptions {
   slides?: string[];
   storage: string;
   suspended?: boolean;
+  switch?: boolean;
   token?: string;
   version: string;
+  workers?: boolean;
 }
