@@ -1,4 +1,20 @@
 
+## v1.8.7
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.6...v1.8.7)
+
+### 🩹 Fixes
+
+- Globe interface ([fc7645f](https://github.com/TouchFlows/buzzcasting-utils/commit/fc7645f))
+
+### 🏡 Chore
+
+- **release:** V1.8.6 ([efb7771](https://github.com/TouchFlows/buzzcasting-utils/commit/efb7771))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.8.6
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.5...v1.8.6)
