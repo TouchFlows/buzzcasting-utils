@@ -1,4 +1,20 @@
 
+## v1.8.6
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.5...v1.8.6)
+
+### 🩹 Fixes
+
+- Added formatting functions, update of interface ([e0a9449](https://github.com/TouchFlows/buzzcasting-utils/commit/e0a9449))
+
+### 🏡 Chore
+
+- **release:** V1.8.5 ([c433d26](https://github.com/TouchFlows/buzzcasting-utils/commit/c433d26))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.8.5
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.4...v1.8.5)
