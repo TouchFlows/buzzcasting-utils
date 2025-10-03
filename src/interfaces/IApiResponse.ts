@@ -9,7 +9,7 @@ import { IQuery } from "./IQuery";
 import { ISeries } from "./ISeries";
 import { IWidget } from "./IWidgets";
 
-export declare interface IApiResponse {
+export interface IApiResponse {
   data:
     | IDashboard[]
     | IImage[]

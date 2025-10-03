@@ -4,6 +4,7 @@ export * from "./attributes";
 export * from "./await-element";
 export * from "./brand-logos";
 export * from "./camel-case";
+export * from "./camel-to-hyphen";
 export * from "./capitalize-first-letter";
 export * from "./clear-contents";
 export * from "./color";

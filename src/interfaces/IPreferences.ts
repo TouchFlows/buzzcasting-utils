@@ -1,8 +1,8 @@
-export declare interface IPreferences {
+export interface IPreferences {
   preferences: IPreference[];
 }
 
-export declare interface IPreference {
+export interface IPreference {
   id: string;
   value?: string;
   update?: number;

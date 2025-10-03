@@ -1,7 +1,7 @@
 /**
  * Cloud
  */
-export declare interface ICloud {
+export interface ICloud {
   labels: ILabel[];
   current: any[];
   previous: any[];
@@ -11,7 +11,7 @@ export declare interface ICloud {
   previous_total: number;
 }
 
-export declare interface ILabel {
+export interface ILabel {
   label: string;
   count: number;
   info?: string;
@@ -20,7 +20,7 @@ export declare interface ILabel {
   percentage?: number;
 }
 
-declare interface ICloudIndicators {
+interface ICloudIndicators {
   total: number;
   positive: number;
   negative: number;

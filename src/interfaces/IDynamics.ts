@@ -1,4 +1,4 @@
-export declare interface IDynamics {
+export interface IDynamics {
   engagement?: number;
   video_views?: number;
   sentiment?: 0;
@@ -6,6 +6,7 @@ export declare interface IDynamics {
   semrush_visits?: number;
   potential_reach?: number;
   facebook_engagement?: number;
+  facebook_followers?: number;
   facebook_insights_reach?: number;
   facebook_insights_impressions?: number;
   facebook_insights_link_clicks?: number;

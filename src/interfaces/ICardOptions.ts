@@ -2,7 +2,7 @@ export interface ICardOptions {
   animation?: IAnimation;
   brand?: IBrand;
   css?: ICss;
-  d3?: ID3;
+  globe: IGlobe;
   dateformat?: IDateFormat;
   show?: IShow;
   debug?: boolean;
@@ -32,6 +32,7 @@ export interface ICss {
   kpi?: string;
   label?: string;
   name?: string;
+  play?: string;
   sender?: string;
   title?: string;
   video?: string;
@@ -51,28 +52,28 @@ export interface IShow {
   brand?: boolean;
   date?: boolean;
   dynamics?: boolean;
+  handle?: boolean;
   kpi?: boolean;
+  name?: boolean;
+  play?: boolean;
   sender?: boolean;
   star?: boolean;
   visible?: boolean;
   debug?: boolean;
 }
 
-export interface ID3 {
+export interface IGlobe {
   globe: {
-    colors: {
-      arc: string;
-      border: string;
-      country: string;
-      land: string;
-      sphere: string;
-    };
-    settings?: {
-      canvas?: string;
-      card?: string;
-      width?: number;
-      height?: number;
-    };
+    arc: string;
+    border: string;
+    country: string;
+    land: string;
+    sphere: string;
+
+    canvas?: string;
+    card?: string;
+    width?: number;
+    height?: number;
   };
 }
 

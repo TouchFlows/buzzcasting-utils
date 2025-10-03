@@ -28,6 +28,6 @@ export * from "./IStorageOptions";
 export * from "./IQuery";
 export * from "./IWidgets";
 export * from "./IWidgetSettings";
-export * from "./ShapeType";
+export * from "../enums/ShapeType";
 
 export type ApiData = ISeries & IMessages & ICloud;

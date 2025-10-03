@@ -1,8 +1,8 @@
-export declare interface IWidgets {
+export interface IWidgets {
   widgets: IWidget[];
 }
 
-export declare interface IWidget {
+export interface IWidget {
   id: string;
   title: string;
   type: string;

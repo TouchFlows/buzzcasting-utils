@@ -1,7 +1,7 @@
 /**
  * Storage Options
  */
-export declare interface IStorageOptions {
+export interface IStorageOptions {
   app: string;
   bearer?: string;
   beforeTime?: string;

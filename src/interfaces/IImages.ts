@@ -1,8 +1,8 @@
-export declare interface IImages {
+export interface IImages {
   images: IImage[];
 }
 
-export declare interface IImage {
+export interface IImage {
   basename: string;
   name: string;
   extension: "png" | "webp" | "gif" | "jpg" | "jpeg";

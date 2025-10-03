@@ -16,7 +16,8 @@ export const intToString = (
 
   if (num < 1000) {
     // MTM: remove .toString())
-    return (num = ("" + num).replace(/[^0-9.]/g, ""));
+    return (Math.round(num * 100) / 100).toFixed(digits);
+    //return (num = ("" + num).replace(/[^0-9.]/g, ""));
   }
 
   num = num.toString().replace(/[^0-9.]/g, "");

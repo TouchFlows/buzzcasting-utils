@@ -2,7 +2,7 @@ export declare interface IPresentations {
   presentations: IPresentation[];
 }
 
-export declare interface IPresentation {
+export interface IPresentation {
   id: string;
   name: string;
   link: string;

@@ -1,10 +1,10 @@
 import { IWidget } from "./IWidgets";
 
-export declare interface IDashboards {
+export interface IDashboards {
   dashboards: IDashboard[];
 }
 
-export declare interface IDashboard {
+export interface IDashboard {
   id: string;
   title: string;
   project: {

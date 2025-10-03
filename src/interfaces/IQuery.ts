@@ -1,7 +1,7 @@
 /**
  * Query
  */
-export declare interface IQuery {
+export interface IQuery {
   [x: string]: any;
   widget: string;
   topics?: string;

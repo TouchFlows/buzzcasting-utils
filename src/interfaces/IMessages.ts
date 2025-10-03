@@ -3,7 +3,7 @@ import { IDynamics } from "./IDynamics";
 /**
  * Messages
  */
-export declare interface IMessages {
+export interface IMessages {
   messages: IMessage[];
   presentation?: string;
   slide?: string;
@@ -13,7 +13,7 @@ export declare interface IMessages {
   topics?: string;
 }
 
-export declare interface IMessage {
+export interface IMessage {
   id: string;
   published: string;
   harvested: string;
@@ -39,7 +39,7 @@ export declare interface IMessage {
   media?: IMedium[];
 }
 
-export declare interface ISender {
+export interface ISender {
   id?: string;
   channel?: string;
   title?: string;
@@ -56,7 +56,7 @@ export declare interface ISender {
   influence?: number;
 }
 
-export declare interface ITopic {
+export interface ITopic {
   message_id: string;
   dashboard_id?: string;
   widget_id?: string;
@@ -72,7 +72,7 @@ export declare interface ITopic {
   approved?: number;
 }
 
-export declare interface IGeo {
+export interface IGeo {
   latitude?: number;
   longitude?: number;
   zip?: string;
@@ -81,14 +81,14 @@ export declare interface IGeo {
   country: string;
 }
 
-export declare interface IMedium {
+export interface IMedium {
   type: string;
   url: string;
   width: number;
   height: number;
 }
 
-export declare interface IAttachedMedia {
+export interface IAttachedMedia {
   image?: string;
   background: { backgroundimage?: string } | null;
   video?: string;

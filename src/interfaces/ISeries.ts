@@ -1,7 +1,7 @@
 /**
  * Series Data
  */
-export declare interface ISeries {
+export interface ISeries {
   topic: string;
   title: string;
   series: ISeriesData[];
