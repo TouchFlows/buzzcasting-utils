@@ -48,6 +48,8 @@ export declare function camelCasedProps(attributes: NamedNodeMap): IFilteredAttr
  */
 export declare function camelize(str: string): string;
 
+export declare const camelToHyphen: (str: string) => string;
+
 export declare const capitalizeFirstLetter: (prop: string) => string;
 
 /**
@@ -315,7 +317,7 @@ export declare interface ICardOptions {
     animation?: IAnimation;
     brand?: IBrand;
     css?: ICss;
-    d3?: ID3;
+    globe: IGlobe;
     dateformat?: IDateFormat;
     show?: IShow;
     debug?: boolean;
@@ -531,29 +533,12 @@ export declare interface ICss {
     kpi?: string;
     label?: string;
     name?: string;
+    play?: string;
     sender?: string;
     title?: string;
     video?: string;
     widget?: string;
     dark?: boolean;
-}
-
-export declare interface ID3 {
-    globe: {
-        colors: {
-            arc: string;
-            border: string;
-            country: string;
-            land: string;
-            sphere: string;
-        };
-        settings?: {
-            canvas?: string;
-            card?: string;
-            width?: number;
-            height?: number;
-        };
-    };
 }
 
 export declare interface ID3Bubbles {
@@ -646,6 +631,7 @@ export declare interface IDynamics {
     semrush_visits?: number;
     potential_reach?: number;
     facebook_engagement?: number;
+    facebook_followers?: number;
     facebook_insights_reach?: number;
     facebook_insights_impressions?: number;
     facebook_insights_link_clicks?: number;
@@ -688,6 +674,20 @@ export declare interface IGeo {
     street: string;
     city?: string;
     country: string;
+}
+
+export declare interface IGlobe {
+    globe: {
+        arc: string;
+        border: string;
+        country: string;
+        land: string;
+        sphere: string;
+        canvas?: string;
+        card?: string;
+        width?: number;
+        height?: number;
+    };
 }
 
 export declare interface IImage {
@@ -1110,7 +1110,10 @@ export declare interface IShow {
     brand?: boolean;
     date?: boolean;
     dynamics?: boolean;
+    handle?: boolean;
     kpi?: boolean;
+    name?: boolean;
+    play?: boolean;
     sender?: boolean;
     star?: boolean;
     visible?: boolean;

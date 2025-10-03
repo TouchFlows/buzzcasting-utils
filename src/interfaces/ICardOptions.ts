@@ -2,7 +2,7 @@ export interface ICardOptions {
   animation?: IAnimation;
   brand?: IBrand;
   css?: ICss;
-  globe: IGlobe;
+  globe?: IGlobe;
   dateformat?: IDateFormat;
   show?: IShow;
   debug?: boolean;
@@ -24,6 +24,7 @@ export interface ICss {
   brand?: string;
   card?: string;
   container?: string;
+  dark?: boolean;
   date?: string;
   dynamics?: string;
   handle?: string;
@@ -37,7 +38,6 @@ export interface ICss {
   title?: string;
   video?: string;
   widget?: string;
-  dark?: boolean;
 }
 
 export interface IDateFormat {
@@ -63,18 +63,16 @@ export interface IShow {
 }
 
 export interface IGlobe {
-  globe: {
-    arc: string;
-    border: string;
-    country: string;
-    land: string;
-    sphere: string;
+  arc: string;
+  border: string;
+  country: string;
+  land: string;
+  sphere: string;
 
-    canvas?: string;
-    card?: string;
-    width?: number;
-    height?: number;
-  };
+  canvas?: string;
+  card?: string;
+  width?: number;
+  height?: number;
 }
 
 export interface IBrand {
