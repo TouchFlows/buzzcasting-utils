@@ -1,4 +1,20 @@
 
+## v1.9.1
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.9.0...v1.9.1)
+
+### 🩹 Fixes
+
+- Interface refactor ([8a9a953](https://github.com/TouchFlows/buzzcasting-utils/commit/8a9a953))
+
+### 🏡 Chore
+
+- **release:** V1.9.0 ([c4aff16](https://github.com/TouchFlows/buzzcasting-utils/commit/c4aff16))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.9.0
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.10...v1.9.0)
