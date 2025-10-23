@@ -104,8 +104,6 @@ export declare interface CountryProperties {
     code: string;
 }
 
-export declare const createLogger: () => Worker;
-
 declare enum CSS_2 {
     API = "color:white;background-color:grey;padding:0 4px 0 4px;border-radius:5px;",
     APP = "color:white;background-color:navy;padding:0 4px 0 4px;border-radius:5px;",
