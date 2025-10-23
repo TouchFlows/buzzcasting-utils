@@ -5,3 +5,9 @@ export interface IDate {
 export interface ITime {
   format: string;
 }
+
+export interface IDateFormat {
+  time?: string;
+  date?: string;
+  locale?: string;
+}
