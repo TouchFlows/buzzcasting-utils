@@ -22,10 +22,16 @@ export interface IShowCloud {
   gradient: boolean;
   hashtags: boolean;
   trend: boolean;
+  debug?: boolean;
+}
+
+export interface IShowContents {
+  debug?: boolean;
 }
 
 export interface IShowLegend {
   percentage: boolean;
+  debug?: boolean;
 }
 
 export interface IShowSeries {
@@ -33,4 +39,5 @@ export interface IShowSeries {
   percentage: boolean;
   date: boolean;
   kpi: boolean;
+  debug?: boolean;
 }

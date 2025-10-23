@@ -31,6 +31,7 @@ export interface ICssCloud {
   arrowup: string;
   arrowdown: string;
   chart: string;
+  backdrop: string;
   body: string;
   brand: string;
   count: string;

@@ -1,8 +1,3 @@
-declare interface Animation_2 {
-    duration: number;
-}
-export { Animation_2 as Animation }
-
 export declare function anonymize(name: string): string;
 
 export declare enum API {
@@ -35,21 +30,7 @@ export declare function attrs(attributes: NamedNodeMap): any;
 
 export declare const awaitElement: (selector: string) => Promise<unknown>;
 
-export declare interface Border {
-    stroke: number;
-    line: string;
-}
-
 export declare function brandLogo(channel: string, size: string): string;
-
-export declare interface Bubbles {
-    label: string;
-    size: string;
-    classlist: string;
-    force: number;
-    color: string;
-    multiplier: number;
-}
 
 /**
  * Convert string containing hyphens to camelCase
@@ -71,32 +52,6 @@ export declare const camelToHyphen: (str: string) => string;
 
 export declare const capitalizeFirstLetter: (prop: string) => string;
 
-export declare interface CardCss {
-    avatar?: string;
-    backdrop?: string;
-    body?: string;
-    bodylayout?: string;
-    brand?: string;
-    canvas?: string;
-    card?: string;
-    container?: string;
-    dark?: boolean;
-    date?: string;
-    dynamics?: string;
-    globe?: string;
-    handle?: string;
-    host?: string;
-    image?: string;
-    kpi?: string;
-    label?: string;
-    name?: string;
-    play?: string;
-    sender?: string;
-    title?: string;
-    video?: string;
-    widget?: string;
-}
-
 /**
  * Clear Container range contents of template code when the web component is connected to the DOM
  * @param myNode
@@ -115,30 +70,6 @@ export declare interface CloudAttr {
     class?: string | string[];
 }
 
-export declare interface CloudCss {
-    up: string;
-    down: string;
-    new: string;
-    arrowup: string;
-    arrowdown: string;
-    chart: string;
-    body: string;
-    brand: string;
-    count: string;
-    change: string;
-    highlight: string;
-    highlighted: string;
-    key: string;
-    host: string;
-    label: string;
-    legend: string;
-    row: string;
-    separator: string;
-    title: string;
-    widget: string;
-    words: string;
-}
-
 export declare interface Component {
     path: string;
     query: string;
@@ -154,10 +85,6 @@ export declare interface Content {
     text: string;
     node: string;
     attr: MessagesAttr;
-}
-
-export declare interface Count {
-    width: string;
 }
 
 export declare interface CountriesGeometry {
@@ -201,6 +128,9 @@ declare enum CSS_2 {
 }
 export { CSS_2 as CSS }
 
+/**
+ * Cloud
+ */
 export declare interface Data {
     dashboard: string;
     type: string;
@@ -208,11 +138,6 @@ export declare interface Data {
 }
 
 export declare function deepMerge(objs: any): void;
-
-export declare interface Dimensions {
-    width: number;
-    height: number;
-}
 
 declare const escape_2: (htmlStr: string) => string;
 export { escape_2 as escape }
@@ -301,11 +226,6 @@ export declare const flatten: (obj: any, res?: {}, parentKey?: string) => {};
 
 export declare function formatContent(message: IMessage, titleCss?: string): string;
 
-export declare interface Gap {
-    column: string;
-    row: string;
-}
-
 export declare interface GeoCountries {
     type: string;
     geometries: CountriesGeometry[];
@@ -329,20 +249,9 @@ export declare function getParameterByName(key: string): string | null;
 
 export declare const getQueryParam: (param: string) => any;
 
-export declare interface Globe {
-    border: Border;
-    land: Land;
-}
-
 export declare function hashSum(o: any): string | any[];
 
 export declare const hasHWA: () => boolean;
-
-declare interface Highlight_2 {
-    label: string;
-    color: string;
-}
-export { Highlight_2 as Highlight }
 
 export declare const html2json: (html: string) => {
     node: string;
@@ -355,7 +264,7 @@ export declare const HTMLtoDOM: (html: string, doc: any) => any;
 
 export declare const HTMLtoXML: (html: string) => string;
 
-export declare interface IAnimation {
+declare interface IAnimation {
     items?: number;
     interval: number;
     animation: number;
@@ -397,9 +306,21 @@ export declare interface IBorders {
     lineWidth: number;
 }
 
+/**
+ * Card
+ */
 export declare interface IBrand {
     show?: boolean;
     size?: string;
+}
+
+declare interface IBubbles {
+    label: string;
+    size: string;
+    classlist: string;
+    force: number;
+    color: string;
+    multiplier: number;
 }
 
 export declare interface ICardAttributes {
@@ -453,13 +374,13 @@ export declare interface ICardAttributes {
 export declare interface ICardOptions {
     animation?: IAnimation;
     brand?: IBrand;
-    css?: CardCss;
+    css?: ICssCard;
     dateformat?: IDateFormat;
     debug?: boolean;
     delay?: number;
     globe?: IGlobe;
     locale?: string;
-    show?: IShow;
+    show?: IShowCard;
 }
 
 export declare interface ICategory {
@@ -522,26 +443,24 @@ export declare interface ICloudInfluencersData {
 }
 
 export declare interface ICloudOptions {
-    animation?: number;
-    interval?: number;
-    speed?: string;
+    animation?: IAnimation;
     component?: string;
-    css?: CloudCss;
-    bubbles?: Bubbles;
+    css?: ICssCloud;
+    bubbles?: IBubbles;
     config?: IConfig;
     colors?: string;
     data?: Data;
     time?: ITime;
     date?: IDate;
     debug?: boolean;
-    dimensions?: Dimensions;
-    globe?: Globe;
-    highlight?: Highlight_2;
+    dimensions?: IDimensions;
+    globe?: IGlobe;
+    highlight?: IHighlight;
     kpi?: Kpi;
-    legend?: Legend;
-    pie?: Pie;
-    show?: ShowOptions;
-    words?: Words;
+    legend?: ILegend;
+    pie?: IPie;
+    show?: IShowCloud;
+    words?: IWords;
 }
 
 declare interface IConfig {
@@ -550,6 +469,16 @@ declare interface IConfig {
     chunk?: number;
     items?: number;
     label?: string;
+}
+
+export declare interface IContentsOptions {
+    css?: ICssContents;
+    date?: IDate;
+    globe?: IGlobe;
+    locale: string;
+    qr?: Qr;
+    time?: ITime;
+    youtube?: Youtube;
 }
 
 export declare interface ICountries {
@@ -562,6 +491,80 @@ export declare interface ICountries {
 
 export declare interface ICountry {
     fillStyle: string;
+}
+
+declare interface ICssCard {
+    avatar?: string;
+    backdrop?: string;
+    body?: string;
+    bodylayout?: string;
+    brand?: string;
+    canvas?: string;
+    card?: string;
+    container?: string;
+    dark?: boolean;
+    date?: string;
+    dynamics?: string;
+    globe?: string;
+    handle?: string;
+    host?: string;
+    image?: string;
+    kpi?: string;
+    label?: string;
+    name?: string;
+    play?: string;
+    sender?: string;
+    title?: string;
+    video?: string;
+    widget?: string;
+}
+
+declare interface ICssCloud {
+    up: string;
+    down: string;
+    new: string;
+    arrowup: string;
+    arrowdown: string;
+    chart: string;
+    backdrop: string;
+    body: string;
+    brand: string;
+    count: string;
+    change: string;
+    highlight: string;
+    highlighted: string;
+    key: string;
+    host: string;
+    label: string;
+    legend: string;
+    row: string;
+    separator: string;
+    title: string;
+    widget: string;
+    words: string;
+}
+
+declare interface ICssContents {
+    body: string;
+    card: string;
+    globe?: string;
+    label: string;
+    widget: string;
+}
+
+declare interface ICssSeries {
+    arrowdown: string;
+    arrowup: string;
+    body: string;
+    brand: string;
+    change: string;
+    count: string;
+    down: string;
+    host: string;
+    label: string;
+    title: string;
+    up: string;
+    widget: string;
 }
 
 export declare interface ID3Bubbles {
@@ -644,7 +647,7 @@ declare interface IDate {
     format: string;
 }
 
-export declare interface IDateFormat {
+declare interface IDateFormat {
     time?: string;
     date?: string;
     locale?: string;
@@ -708,14 +711,43 @@ export declare interface IGeo {
     country: string;
 }
 
-export declare interface IGlobe {
-    arc: string;
-    border: string;
-    country: string;
-    land: string;
-    sphere: string;
-    width?: number;
-    height?: number;
+declare interface IGlobe {
+    width: number;
+    height: number;
+    arc: IGlobeArc;
+    border: IGlobeBorder;
+    country: IGlobeCountry;
+    land: IGlobeLand;
+    sphere: IGlobeSphere;
+}
+
+declare interface IGlobeArc {
+    stroke: string;
+    line: number;
+}
+
+declare interface IGlobeBorder {
+    stroke: string;
+    line: number;
+}
+
+declare interface IGlobeCountry {
+    fill: string;
+}
+
+declare interface IGlobeLand {
+    fill: string;
+}
+
+declare interface IGlobeSphere {
+    stroke: string;
+    line: number;
+    fill: string;
+}
+
+export declare interface IHighlight {
+    label?: string;
+    color?: string[];
 }
 
 export declare interface IImage {
@@ -890,6 +922,33 @@ export declare interface ILayoutZones {
     ["x:string"]: ILayoutZone[];
 }
 
+declare interface ILegend {
+    key: ILegendKey;
+    label: ILegendLabel;
+    count: ILegendCount;
+    width: string;
+    position: string;
+    show: IShowLegend;
+    gap: ILegendGap;
+}
+
+declare interface ILegendCount {
+    width: string;
+}
+
+declare interface ILegendGap {
+    column: string;
+    row: string;
+}
+
+declare interface ILegendKey {
+    width: string;
+}
+
+declare interface ILegendLabel {
+    width: string;
+}
+
 export declare interface IMedium {
     type: string;
     url: string;
@@ -958,6 +1017,26 @@ export declare interface InfluencerLabel {
 }
 
 export declare const intToString: (num: any, digits?: number, abbreviate?: boolean, locale?: string) => string;
+
+declare interface IPie {
+    radius: IPieRadius;
+    animation: IPieAnimation;
+}
+
+/**
+ * Animation Duration
+ */
+declare interface IPieAnimation {
+    duration: number;
+}
+
+/**
+ * inner and outer radius in px
+ */
+declare interface IPieRadius {
+    inner: number;
+    outer: number;
+}
 
 export declare interface IPreference {
     id: string;
@@ -1078,15 +1157,15 @@ export declare interface ISeriesData {
 
 export declare interface ISeriesOptions {
     colors?: string;
-    css?: SeriesCss;
+    css?: ICssSeries;
     time?: ITime;
     date?: IDate;
     dimensions?: IDimensions;
-    show?: Show;
+    show?: IShowSeries;
     config?: IConfig;
 }
 
-export declare interface IShow {
+declare interface IShowCard {
     approve?: boolean;
     avatar?: boolean;
     brand?: boolean;
@@ -1100,6 +1179,29 @@ export declare interface IShow {
     sender?: boolean;
     star?: boolean;
     visible?: boolean;
+    debug?: boolean;
+}
+
+declare interface IShowCloud {
+    emojis: boolean;
+    brand: boolean;
+    date: boolean;
+    gradient: boolean;
+    hashtags: boolean;
+    trend: boolean;
+    debug?: boolean;
+}
+
+declare interface IShowLegend {
+    percentage: boolean;
+    debug?: boolean;
+}
+
+declare interface IShowSeries {
+    brand: boolean;
+    percentage: boolean;
+    date: boolean;
+    kpi: boolean;
     debug?: boolean;
 }
 
@@ -1221,6 +1323,13 @@ export declare interface IWidgetSettings {
     component: IWidgetComponent;
 }
 
+declare interface IWords {
+    duration: number;
+    multiplier: number;
+    padding: number;
+    range: string;
+}
+
 export declare const json2html: (json: any) => any;
 
 export declare interface JsonChild {
@@ -1230,39 +1339,13 @@ export declare interface JsonChild {
     child: JsonChild[];
 }
 
-export declare interface Key {
-    width: string;
-}
-
 export declare interface Kpi {
     name: string;
-}
-
-export declare interface Label {
-    width: string;
-}
-
-export declare interface Land {
-    fill: string;
 }
 
 export declare interface LandGeometry {
     type: GeoType;
     arcs: Array<Array<number[]>>;
-}
-
-export declare interface Legend {
-    key: Key;
-    label: Label;
-    count: Count;
-    width: string;
-    position: string;
-    show: LegendShow;
-    gap: Gap;
-}
-
-export declare interface LegendShow {
-    percentage: boolean;
 }
 
 /**
@@ -1325,19 +1408,25 @@ export declare function moderation(options: IStorageOptions, query: IQuery): IQu
 
 export declare function numberFormatter(num: number, digits: number): string;
 
+/**
+ * Series
+ */
 export declare interface Percentage {
     count: boolean;
     change: boolean;
 }
 
-export declare interface Pie {
-    radius: Radius;
-    animation: Animation_2;
-}
-
-export declare interface Radius {
-    inner: number;
-    outer: number;
+/**
+ * Contents
+ */
+export declare interface Qr {
+    text: string;
+    correction: string;
+    margin: number;
+    scale: number;
+    colorDark: string;
+    colorLight: string;
+    outputMode: string;
 }
 
 export declare const randomColor: () => string;
@@ -1384,21 +1473,6 @@ export declare interface SeriesAttr {
     class?: string | string[];
 }
 
-export declare interface SeriesCss {
-    arrowdown: string;
-    arrowup: string;
-    body: string;
-    brand: string;
-    change: string;
-    count: string;
-    down: string;
-    host: string;
-    label: string;
-    title: string;
-    up: string;
-    widget: string;
-}
-
 export declare interface Settings {
     contents: Content[];
     component: Component;
@@ -1409,23 +1483,7 @@ export declare enum ShapeType {
     Polygon = "Polygon"
 }
 
-export declare interface Show {
-    brand: boolean;
-    percentage: Percentage;
-    date: boolean;
-    kpi: boolean;
-}
-
 export declare function showModal(e: MouseEvent, widget: any, message: IMessage, options: any): void;
-
-export declare interface ShowOptions {
-    emojis: boolean;
-    brand: boolean;
-    date: boolean;
-    gradient: boolean;
-    hashtags: boolean;
-    trend: boolean;
-}
 
 export declare function shuffleMessages(messages: IMessage[]): IMessage[];
 
@@ -1458,13 +1516,6 @@ export declare const upDownColor: (change: number) => "text-down text-xs" | "tex
 
 export declare function widgetParams(query: IQuery): IQuery;
 
-export declare interface Words {
-    duration: number;
-    multiplier: number;
-    padding: number;
-    range: string;
-}
-
 export declare const wrapPromise: (promise: any, delay: number, reason: string) => Promise<any>;
 
 export declare interface XAxis {
@@ -1475,6 +1526,11 @@ export declare interface XAxis {
 
 export declare interface YAxis {
     type: string;
+}
+
+export declare interface Youtube {
+    list: string;
+    title: string;
 }
 
 export { }

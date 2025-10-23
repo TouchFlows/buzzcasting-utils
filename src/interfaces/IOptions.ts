@@ -45,7 +45,7 @@ export interface ICloudOptions {
   debug?: boolean;
   dimensions?: IDimensions;
   globe?: IGlobe;
-  highlight?: Highlight;
+  highlight?: IHighlight;
   kpi?: Kpi;
   legend?: ILegend;
   pie?: IPie;
@@ -83,6 +83,11 @@ export interface Data {
 
 export interface Kpi {
   name: string;
+}
+
+export interface IHighlight {
+  label?: string;
+  color?: string[];
 }
 
 /**
