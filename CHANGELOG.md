@@ -1,4 +1,20 @@
 
+## v1.9.4
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.9.3...v1.9.4)
+
+### 🩹 Fixes
+
+- CreateLogger ([deb4943](https://github.com/TouchFlows/buzzcasting-utils/commit/deb4943))
+
+### 🏡 Chore
+
+- **release:** V1.9.3 ([b6aa0d6](https://github.com/TouchFlows/buzzcasting-utils/commit/b6aa0d6))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.9.3
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.9.2...v1.9.3)
