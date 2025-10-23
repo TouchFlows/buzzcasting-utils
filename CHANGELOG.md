@@ -1,4 +1,20 @@
 
+## v1.10.0
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.9.6...v1.10.0)
+
+### 🚀 Enhancements
+
+- Adding logging custom levels thru broadcast channel ([dc28f66](https://github.com/TouchFlows/buzzcasting-utils/commit/dc28f66))
+
+### 🏡 Chore
+
+- **release:** V1.9.6 ([0715ae0](https://github.com/TouchFlows/buzzcasting-utils/commit/0715ae0))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.9.6
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.9.5...v1.9.6)
