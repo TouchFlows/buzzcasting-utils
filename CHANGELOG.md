@@ -1,4 +1,8 @@
 
+## v1.8.10
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.8...v1.8.10)
+
 ## v1.8.8
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.8.7...v1.8.8)

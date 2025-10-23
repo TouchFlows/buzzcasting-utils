@@ -1,7 +1,7 @@
 {
   "name": "buzzcasting-utils",
   "type": "module",
-  "version": "1.8.8",
+  "version": "1.8.10",
   "private": false,
   "author": {
     "name": "Mark Tamis, TouchFlows SAS",
@@ -9,6 +9,8 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/buzzcasting-utils.d.ts",
+      "default": "./dist/buzzcasting-utils.esm.js",
       "import": "./dist/buzzcasting-utils.esm.js"
     }
   },
@@ -29,21 +31,21 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@antfu/eslint-config": "^5.4.1",
+    "@antfu/eslint-config": "^6.0.0",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
-    "@types/node": "^22.18.8",
-    "@typescript-eslint/eslint-plugin": "^8.45.0",
-    "@typescript-eslint/parser": "^8.45.0",
-    "@vitest/coverage-v8": "^3.2.4",
+    "@types/node": "^22.18.12",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "@vitest/coverage-v8": "^4.0.1",
     "camelcase": "^8.0.0",
     "changelogen": "^0.6.2",
-    "eslint": "^9.36.0",
-    "lint-staged": "^16.2.3",
+    "eslint": "^9.38.0",
+    "lint-staged": "^16.2.6",
     "typescript": "^5.9.3",
-    "vite": "^7.1.7",
+    "vite": "^7.1.11",
     "vite-plugin-dts": "^4.5.4",
-    "vitest": "^3.2.4"
+    "vitest": "^4.0.1"
   },
   "lint-staged": {
     "*.ts": "npm run lint"
