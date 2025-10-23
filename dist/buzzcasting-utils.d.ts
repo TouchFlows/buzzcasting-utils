@@ -1361,13 +1361,6 @@ export declare interface LandGeometry {
  */
 export declare const log: (level: number | string | undefined, message: any[]) => Promise<void>;
 
-export declare const logging: {
-    add: (level: number | string) => void;
-    clear: () => void;
-    delete: (level: number | string) => void;
-    list: () => void;
-};
-
 export declare const maxifyCss: (css: string) => string;
 
 export declare const maxifyHtml: (html: string) => string;

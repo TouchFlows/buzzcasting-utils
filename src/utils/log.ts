@@ -1,3 +1,4 @@
+import { CSS } from "../enums";
 const logChannel = new BroadcastChannel("logging");
 
 /**
@@ -10,4 +11,17 @@ const logChannel = new BroadcastChannel("logging");
 
 export const log = async (level: number | string = 0, message: any[]) => {
   logChannel.postMessage({ action: "log", level, message });
+};
+
+export const logging = {
+  add: (level: number | string) =>
+    logChannel.postMessage({ action: "add", level }),
+  clear: () => logChannel.postMessage({ action: "delete" }),
+  delete: (level: number | string) =>
+    logChannel.postMessage({ action: "delete", level }),
+  list: () =>
+    logChannel.postMessage({
+      action: "list",
+      message: ["%capp%c %clogging", CSS.APP, CSS.NONE, CSS.OK],
+    }),
 };
