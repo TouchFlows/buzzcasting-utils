@@ -1,7 +1,7 @@
 {
   "name": "buzzcasting-utils",
   "type": "module",
-  "version": "1.8.10",
+  "version": "1.9.0",
   "private": false,
   "author": {
     "name": "Mark Tamis, TouchFlows SAS",
