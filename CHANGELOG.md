@@ -1,4 +1,20 @@
 
+## v1.9.3
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.9.2...v1.9.3)
+
+### 🩹 Fixes
+
+- Interface export errors ([323c366](https://github.com/TouchFlows/buzzcasting-utils/commit/323c366))
+
+### 🏡 Chore
+
+- **release:** V1.9.2 ([ef8bd8d](https://github.com/TouchFlows/buzzcasting-utils/commit/ef8bd8d))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.9.2
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.9.1...v1.9.2)
