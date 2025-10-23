@@ -10,8 +10,8 @@
   "exports": {
     ".": {
       "types": "./dist/buzzcasting-utils.d.ts",
-      "default": "./dist/buzzcasting-utils.esm.js",
-      "import": "./dist/buzzcasting-utils.esm.js"
+      "import": "./dist/buzzcasting-utils.esm.js",
+      "default": "./dist/buzzcasting-utils.esm.js"
     }
   },
   "module": "./dist/buzzcasting-utils.esm.js",

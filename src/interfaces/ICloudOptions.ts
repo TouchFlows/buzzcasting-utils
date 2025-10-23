@@ -1,121 +1,153 @@
+import { IConfig } from "./IConfig";
+import { IDate, ITime } from "./IDateTime";
+
 export interface ICloudOptions {
-	animation?: ICloudAnimation
-	css?: ICloudCss
-	d3?: ICloudD3
-	dateformat?: ICloudDateFormat
-	show?: ICloudShow
-	config?: ICloudConfig
-	colors?: string[]
-	dimensions?: ICloudDimensions
-	pie?: ICloudPie
-	kpi?: ICloudKpi
-	legend?: ICloudLegend
-  bubbles?: ICloudBubbles
+  animation?: number;
+  interval?: number;
+  speed?: string;
+  component?: string;
+  css?: CloudCss;
+  bubbles?: Bubbles;
+  config?: IConfig;
+  colors?: string;
+  data?: Data;
+  time?: ITime;
+  date?: IDate;
+  debug?: boolean;
+  dimensions?: Dimensions;
+  globe?: Globe;
+  highlight?: Highlight;
+  kpi?: Kpi;
+  legend?: Legend;
+  pie?: Pie;
+  show?: ShowOptions;
+  words?: Words;
 }
 
-export interface ICloudAnimation {
-	interval: number,
-	animation: number,
-	speed: string,
-	parentTag: string
+export interface CloudCss {
+  up: string;
+  down: string;
+  new: string;
+  arrowup: string;
+  arrowdown: string;
+  chart: string;
+  body: string;
+  brand: string;
+  count: string;
+  change: string;
+  highlight: string;
+  highlighted: string;
+  key: string;
+  host: string;
+  label: string;
+  legend: string;
+  row: string;
+  separator: string;
+  title: string;
+  widget: string;
+  words: string;
 }
 
-export interface ICloudDimensions {
-	width: number
-	height: number
+export interface Bubbles {
+  label: string;
+  size: string;
+  classlist: string;
+  force: number;
+  color: string;
+  multiplier: number;
 }
 
-export interface ICloudPie {
-	radius: {
-		inner: number
-		outer: number
-	}
-	animation: {
-		duration: number
-	}
+export interface Data {
+  dashboard: string;
+  type: string;
+  widget: string;
 }
 
-export interface ICloudLegend {
-	count?: {
-		width?: string
-		height?: string
-	}
-	key: {
-		width: string
-	}
-	width: string
-  position: string
-	gap?: {
-		column: string
-		row: string
-	}
-  show: { percentage: boolean}
+export interface Dimensions {
+  width: number;
+  height: number;
 }
 
-export interface ICloudBubbles {
-    size: number
-    classlist: string
-    force: number
-    color: string
+export interface Globe {
+  border: Border;
+  land: Land;
 }
 
-export interface ICloudKpi {
-	name: string
+export interface Border {
+  stroke: number;
+  line: string;
 }
 
-export interface ICloudCss {
-	arrowdown?: string
-	arrowup?: string
-	backdrop?: string
-	body?: string
-	brand?: string
-	change?: string
-  chart?: string
-	count?: string
-	container?: string
-	date?: string
-	down?: string
-	host?: string
-	image?: string
-  key?: string 
-  legend?: string
-	title?: string
-	up?: string
-	widget?: string
-	dark?: boolean
+export interface Land {
+  fill: string;
 }
 
-export interface ICloudDateFormat {
-	time?: string
-	date?: string
+export interface Highlight {
+  label: string;
+  color: string;
 }
 
-export interface ICloudShow {
-	brand?: boolean
-	date?: boolean
+export interface Kpi {
+  name: string;
 }
 
-export interface ICloudD3 {
-	globe: {
-		colors: {
-			arc: string
-			border: string
-			country: string
-			land: string
-			sphere: string
-		}
-		settings?: {
-			canvas?: string
-			card?: string
-			width?: number
-			height?: number
-		}
-	}
+export interface Legend {
+  key: Key;
+  label: Label;
+  count: Count;
+  width: string;
+  position: string;
+  show: LegendShow;
+  gap: Gap;
 }
 
-export interface ICloudConfig {
-	items?: number
-	chunk?: number
-	fixed?: number
-	abbreviate?: boolean
+export interface Key {
+  width: string;
+}
+
+export interface Label {
+  width: string;
+}
+
+export interface Count {
+  width: string;
+}
+
+export interface LegendShow {
+  percentage: boolean;
+}
+
+export interface Gap {
+  column: string;
+  row: string;
+}
+
+export interface Pie {
+  radius: Radius;
+  animation: Animation;
+}
+
+export interface Radius {
+  inner: number;
+  outer: number;
+}
+
+export interface Animation {
+  duration: number;
+}
+
+export interface ShowOptions {
+  emojis: boolean;
+  brand: boolean;
+  date: boolean;
+  gradient: boolean;
+  hashtags: boolean;
+  trend: boolean;
+}
+
+export interface Words {
+  duration: number;
+  multiplier: number;
+  padding: number;
+  range: string;
 }

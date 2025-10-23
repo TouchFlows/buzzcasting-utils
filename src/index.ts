@@ -1,6 +1,7 @@
 declare global {
   interface Window {
     __bc: {
+      logger: Worker;
       opts: any;
     };
   }

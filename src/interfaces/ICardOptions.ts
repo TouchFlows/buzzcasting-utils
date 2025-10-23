@@ -1,9 +1,10 @@
 export interface ICardOptions {
   animation?: IAnimation;
   brand?: IBrand;
-  css?: ICss;
+  css?: CardCss;
   dateformat?: IDateFormat;
   debug?: boolean;
+  delay?: number;
   globe?: IGlobe;
   locale?: string;
   show?: IShow;
@@ -18,16 +19,19 @@ export interface IAnimation {
   parentTag?: string;
 }
 
-export interface ICss {
+export interface CardCss {
   avatar?: string;
   backdrop?: string;
   body?: string;
+  bodylayout?: string;
   brand?: string;
+  canvas?: string;
   card?: string;
   container?: string;
   dark?: boolean;
   date?: string;
   dynamics?: string;
+  globe?: string;
   handle?: string;
   host?: string;
   image?: string;
@@ -51,6 +55,7 @@ export interface IShow {
   approve?: boolean;
   avatar?: boolean;
   brand?: boolean;
+  carousel?: boolean;
   date?: boolean;
   dynamics?: boolean;
   handle?: boolean;
@@ -69,9 +74,6 @@ export interface IGlobe {
   country: string;
   land: string;
   sphere: string;
-
-  canvas?: string;
-  card?: string;
   width?: number;
   height?: number;
 }

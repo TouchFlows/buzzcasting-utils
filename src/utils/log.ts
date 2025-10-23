@@ -1,17 +1,75 @@
-export const log = (level: number = 0, message: any[]) => {
-	switch (true) {
-		case level > 3:
-			console.debug(...message)
-			break
-		case level > 2:
-      console.info(...message)
-			break
-		case level > 1:
-      console.warn(...message)
-			break
-		case level > 0:
-      console.error(...message)
-			break
-		default:
+import { CSS } from "../enums";
+const blob = new Blob(
+  [
+    `const LOG_LEVELS = new Set([1,2,3,4])
+		self.onmessage = function(e) {
+  switch(e.data.action){
+		case 'add':
+			LOG_LEVELS.add(e.data.level);
+			break;
+		case 'clear':
+			LOG_LEVELS.clear();
+			break;
+		case 'delete':
+			LOG_LEVELS.delete(e.data.level);
+			break;
+		case 'list':
+			e.data.message.push([...LOG_LEVELS])
+			console.log(...e.data.message);
+		break;
+		case 'log':
+			if(LOG_LEVELS.has(e.data.level)) {
+				switch (true) {
+					case e.data.level > 3:
+						console.debug(...e.data.message);
+						break;
+					case e.data.level > 2:
+						console.info(...e.data.message);
+						break;
+					case e.data.level > 1:
+						console.warn(...e.data.message);
+						break;
+					case e.data.level > 0:
+						console.error(...e.data.message);
+						break;
+					default:
+						console.info(...e.data.message);
+				}
+			}
+			break;
 	}
-}
+}`,
+  ],
+  { type: "text/javascript" }
+);
+
+window.__bc = window.__bc || {};
+// Note: window.webkitURL.createObjectURL() in Chrome 10+.
+window.__bc.logger =
+  window.__bc?.logger ||
+  new Worker(window.URL.createObjectURL(blob), { name: "logger" });
+
+/**
+ * Send Message to worker, don't block the main thread
+ *
+ * @param level Log Level
+ *
+ * @returns
+ */
+
+export const log = async (level: number | string = 0, message: any[]) => {
+  window.__bc.logger.postMessage({ action: "log", level, message });
+};
+
+export const logging = {
+  add: (level: number | string) =>
+    window.__bc.logger.postMessage({ action: "add", level }),
+  clear: () => window.__bc.logger.postMessage({ action: "delete" }),
+  delete: (level: number | string) =>
+    window.__bc.logger.postMessage({ action: "delete", level }),
+  list: () =>
+    window.__bc.logger.postMessage({
+      action: "list",
+      message: ["%capp%c %clogging", CSS.APP, CSS.NONE, CSS.OK],
+    }),
+};

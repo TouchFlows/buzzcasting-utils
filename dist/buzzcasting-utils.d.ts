@@ -1,3 +1,8 @@
+declare interface Animation_2 {
+    duration: number;
+}
+export { Animation_2 as Animation }
+
 export declare function anonymize(name: string): string;
 
 export declare enum API {
@@ -30,7 +35,21 @@ export declare function attrs(attributes: NamedNodeMap): any;
 
 export declare const awaitElement: (selector: string) => Promise<unknown>;
 
+export declare interface Border {
+    stroke: number;
+    line: string;
+}
+
 export declare function brandLogo(channel: string, size: string): string;
+
+export declare interface Bubbles {
+    label: string;
+    size: string;
+    classlist: string;
+    force: number;
+    color: string;
+    multiplier: number;
+}
 
 /**
  * Convert string containing hyphens to camelCase
@@ -52,6 +71,32 @@ export declare const camelToHyphen: (str: string) => string;
 
 export declare const capitalizeFirstLetter: (prop: string) => string;
 
+export declare interface CardCss {
+    avatar?: string;
+    backdrop?: string;
+    body?: string;
+    bodylayout?: string;
+    brand?: string;
+    canvas?: string;
+    card?: string;
+    container?: string;
+    dark?: boolean;
+    date?: string;
+    dynamics?: string;
+    globe?: string;
+    handle?: string;
+    host?: string;
+    image?: string;
+    kpi?: string;
+    label?: string;
+    name?: string;
+    play?: string;
+    sender?: string;
+    title?: string;
+    video?: string;
+    widget?: string;
+}
+
 /**
  * Clear Container range contents of template code when the web component is connected to the DOM
  * @param myNode
@@ -68,6 +113,30 @@ export declare interface CloudAttr {
     "kpi-name"?: string;
     "config-abbreviate"?: string;
     class?: string | string[];
+}
+
+export declare interface CloudCss {
+    up: string;
+    down: string;
+    new: string;
+    arrowup: string;
+    arrowdown: string;
+    chart: string;
+    body: string;
+    brand: string;
+    count: string;
+    change: string;
+    highlight: string;
+    highlighted: string;
+    key: string;
+    host: string;
+    label: string;
+    legend: string;
+    row: string;
+    separator: string;
+    title: string;
+    widget: string;
+    words: string;
 }
 
 export declare interface Component {
@@ -87,21 +156,20 @@ export declare interface Content {
     attr: MessagesAttr;
 }
 
-export declare interface Countries {
-    type: string;
-    geometries: CountriesGeometry[];
+export declare interface Count {
+    width: string;
 }
 
 export declare interface CountriesGeometry {
-    type: Type;
+    type: GeoType;
     arcs: Array<Array<number[] | number>>;
     id?: string;
     properties: CountryProperties;
 }
 
 export declare interface CountryObjects {
-    countries: Countries;
-    land: Land;
+    countries: GeoCountries;
+    land: GeoLand;
 }
 
 export declare interface CountryProperties {
@@ -128,12 +196,23 @@ declare enum CSS_2 {
     SLIDE = "color:black;background-color:yellow;padding:0 4px 0 4px;border-radius:5px;",
     STORAGE = "color:black;background-color:cyan;padding:0 4px 0 4px;border-radius:5px;",
     SUBSCRIBE = "color:white;background-color:dodgerblue;padding:0 4px 0 4px;border-radius:5px;",
-    WIDGET = "color:gret;background-color:lemonchiffon;padding:0 4px 0 4px;border-radius:5px;",
+    WIDGET = "color:black;background-color:lemonchiffon;padding:0 4px 0 4px;border-radius:5px;",
     WS = "color:white;background-color:green;padding:0 4px 0 4px;border-radius:5px;"
 }
 export { CSS_2 as CSS }
 
+export declare interface Data {
+    dashboard: string;
+    type: string;
+    widget: string;
+}
+
 export declare function deepMerge(objs: any): void;
+
+export declare interface Dimensions {
+    width: number;
+    height: number;
+}
 
 declare const escape_2: (htmlStr: string) => string;
 export { escape_2 as escape }
@@ -218,7 +297,29 @@ export declare enum EVENTS {
 
 export declare function filterAttributes(attributes: NamedNodeMap): IFilteredAttributes;
 
+export declare const flatten: (obj: any, res?: {}, parentKey?: string) => {};
+
 export declare function formatContent(message: IMessage, titleCss?: string): string;
+
+export declare interface Gap {
+    column: string;
+    row: string;
+}
+
+export declare interface GeoCountries {
+    type: string;
+    geometries: CountriesGeometry[];
+}
+
+export declare interface GeoLand {
+    type: string;
+    geometries: LandGeometry[];
+}
+
+export declare enum GeoType {
+    MultiPolygon = "MultiPolygon",
+    Polygon = "Polygon"
+}
 
 export declare const getGuid: () => string;
 
@@ -228,9 +329,20 @@ export declare function getParameterByName(key: string): string | null;
 
 export declare const getQueryParam: (param: string) => any;
 
+export declare interface Globe {
+    border: Border;
+    land: Land;
+}
+
 export declare function hashSum(o: any): string | any[];
 
 export declare const hasHWA: () => boolean;
+
+declare interface Highlight_2 {
+    label: string;
+    color: string;
+}
+export { Highlight_2 as Highlight }
 
 export declare const html2json: (html: string) => {
     node: string;
@@ -291,36 +403,63 @@ export declare interface IBrand {
 }
 
 export declare interface ICardAttributes {
-    layout?: "base" | "globe" | "carousel";
+    layout?: "" | "none" | "base" | "globe" | "carousel";
     component: string;
-    "data-type": "messages" | "cloud" | "series";
+    "data-type": "messages" | "cloud" | "series" | "contents";
     "data-order"?: string;
     "data-dashboard": string;
     "data-widget": string;
     "data-limit"?: string;
+    "css-avatar"?: string[];
+    "css-backdrop"?: string[];
     "css-body"?: string[];
     "css-brand"?: string[];
     "css-card"?: string[];
+    "css-container"?: string[];
     "css-date"?: string[];
+    "css-dynamics"?: string[];
     "css-handle"?: string[];
+    "css-host"?: string[];
+    "css-image"?: string[];
+    "css-kpi"?: string[];
+    "css-label"?: string[];
     "css-name"?: string[];
+    "css-play"?: string[];
+    "css-sender"?: string[];
+    "css-title"?: string[];
+    "css-video"?: string[];
+    "css-widget"?: string[];
     "date-format"?: string;
     "time-format"?: string;
-    "show-brand"?: "true" | "false";
-    "show-kpi"?: "true" | "false";
-    "show-sender"?: "true" | "false";
-    animation?: string;
+    "date-locale"?: string;
+    "show-approve?": boolean;
+    "show-avatar"?: boolean;
+    "show-brand"?: boolean;
+    "show-date"?: boolean;
+    "show-dynamics"?: boolean;
+    "show-handle"?: boolean;
+    "show-kpi"?: boolean;
+    "show-name"?: boolean;
+    "show-play"?: boolean;
+    "show-sender"?: boolean;
+    "show-star"?: boolean;
+    "show-visible"?: boolean;
+    "show-debug"?: boolean;
+    animation?: boolean;
     interval?: string;
+    speed?: string;
 }
 
 export declare interface ICardOptions {
     animation?: IAnimation;
     brand?: IBrand;
-    css?: ICss;
-    globe?: IGlobe;
+    css?: CardCss;
     dateformat?: IDateFormat;
-    show?: IShow;
     debug?: boolean;
+    delay?: number;
+    globe?: IGlobe;
+    locale?: string;
+    show?: IShow;
 }
 
 export declare interface ICategory {
@@ -341,77 +480,6 @@ export declare interface ICloud {
     previous_total: number;
 }
 
-export declare interface ICloudAnimation {
-    interval: number;
-    animation: number;
-    speed: string;
-    parentTag: string;
-}
-
-export declare interface ICloudBubbles {
-    size: number;
-    classlist: string;
-    force: number;
-    color: string;
-}
-
-export declare interface ICloudConfig {
-    items?: number;
-    chunk?: number;
-    fixed?: number;
-    abbreviate?: boolean;
-}
-
-export declare interface ICloudCss {
-    arrowdown?: string;
-    arrowup?: string;
-    backdrop?: string;
-    body?: string;
-    brand?: string;
-    change?: string;
-    chart?: string;
-    count?: string;
-    container?: string;
-    date?: string;
-    down?: string;
-    host?: string;
-    image?: string;
-    key?: string;
-    legend?: string;
-    title?: string;
-    up?: string;
-    widget?: string;
-    dark?: boolean;
-}
-
-export declare interface ICloudD3 {
-    globe: {
-        colors: {
-            arc: string;
-            border: string;
-            country: string;
-            land: string;
-            sphere: string;
-        };
-        settings?: {
-            canvas?: string;
-            card?: string;
-            width?: number;
-            height?: number;
-        };
-    };
-}
-
-export declare interface ICloudDateFormat {
-    time?: string;
-    date?: string;
-}
-
-export declare interface ICloudDimensions {
-    width: number;
-    height: number;
-}
-
 declare interface ICloudIndicators {
     total: number;
     positive: number;
@@ -423,7 +491,7 @@ declare interface ICloudIndicators {
 }
 
 export declare interface ICloudInfluencers {
-    labels?: Label[];
+    labels?: InfluencerLabel[];
     title?: string;
     current?: ICloudInfluencersData[];
     previous?: ICloudInfluencersData[];
@@ -453,57 +521,35 @@ export declare interface ICloudInfluencersData {
     country: string;
 }
 
-export declare interface ICloudKpi {
-    name: string;
-}
-
-export declare interface ICloudLegend {
-    count?: {
-        width?: string;
-        height?: string;
-    };
-    key: {
-        width: string;
-    };
-    width: string;
-    position: string;
-    gap?: {
-        column: string;
-        row: string;
-    };
-    show: {
-        percentage: boolean;
-    };
-}
-
 export declare interface ICloudOptions {
-    animation?: ICloudAnimation;
-    css?: ICloudCss;
-    d3?: ICloudD3;
-    dateformat?: ICloudDateFormat;
-    show?: ICloudShow;
-    config?: ICloudConfig;
-    colors?: string[];
-    dimensions?: ICloudDimensions;
-    pie?: ICloudPie;
-    kpi?: ICloudKpi;
-    legend?: ICloudLegend;
-    bubbles?: ICloudBubbles;
+    animation?: number;
+    interval?: number;
+    speed?: string;
+    component?: string;
+    css?: CloudCss;
+    bubbles?: Bubbles;
+    config?: IConfig;
+    colors?: string;
+    data?: Data;
+    time?: ITime;
+    date?: IDate;
+    debug?: boolean;
+    dimensions?: Dimensions;
+    globe?: Globe;
+    highlight?: Highlight_2;
+    kpi?: Kpi;
+    legend?: Legend;
+    pie?: Pie;
+    show?: ShowOptions;
+    words?: Words;
 }
 
-export declare interface ICloudPie {
-    radius: {
-        inner: number;
-        outer: number;
-    };
-    animation: {
-        duration: number;
-    };
-}
-
-export declare interface ICloudShow {
-    brand?: boolean;
-    date?: boolean;
+declare interface IConfig {
+    fixed: number;
+    abbreviate: boolean;
+    chunk?: number;
+    items?: number;
+    label?: string;
 }
 
 export declare interface ICountries {
@@ -516,29 +562,6 @@ export declare interface ICountries {
 
 export declare interface ICountry {
     fillStyle: string;
-}
-
-export declare interface ICss {
-    avatar?: string;
-    backdrop?: string;
-    body?: string;
-    brand?: string;
-    card?: string;
-    container?: string;
-    dark?: boolean;
-    date?: string;
-    dynamics?: string;
-    handle?: string;
-    host?: string;
-    image?: string;
-    kpi?: string;
-    label?: string;
-    name?: string;
-    play?: string;
-    sender?: string;
-    title?: string;
-    video?: string;
-    widget?: string;
 }
 
 export declare interface ID3Bubbles {
@@ -617,10 +640,19 @@ export declare interface IDashboards {
     dashboards: IDashboard[];
 }
 
+declare interface IDate {
+    format: string;
+}
+
 export declare interface IDateFormat {
     time?: string;
     date?: string;
     locale?: string;
+}
+
+declare interface IDimensions {
+    width: number;
+    height: number;
 }
 
 export declare interface IDynamics {
@@ -682,8 +714,6 @@ export declare interface IGlobe {
     country: string;
     land: string;
     sphere: string;
-    canvas?: string;
-    card?: string;
     width?: number;
     height?: number;
 }
@@ -921,6 +951,12 @@ export declare interface IModal {
     timeout?: number;
 }
 
+export declare interface InfluencerLabel {
+    label: string;
+    count: number;
+    info: string;
+}
+
 export declare const intToString: (num: any, digits?: number, abbreviate?: boolean, locale?: string) => string;
 
 export declare interface IPreference {
@@ -1029,50 +1065,6 @@ export declare interface ISeries {
     timestamp?: number;
 }
 
-export declare interface ISeriesConfig {
-    fixed?: number;
-    abbreviate?: boolean;
-    label?: string;
-}
-
-export declare interface ISeriesCss {
-    arrowdown?: string;
-    arrowup?: string;
-    backdrop?: string;
-    body?: string;
-    brand?: string;
-    change?: string;
-    count?: string;
-    container?: string;
-    date?: string;
-    down?: string;
-    host?: string;
-    image?: string;
-    label?: string;
-    title?: string;
-    up?: string;
-    widget?: string;
-    dark?: boolean;
-}
-
-export declare interface ISeriesD3 {
-    globe: {
-        colors: {
-            arc: string;
-            border: string;
-            country: string;
-            land: string;
-            sphere: string;
-        };
-        settings?: {
-            canvas?: string;
-            card?: string;
-            width?: number;
-            height?: number;
-        };
-    };
-}
-
 export declare interface ISeriesData {
     name?: string;
     label?: string;
@@ -1084,28 +1076,21 @@ export declare interface ISeriesData {
     previous_category?: number;
 }
 
-export declare interface ISeriesDateFormat {
-    time?: string;
-    date?: string;
-}
-
 export declare interface ISeriesOptions {
-    css?: ISeriesCss;
-    d3?: ISeriesD3;
-    dateformat?: ISeriesDateFormat;
-    show?: ISeriesShow;
-    config?: ISeriesConfig;
-}
-
-export declare interface ISeriesShow {
-    brand?: boolean;
-    date?: boolean;
+    colors?: string;
+    css?: SeriesCss;
+    time?: ITime;
+    date?: IDate;
+    dimensions?: IDimensions;
+    show?: Show;
+    config?: IConfig;
 }
 
 export declare interface IShow {
     approve?: boolean;
     avatar?: boolean;
     brand?: boolean;
+    carousel?: boolean;
     date?: boolean;
     dynamics?: boolean;
     handle?: boolean;
@@ -1143,7 +1128,12 @@ export declare interface IStorageOptions {
     delay?: number;
     display?: string;
     domain?: string;
+    favorite?: boolean;
+    firefox?: boolean;
+    generateCss?: boolean;
     html?: boolean;
+    interval?: number;
+    link?: string;
     locale: string;
     loglevel?: number;
     moderation?: string;
@@ -1157,8 +1147,14 @@ export declare interface IStorageOptions {
     slides?: string[];
     storage: string;
     suspended?: boolean;
+    switch?: boolean;
     token?: string;
     version: string;
+    workers?: boolean;
+}
+
+declare interface ITime {
+    format: string;
 }
 
 export declare interface ITopic {
@@ -1234,23 +1230,56 @@ export declare interface JsonChild {
     child: JsonChild[];
 }
 
+export declare interface Key {
+    width: string;
+}
+
+export declare interface Kpi {
+    name: string;
+}
+
 export declare interface Label {
-    label: string;
-    count: number;
-    info: string;
+    width: string;
 }
 
 export declare interface Land {
-    type: string;
-    geometries: LandGeometry[];
+    fill: string;
 }
 
 export declare interface LandGeometry {
-    type: Type;
+    type: GeoType;
     arcs: Array<Array<number[]>>;
 }
 
-export declare const log: (level: number | undefined, message: any[]) => void;
+export declare interface Legend {
+    key: Key;
+    label: Label;
+    count: Count;
+    width: string;
+    position: string;
+    show: LegendShow;
+    gap: Gap;
+}
+
+export declare interface LegendShow {
+    percentage: boolean;
+}
+
+/**
+ * Send Message to worker, don't block the main thread
+ *
+ * @param level Log Level
+ *
+ * @returns
+ */
+export declare const log: (level: number | string | undefined, message: any[]) => Promise<void>;
+
+export declare const logging: {
+    add: (level: number | string) => void;
+    clear: () => void;
+    delete: (level: number | string) => void;
+    list: () => void;
+};
 
 export declare const maxifyCss: (css: string) => string;
 
@@ -1296,6 +1325,21 @@ export declare function moderation(options: IStorageOptions, query: IQuery): IQu
 
 export declare function numberFormatter(num: number, digits: number): string;
 
+export declare interface Percentage {
+    count: boolean;
+    change: boolean;
+}
+
+export declare interface Pie {
+    radius: Radius;
+    animation: Animation_2;
+}
+
+export declare interface Radius {
+    inner: number;
+    outer: number;
+}
+
 export declare const randomColor: () => string;
 
 export declare const randomRGB: () => string;
@@ -1340,6 +1384,21 @@ export declare interface SeriesAttr {
     class?: string | string[];
 }
 
+export declare interface SeriesCss {
+    arrowdown: string;
+    arrowup: string;
+    body: string;
+    brand: string;
+    change: string;
+    count: string;
+    down: string;
+    host: string;
+    label: string;
+    title: string;
+    up: string;
+    widget: string;
+}
+
 export declare interface Settings {
     contents: Content[];
     component: Component;
@@ -1350,7 +1409,23 @@ export declare enum ShapeType {
     Polygon = "Polygon"
 }
 
+export declare interface Show {
+    brand: boolean;
+    percentage: Percentage;
+    date: boolean;
+    kpi: boolean;
+}
+
 export declare function showModal(e: MouseEvent, widget: any, message: IMessage, options: any): void;
+
+export declare interface ShowOptions {
+    emojis: boolean;
+    brand: boolean;
+    date: boolean;
+    gradient: boolean;
+    hashtags: boolean;
+    trend: boolean;
+}
 
 export declare function shuffleMessages(messages: IMessage[]): IMessage[];
 
@@ -1373,11 +1448,6 @@ export declare interface Transform {
     translate: number[];
 }
 
-export declare enum Type {
-    MultiPolygon = "MultiPolygon",
-    Polygon = "Polygon"
-}
-
 export declare const typeCss: (query: IQuery | undefined) => string;
 
 export declare const uniq: (length?: number, existing?: never[]) => string;
@@ -1387,6 +1457,13 @@ export declare const unique: (arr: any) => unknown[];
 export declare const upDownColor: (change: number) => "text-down text-xs" | "text-up text-xs" | "text-white text-xs";
 
 export declare function widgetParams(query: IQuery): IQuery;
+
+export declare interface Words {
+    duration: number;
+    multiplier: number;
+    padding: number;
+    range: string;
+}
 
 export declare const wrapPromise: (promise: any, delay: number, reason: string) => Promise<any>;
 
