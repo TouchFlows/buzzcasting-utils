@@ -1,4 +1,20 @@
 
+## v1.9.6
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.9.5...v1.9.6)
+
+### 🩹 Fixes
+
+- Broadcast channel for logging ([90a73c5](https://github.com/TouchFlows/buzzcasting-utils/commit/90a73c5))
+
+### 🏡 Chore
+
+- **release:** V1.9.5 ([8dbd023](https://github.com/TouchFlows/buzzcasting-utils/commit/8dbd023))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.9.5
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.9.4...v1.9.5)
