@@ -43,10 +43,9 @@ const blob = new Blob(
   { type: "text/javascript" }
 );
 
-export const createLogger = () => {
-  // Note: window.webkitURL.createObjectURL() in Chrome 10+.
-  return new Worker(window.URL.createObjectURL(blob), { name: "logger" });
-};
+const logworker = new Worker(window.URL.createObjectURL(blob), {
+  name: "logger",
+});
 
 /**
  * Send Message to worker, don't block the main thread
@@ -57,17 +56,17 @@ export const createLogger = () => {
  */
 
 export const log = async (level: number | string = 0, message: any[]) => {
-  window.__bc.logger.postMessage({ action: "log", level, message });
+  logworker.postMessage({ action: "log", level, message });
 };
 
 export const logging = {
   add: (level: number | string) =>
-    window.__bc.logger.postMessage({ action: "add", level }),
-  clear: () => window.__bc.logger.postMessage({ action: "delete" }),
+    logworker.postMessage({ action: "add", level }),
+  clear: () => logworker.postMessage({ action: "delete" }),
   delete: (level: number | string) =>
-    window.__bc.logger.postMessage({ action: "delete", level }),
+    logworker.postMessage({ action: "delete", level }),
   list: () =>
-    window.__bc.logger.postMessage({
+    logworker.postMessage({
       action: "list",
       message: ["%capp%c %clogging", CSS.APP, CSS.NONE, CSS.OK],
     }),

@@ -197,7 +197,7 @@ function he(e) {
 }
 const De = (e) => {
   let t = "";
-  return w(e, {
+  return _(e, {
     start: function(r, n, a) {
       t += "<" + r;
       for (let o = 0; o < n.length; o++)
@@ -214,7 +214,7 @@ const De = (e) => {
       t += `<!-- ${r} -->`;
     }
   }), t;
-}, _e = (e, t) => {
+}, Ae = (e, t) => {
   const r = b("html,head,body,title"), n = { link: "head", base: "head" };
   t ? t = t.ownerDocument || t.getOwnerDocument && t.getOwnerDocument() || t : typeof t < "u" ? t = new Document() : typeof document < "u" && document.implementation && document.implementation.createDocument && (t = document.implementation.createDocument("", "", null));
   const a = [];
@@ -224,7 +224,7 @@ const De = (e) => {
   }(), t.getElementsByTagName)
     for (let s in r) r[s] = t.getElementsByTagName(s)[0];
   let l = r.body;
-  return w(e, {
+  return _(e, {
     start: function(s, u, c) {
       if (r[s]) {
         l = r[s], c || a.push(l);
@@ -256,7 +256,7 @@ const De = (e) => {
   "abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var"
 ), B = b("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr"), T = b(
   "checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected"
-), H = b("script,style"), w = (e, t) => {
+), H = b("script,style"), _ = (e, t) => {
   let r, n, a, o = [], l = e;
   const s = (c, i) => {
     let d;
@@ -297,16 +297,16 @@ const De = (e) => {
       for (; o.at(-1) && G[o.at(-1)]; )
         s("", o.at(-1));
     if (B[i] && o.at(-1) == i && s("", i), p = S[i] || !!p, p || o.push(i), t.start) {
-      const A = [];
-      d.replace($, function(z, _) {
-        let O = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : T[_] ? _ : "";
-        A.push({
-          name: _,
+      const w = [];
+      d.replace($, function(z, A) {
+        let O = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : T[A] ? A : "";
+        w.push({
+          name: A,
           value: O,
           escaped: O.replace(/(^|[^\\])"/g, '$1\\"')
           //"
         });
-      }), t.start && t.start(i, A, p);
+      }), t.start && t.start(i, w, p);
     }
   }
 };
@@ -316,13 +316,13 @@ function W(e) {
 function F(e) {
   return e.replace(/<\?xml.*\?>\n/, "").replace(/<!doctype.*\>\n/, "").replace(/<!DOCTYPE.*\>\n/, "");
 }
-const we = (e) => {
+const _e = (e) => {
   e = F(e);
   const t = [], r = {
     node: "root",
     child: []
   };
-  return w(e, {
+  return _(e, {
     start: function(n, a, o) {
       let l = {
         node: "element",
@@ -406,7 +406,7 @@ const we = (e) => {
     return `<!-- ${e.text} -->`;
   if (e.node === "root")
     return r;
-}, Ae = () => {
+}, we = () => {
   const e = (t = !1) => {
     const n = document.createElement("canvas").getContext("2d", { willReadFrequently: t });
     return n !== null ? (n.moveTo(0, 0), n.lineTo(120, 121), n.stroke(), n.getImageData(0, 0, 200, 200).data.join()) : null;
@@ -472,12 +472,9 @@ const we = (e) => {
 }`
   ],
   { type: "text/javascript" }
-);
-window.__bc = window.__bc || {};
-window.__bc.logger = window.__bc?.logger || new Worker(window.URL.createObjectURL(Y), { name: "logger" });
-const Le = async (e = 0, t) => {
+), Le = () => new Worker(window.URL.createObjectURL(Y), { name: "logger" }), Re = async (e = 0, t) => {
   window.__bc.logger.postMessage({ action: "log", level: e, message: t });
-}, Re = {
+}, ve = {
   add: (e) => window.__bc.logger.postMessage({ action: "add", level: e }),
   clear: () => window.__bc.logger.postMessage({ action: "delete" }),
   delete: (e) => window.__bc.logger.postMessage({ action: "delete", level: e }),
@@ -485,12 +482,12 @@ const Le = async (e = 0, t) => {
     action: "list",
     message: ["%capp%c %clogging", g.APP, g.NONE, g.OK]
   })
-}, ve = (e) => e.replace(/\<\!--\s*?[^\s?\[][\s\S]*?--\>/g, "").replace(/\>\s*\</g, "><").replace(/\t/g, ""), Ee = (e) => e.replace(/\>\</g, `>
-<`), Pe = (e) => e.replace(/\/\*.*\*\/|\/\*[\s\S]*?\*\/|\n|\t|\v|\s{2,}/g, "").replace(/\s*\{\s*/g, "{").replace(/\s*\}\s*/g, "}").replace(/\s*\:\s*/g, ":").replace(/\s*\;\s*/g, ";").replace(/\s*\,\s*/g, ",").replace(/\s*\~\s*/g, "~").replace(/\s*\>\s*/g, ">").replace(/\s*\+\s*/g, "+").replace(/\s*\!\s*/g, "!"), Ie = (e) => e.replace(/\,/g, ", ").replace(/\{/g, ` {
+}, Ee = (e) => e.replace(/\<\!--\s*?[^\s?\[][\s\S]*?--\>/g, "").replace(/\>\s*\</g, "><").replace(/\t/g, ""), Pe = (e) => e.replace(/\>\</g, `>
+<`), Ie = (e) => e.replace(/\/\*.*\*\/|\/\*[\s\S]*?\*\/|\n|\t|\v|\s{2,}/g, "").replace(/\s*\{\s*/g, "{").replace(/\s*\}\s*/g, "}").replace(/\s*\:\s*/g, ":").replace(/\s*\;\s*/g, ";").replace(/\s*\,\s*/g, ",").replace(/\s*\~\s*/g, "~").replace(/\s*\>\s*/g, ">").replace(/\s*\+\s*/g, "+").replace(/\s*\!\s*/g, "!"), ke = (e) => e.replace(/\,/g, ", ").replace(/\{/g, ` {
 	`).replace(/\}/g, `}
 `).replace(/\;/g, `;
 	`);
-function ke(e, t) {
+function ye(e, t) {
   const r = [
     { value: 1, symbol: "" },
     { value: 1e3, symbol: "K" },
@@ -505,18 +502,18 @@ function ke(e, t) {
     ;
   return (e / r[a].value).toFixed(t).replace(n, "$1") + r[a].symbol;
 }
-function ye(e) {
+function Me(e) {
   const t = RegExp(`[?&]${e}=([^&]*)`).exec(window.location.search);
   return t && decodeURIComponent(t[1].replace(/\+/g, " ")) || null;
 }
-const Me = (e) => new Proxy(new URLSearchParams(window.location.search), {
+const Ue = (e) => new Proxy(new URLSearchParams(window.location.search), {
   // @ts-ignore
   get: (r, n) => r.get(n)
 })[e];
-function Ue(e) {
+function $e(e) {
   return e[Math.floor(Math.random() * e.length)];
 }
-function $e(e) {
+function Se(e) {
   switch (e.language) {
     case "ar":
       return {
@@ -527,7 +524,7 @@ function $e(e) {
       return {};
   }
 }
-function Se(e) {
+function Ce(e) {
   const t = e.filter(
     (r) => r !== void 0
   );
@@ -569,13 +566,13 @@ function Se(e) {
     }
   }), t;
 }
-function Ce(e, t, r, n) {
+function Ge(e, t, r, n) {
   e.stopPropagation(), t.showModal({
     showComponent: "card-modal",
     props: { data: r, options: n }
   });
 }
-function Ge(e) {
+function Be(e) {
   const t = [...e];
   for (let r = t.length - 1; r > 0; r--) {
     const n = Math.floor(Math.random() * (r + 1));
@@ -583,13 +580,13 @@ function Ge(e) {
   }
   return t;
 }
-function Be() {
+function Te() {
   let e = "";
   const t = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   for (let r = 0; r < 7; r++) e += t.charAt(Math.floor(Math.random() * t.length));
   return e;
 }
-const Te = (e) => {
+const He = (e) => {
   switch (e?.type) {
     case h.MESSAGES:
       return g.MESSAGES;
@@ -602,12 +599,12 @@ const Te = (e) => {
   }
 }, Z = (e = 6) => Math.random().toString(36).substring(2, e + 2), X = (e, t = []) => !t.find(function(n) {
   return n === e;
-}), He = (e, t = []) => {
+}), We = (e, t = []) => {
   let n = 0, a = "";
   for (; a == "" && n < 100; )
     a = Z(e), X(a, t) || (a = "", n++);
   return a;
-}, We = (e) => {
+}, Fe = (e) => {
   switch (!0) {
     case e < 0:
       return "text-down text-xs";
@@ -616,19 +613,19 @@ const Te = (e) => {
     default:
       return "text-white text-xs";
   }
-}, Fe = (e, t, r) => Promise.race([e, Q(t, r)]), Q = (e, t) => new Promise((r, n) => setTimeout(() => t === void 0 ? r("ok") : n(t), e));
-function Ke(e) {
+}, Ke = (e, t, r) => Promise.race([e, Q(t, r)]), Q = (e, t) => new Promise((r, n) => setTimeout(() => t === void 0 ? r("ok") : n(t), e));
+function Ye(e) {
   let t = `${e.type}.${e.topics}`;
   return e.order && (t += `.${e.order}`), e.period && (t += `.${e.period}`), t;
 }
-function Ye(e) {
+function Ze(e) {
   if (e.widget === void 0) {
     const t = e.topics?.split("-");
     t && t.length > 1 ? (e.dashboard = t ? t[0] : "", e.widget = t ? t[1] : "") : (e.widget = e.topics, e.dashboard = e.slide);
   }
   return e;
 }
-function Ze(e, t) {
+function Xe(e, t) {
   let r, n, a, o, l;
   switch (e.moderation) {
     case D.BEFORE:
@@ -651,8 +648,8 @@ export {
   g as CSS,
   v as EVENTS,
   j as GeoType,
-  w as HTMLParser,
-  _e as HTMLtoDOM,
+  _ as HTMLParser,
+  Ae as HTMLtoDOM,
   De as HTMLtoXML,
   D as MODERATION,
   fe as RGBAchangeA,
@@ -669,43 +666,44 @@ export {
   ae as camelize,
   se as capitalizeFirstLetter,
   ie as clearContents,
+  Le as createLogger,
   I as deepMerge,
   ge as escape,
   ee as filterAttributes,
   k as flatten,
   be as formatContent,
   me as getGuid,
-  Ke as getKey,
-  ye as getParameterByName,
-  Me as getQueryParam,
-  Ae as hasHWA,
+  Ye as getKey,
+  Me as getParameterByName,
+  Ue as getQueryParam,
+  we as hasHWA,
   he as hashSum,
-  we as html2json,
+  _e as html2json,
   Oe as intToString,
   xe as isEmpty,
   K as json2html,
-  Le as log,
-  Re as logging,
-  Ie as maxifyCss,
-  Ee as maxifyHtml,
-  Pe as minifyCss,
-  ve as minifyHtml,
-  Ze as moderation,
-  ke as numberFormatter,
+  Re as log,
+  ve as logging,
+  ke as maxifyCss,
+  Pe as maxifyHtml,
+  Ie as minifyCss,
+  Ee as minifyHtml,
+  Xe as moderation,
+  ye as numberFormatter,
   le as randomColor,
   ue as randomRGB,
   de as randomRGBA,
   ce as randomRGBAfull,
-  Ue as randomValue,
-  $e as rtl,
-  Se as sanitize,
-  Ce as showModal,
-  Ge as shuffleMessages,
-  Be as stringGen,
-  Te as typeCss,
-  He as uniq,
+  $e as randomValue,
+  Se as rtl,
+  Ce as sanitize,
+  Ge as showModal,
+  Be as shuffleMessages,
+  Te as stringGen,
+  He as typeCss,
+  We as uniq,
   pe as unique,
-  We as upDownColor,
-  Ye as widgetParams,
-  Fe as wrapPromise
+  Fe as upDownColor,
+  Ze as widgetParams,
+  Ke as wrapPromise
 };
