@@ -43,11 +43,10 @@ const blob = new Blob(
   { type: "text/javascript" }
 );
 
-window.__bc = window.__bc || {};
-// Note: window.webkitURL.createObjectURL() in Chrome 10+.
-window.__bc.logger =
-  window.__bc?.logger ||
-  new Worker(window.URL.createObjectURL(blob), { name: "logger" });
+export const createLogger = () => {
+  // Note: window.webkitURL.createObjectURL() in Chrome 10+.
+  return new Worker(window.URL.createObjectURL(blob), { name: "logger" });
+};
 
 /**
  * Send Message to worker, don't block the main thread

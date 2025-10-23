@@ -493,7 +493,7 @@ export declare interface ICountry {
     fillStyle: string;
 }
 
-declare interface ICssCard {
+export declare interface ICssCard {
     avatar?: string;
     backdrop?: string;
     body?: string;
@@ -519,7 +519,7 @@ declare interface ICssCard {
     widget?: string;
 }
 
-declare interface ICssCloud {
+export declare interface ICssCloud {
     up: string;
     down: string;
     new: string;
@@ -544,7 +544,7 @@ declare interface ICssCloud {
     words: string;
 }
 
-declare interface ICssContents {
+export declare interface ICssContents {
     body: string;
     card: string;
     globe?: string;
@@ -552,7 +552,7 @@ declare interface ICssContents {
     widget: string;
 }
 
-declare interface ICssSeries {
+export declare interface ICssSeries {
     arrowdown: string;
     arrowup: string;
     body: string;
@@ -922,7 +922,7 @@ export declare interface ILayoutZones {
     ["x:string"]: ILayoutZone[];
 }
 
-declare interface ILegend {
+export declare interface ILegend {
     key: ILegendKey;
     label: ILegendLabel;
     count: ILegendCount;
@@ -932,20 +932,20 @@ declare interface ILegend {
     gap: ILegendGap;
 }
 
-declare interface ILegendCount {
+export declare interface ILegendCount {
     width: string;
 }
 
-declare interface ILegendGap {
+export declare interface ILegendGap {
     column: string;
     row: string;
 }
 
-declare interface ILegendKey {
+export declare interface ILegendKey {
     width: string;
 }
 
-declare interface ILegendLabel {
+export declare interface ILegendLabel {
     width: string;
 }
 
@@ -1018,7 +1018,7 @@ export declare interface InfluencerLabel {
 
 export declare const intToString: (num: any, digits?: number, abbreviate?: boolean, locale?: string) => string;
 
-declare interface IPie {
+export declare interface IPie {
     radius: IPieRadius;
     animation: IPieAnimation;
 }
@@ -1026,14 +1026,14 @@ declare interface IPie {
 /**
  * Animation Duration
  */
-declare interface IPieAnimation {
+export declare interface IPieAnimation {
     duration: number;
 }
 
 /**
  * inner and outer radius in px
  */
-declare interface IPieRadius {
+export declare interface IPieRadius {
     inner: number;
     outer: number;
 }
@@ -1165,7 +1165,7 @@ export declare interface ISeriesOptions {
     config?: IConfig;
 }
 
-declare interface IShowCard {
+export declare interface IShowCard {
     approve?: boolean;
     avatar?: boolean;
     brand?: boolean;
@@ -1182,7 +1182,7 @@ declare interface IShowCard {
     debug?: boolean;
 }
 
-declare interface IShowCloud {
+export declare interface IShowCloud {
     emojis: boolean;
     brand: boolean;
     date: boolean;
@@ -1192,12 +1192,16 @@ declare interface IShowCloud {
     debug?: boolean;
 }
 
-declare interface IShowLegend {
+export declare interface IShowContents {
+    debug?: boolean;
+}
+
+export declare interface IShowLegend {
     percentage: boolean;
     debug?: boolean;
 }
 
-declare interface IShowSeries {
+export declare interface IShowSeries {
     brand: boolean;
     percentage: boolean;
     date: boolean;
