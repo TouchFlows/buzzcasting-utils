@@ -1,4 +1,20 @@
 
+## v1.10.2
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.10.0...v1.10.2)
+
+### 🩹 Fixes
+
+- Change K abbreviation to k, plus improved emoji regex ([b996204](https://github.com/TouchFlows/buzzcasting-utils/commit/b996204))
+
+### 🏡 Chore
+
+- **release:** V1.10.0 ([cfa4942](https://github.com/TouchFlows/buzzcasting-utils/commit/cfa4942))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.10.0
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.9.6...v1.10.0)
