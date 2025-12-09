@@ -58,6 +58,7 @@ export enum EVENTS {
   SLIDE_UPDATED = "slideUpdated",
   START_TRANSITIONER = "startTransitioner",
   STORAGE_INIT = "storageInit",
+  STREAM = "stream",
   SUBSCRIBE = "subscribe",
   SUSPEND_ACCOUNT = "suspendAccount",
   SWITCH_PRESENTATION = "switchPresentation",

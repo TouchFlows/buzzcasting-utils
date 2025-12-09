@@ -67,6 +67,7 @@ export interface ICssSeries {
   down: string;
   host: string;
   label: string;
+  table: string;
   title: string;
   up: string;
   widget: string;

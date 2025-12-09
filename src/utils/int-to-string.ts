@@ -23,12 +23,14 @@ export const intToString = (
   num = num.toString().replace(/[^0-9.]/g, "");
 
   let si = [
-    { v: 1e3, s: "K" },
+    { v: 1e3, s: "k" },
     { v: 1e6, s: "M" },
-    { v: 1e9, s: "B" },
+    { v: 1e9, s: "G" },
     { v: 1e12, s: "T" },
     { v: 1e15, s: "P" },
     { v: 1e18, s: "E" },
+    { v: 1e21, s: "Z" },
+    { v: 1e24, s: "Y" },
   ];
   let index: number;
   for (index = si.length - 1; index > 0; index--) {
