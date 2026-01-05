@@ -202,6 +202,7 @@ export declare enum EVENTS {
     SLIDE_UPDATED = "slideUpdated",
     START_TRANSITIONER = "startTransitioner",
     STORAGE_INIT = "storageInit",
+    STREAM = "stream",
     SUBSCRIBE = "subscribe",
     SUSPEND_ACCOUNT = "suspendAccount",
     SWITCH_PRESENTATION = "switchPresentation",
@@ -562,6 +563,7 @@ export declare interface ICssSeries {
     down: string;
     host: string;
     label: string;
+    table: string;
     title: string;
     up: string;
     widget: string;

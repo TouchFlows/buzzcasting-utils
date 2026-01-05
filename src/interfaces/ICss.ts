@@ -12,6 +12,7 @@ export interface ICssCard {
   dynamics?: string;
   globe?: string;
   handle?: string;
+  heading?: string;
   host?: string;
   image?: string;
   kpi?: string;

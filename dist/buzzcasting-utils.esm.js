@@ -1,4 +1,4 @@
-var D = /* @__PURE__ */ ((e) => (e.CARDS = "cards", e.CLOUD = "cloud", e.DASHBOARD = "dashboard", e.DASHBOARDS = "dashboards", e.IMAGES = "images", e.MESSAGES = "messages", e.PREFERENCE = "preference", e.PREFERENCES = "preferences", e.PRESENTATION = "presentation", e.PRESENTATIONS = "presentations", e.SERIES = "series", e.SLIDE = "slide", e.SLIDES = "slides", e.TOPICS = "topics", e.WIDGET = "widget", e.WIDGETS = "widgets", e))(D || {}), g = /* @__PURE__ */ ((e) => (e.API = "color:white;background-color:grey;padding:0 4px 0 4px;border-radius:5px;", e.APP = "color:white;background-color:navy;padding:0 4px 0 4px;border-radius:5px;", e.BROADCAST = "color:navy;background-color:orange;padding:0 4px 0 4px;border-radius:5px;", e.CLOUD = "color:purple;background-color:mistyrose;padding:0 4px 0 4px;border-radius:5px;", e.DATA = "color:grey;background-color:lightskyblue;padding:0 4px 0 4px;border-radius:5px;", e.ERROR = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.GET_DATA = "color:black;background-color:lime;padding:0 4px 0 4px;border-radius:5px;", e.HIDE = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.KO = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.MESSAGES = "color:white;background-color:darkslateblue;padding:0 4px 0 4px;border-radius:5px;", e.NO_UPDATES = "color:grey;border:1px solid grey;padding:0 4px 0 4px;border-radius:5px;", e.NONE = "color:transparent;background-color:transparent;", e.OK = "color:black;background-color:lime;padding:0 4px 0 4px;border-radius:5px;", e.PRESENTATION = "color:white;background-color:darkred;padding:0 4px 0 4px;border-radius:5px;", e.SERIES = "color:purple;background-color:thistle;padding:0 4px 0 4px;border-radius:5px;", e.SLIDE = "color:black;background-color:yellow;padding:0 4px 0 4px;border-radius:5px;", e.STORAGE = "color:black;background-color:cyan;padding:0 4px 0 4px;border-radius:5px;", e.SUBSCRIBE = "color:white;background-color:dodgerblue;padding:0 4px 0 4px;border-radius:5px;", e.WIDGET = "color:black;background-color:lemonchiffon;padding:0 4px 0 4px;border-radius:5px;", e.WS = "color:white;background-color:green;padding:0 4px 0 4px;border-radius:5px;", e))(g || {}), I = /* @__PURE__ */ ((e) => (e.ADD_SLIDE = "addSlide", e.APP_READY = "appReady", e.API_UPDATE = "apiUpdate", e.BACKGROUND_UPDATE = "backgroundUpdate", e.BUILDER_PREVIEW = "builderPreview", e.COMPONENT_UPDATE = "componentUpdate", e.APPROVE_MESSAGE = "approveMessage", e.CHANNEL = "channel", e.CLEAN_MESSAGES = "cleanMessages", e.CLOSE_BUILDER_DIALOG = "closeBuilderDialog", e.CLOSE_BUILDER_MODAL = "closeBuilderModal", e.CLOSE_MODAL = "closeModal", e.COLOR_UPDATE = "colorUpdate", e.COMPONENT_INDEX = "componentIndex", e.CSS_SET = "setCss", e.CSS_STORE = "storeCss", e.DASHBOARD_LOAD = "loadDashboard", e.DASHBOARD_STORE = "storeDashboard", e.DASHBOARD_UPDATED = "dashboardUpdated", e.ERROR = "error", e.HIDE_MESSAGE = "hideMessage", e.HIDE_LABELS = "hideLabels", e.IMAGE_GET = "getImage", e.IMAGE_SET = "setImage", e.IMAGE_STORED = "imageStored", e.LAUPPUT_UPDATE = "layoutUpdate", e.PREV_SLIDE = "prevSlide", e.RELOAD_PRESENTATION = "reloadPresentation", e.STAR_MESSAGE = "starMessage", e.GOTO_SLIDE = "gotoSlide", e.NEXT_SLIDE = "nextSlide", e.PREFERENCE_LOAD = "loadPreference", e.PREFERENCE_STORE = "storePreference", e.PREFERENCE_UPDATED = "preferenceUpdated", e.PAUSE_PRESENTATION = "pausePresentation", e.PRESENTATION_READY = "presentationReady", e.PRESENTATION_LOAD = "loadPresentation", e.PRESENTATION_STORE = "storePresentation", e.PRESENTATION_UPDATED = "presentationUpdated", e.ROW_COL_UPDATE = "rowcolupdate", e.SCREENSHOT_TAKE = "takeScreenshot", e.SCREENSHOT_STORE = "storeScreenshot", e.SECTION_UPDATE = "sectionUpdate", e.SHOW_BUILDER_DIALOG = "showBuilderDialog", e.SHOW_BUILDER_MODAL = "showBuilderModal", e.SHOW_MODAL = "showModal", e.SLIDE_DID_LOAD = "slideDidLoad", e.SLIDE_GET = "getSlide", e.SLIDE_GOTO = "slideGoto", e.SLIDE_LOAD = "loadSlide", e.SLIDE_READY = "slideReady", e.SLIDE_SAVED = "slideSaved", e.SLIDE_SET = "setSlide", e.SLIDE_STORE = "storeSlide", e.SLIDE_STORED = "slideStored", e.SLIDE_TRANSITIONER = "slideTransitioner", e.SLIDE_UPDATED = "slideUpdated", e.START_TRANSITIONER = "startTransitioner", e.STORAGE_INIT = "storageInit", e.SUBSCRIBE = "subscribe", e.SUSPEND_ACCOUNT = "suspendAccount", e.SWITCH_PRESENTATION = "switchPresentation", e.REMOVE_CLOUD = "removeCloud", e.UPDATE = "update", e.UPLOAD_COMPLETED = "uploadCompleted", e.VERSION = "version", e.WIDGETS_CLEAR = "widgetsClear", e.WIDGET_DID_LOAD = "widgetDidLoad", e.WIDGET_DID_UPDATE = "widgetDidUpdate", e.WIDGET_LOAD = "widgetLoad", e.WIDGET_STORE = "widgetStore", e.WIDGET_UPDATE = "widgetUpdate", e.WS_API_REQUEST = "wsApiRequest", e.WS_API_RESPONSE = "wsApiResponse", e.WS_API_UPDATE = "wsApiRUpdate", e))(I || {}), A = /* @__PURE__ */ ((e) => (e.APPROVED = "approved", e.BEFORE = "before", e.DELAYED = "delayed", e.NONE = "none", e.REALTIME = "realtime", e))(A || {}), v = /* @__PURE__ */ ((e) => (e.KEYVAL = "keyval", e.LOCAL = "local", e.SESSION = "session", e.DEXIE = "dexie", e.WINDOW = "window", e))(v || {});
+var D = /* @__PURE__ */ ((e) => (e.CARDS = "cards", e.CLOUD = "cloud", e.DASHBOARD = "dashboard", e.DASHBOARDS = "dashboards", e.IMAGES = "images", e.MESSAGES = "messages", e.PREFERENCE = "preference", e.PREFERENCES = "preferences", e.PRESENTATION = "presentation", e.PRESENTATIONS = "presentations", e.SERIES = "series", e.SLIDE = "slide", e.SLIDES = "slides", e.TOPICS = "topics", e.WIDGET = "widget", e.WIDGETS = "widgets", e))(D || {}), g = /* @__PURE__ */ ((e) => (e.API = "color:white;background-color:grey;padding:0 4px 0 4px;border-radius:5px;", e.APP = "color:white;background-color:navy;padding:0 4px 0 4px;border-radius:5px;", e.BROADCAST = "color:navy;background-color:orange;padding:0 4px 0 4px;border-radius:5px;", e.CLOUD = "color:purple;background-color:mistyrose;padding:0 4px 0 4px;border-radius:5px;", e.DATA = "color:grey;background-color:lightskyblue;padding:0 4px 0 4px;border-radius:5px;", e.ERROR = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.GET_DATA = "color:black;background-color:lime;padding:0 4px 0 4px;border-radius:5px;", e.HIDE = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.KO = "color:white;background-color:red;padding:0 4px 0 4px;border-radius:5px;", e.MESSAGES = "color:white;background-color:darkslateblue;padding:0 4px 0 4px;border-radius:5px;", e.NO_UPDATES = "color:grey;border:1px solid grey;padding:0 4px 0 4px;border-radius:5px;", e.NONE = "color:transparent;background-color:transparent;", e.OK = "color:black;background-color:lime;padding:0 4px 0 4px;border-radius:5px;", e.PRESENTATION = "color:white;background-color:darkred;padding:0 4px 0 4px;border-radius:5px;", e.SERIES = "color:purple;background-color:thistle;padding:0 4px 0 4px;border-radius:5px;", e.SLIDE = "color:black;background-color:yellow;padding:0 4px 0 4px;border-radius:5px;", e.STORAGE = "color:black;background-color:cyan;padding:0 4px 0 4px;border-radius:5px;", e.SUBSCRIBE = "color:white;background-color:dodgerblue;padding:0 4px 0 4px;border-radius:5px;", e.WIDGET = "color:black;background-color:lemonchiffon;padding:0 4px 0 4px;border-radius:5px;", e.WS = "color:white;background-color:green;padding:0 4px 0 4px;border-radius:5px;", e))(g || {}), L = /* @__PURE__ */ ((e) => (e.ADD_SLIDE = "addSlide", e.APP_READY = "appReady", e.API_UPDATE = "apiUpdate", e.BACKGROUND_UPDATE = "backgroundUpdate", e.BUILDER_PREVIEW = "builderPreview", e.COMPONENT_UPDATE = "componentUpdate", e.APPROVE_MESSAGE = "approveMessage", e.CHANNEL = "channel", e.CLEAN_MESSAGES = "cleanMessages", e.CLOSE_BUILDER_DIALOG = "closeBuilderDialog", e.CLOSE_BUILDER_MODAL = "closeBuilderModal", e.CLOSE_MODAL = "closeModal", e.COLOR_UPDATE = "colorUpdate", e.COMPONENT_INDEX = "componentIndex", e.CSS_SET = "setCss", e.CSS_STORE = "storeCss", e.DASHBOARD_LOAD = "loadDashboard", e.DASHBOARD_STORE = "storeDashboard", e.DASHBOARD_UPDATED = "dashboardUpdated", e.ERROR = "error", e.HIDE_MESSAGE = "hideMessage", e.HIDE_LABELS = "hideLabels", e.IMAGE_GET = "getImage", e.IMAGE_SET = "setImage", e.IMAGE_STORED = "imageStored", e.LAUPPUT_UPDATE = "layoutUpdate", e.PREV_SLIDE = "prevSlide", e.RELOAD_PRESENTATION = "reloadPresentation", e.STAR_MESSAGE = "starMessage", e.GOTO_SLIDE = "gotoSlide", e.NEXT_SLIDE = "nextSlide", e.PREFERENCE_LOAD = "loadPreference", e.PREFERENCE_STORE = "storePreference", e.PREFERENCE_UPDATED = "preferenceUpdated", e.PAUSE_PRESENTATION = "pausePresentation", e.PRESENTATION_READY = "presentationReady", e.PRESENTATION_LOAD = "loadPresentation", e.PRESENTATION_STORE = "storePresentation", e.PRESENTATION_UPDATED = "presentationUpdated", e.ROW_COL_UPDATE = "rowcolupdate", e.SCREENSHOT_TAKE = "takeScreenshot", e.SCREENSHOT_STORE = "storeScreenshot", e.SECTION_UPDATE = "sectionUpdate", e.SHOW_BUILDER_DIALOG = "showBuilderDialog", e.SHOW_BUILDER_MODAL = "showBuilderModal", e.SHOW_MODAL = "showModal", e.SLIDE_DID_LOAD = "slideDidLoad", e.SLIDE_GET = "getSlide", e.SLIDE_GOTO = "slideGoto", e.SLIDE_LOAD = "loadSlide", e.SLIDE_READY = "slideReady", e.SLIDE_SAVED = "slideSaved", e.SLIDE_SET = "setSlide", e.SLIDE_STORE = "storeSlide", e.SLIDE_STORED = "slideStored", e.SLIDE_TRANSITIONER = "slideTransitioner", e.SLIDE_UPDATED = "slideUpdated", e.START_TRANSITIONER = "startTransitioner", e.STORAGE_INIT = "storageInit", e.STREAM = "stream", e.SUBSCRIBE = "subscribe", e.SUSPEND_ACCOUNT = "suspendAccount", e.SWITCH_PRESENTATION = "switchPresentation", e.REMOVE_CLOUD = "removeCloud", e.UPDATE = "update", e.UPLOAD_COMPLETED = "uploadCompleted", e.VERSION = "version", e.WIDGETS_CLEAR = "widgetsClear", e.WIDGET_DID_LOAD = "widgetDidLoad", e.WIDGET_DID_UPDATE = "widgetDidUpdate", e.WIDGET_LOAD = "widgetLoad", e.WIDGET_STORE = "widgetStore", e.WIDGET_UPDATE = "widgetUpdate", e.WS_API_REQUEST = "wsApiRequest", e.WS_API_RESPONSE = "wsApiResponse", e.WS_API_UPDATE = "wsApiRUpdate", e))(L || {}), A = /* @__PURE__ */ ((e) => (e.APPROVED = "approved", e.BEFORE = "before", e.DELAYED = "delayed", e.NONE = "none", e.REALTIME = "realtime", e))(A || {}), I = /* @__PURE__ */ ((e) => (e.KEYVAL = "keyval", e.LOCAL = "local", e.SESSION = "session", e.DEXIE = "dexie", e.WINDOW = "window", e))(I || {});
 function q(e) {
   const t = e.toUpperCase().split(/[\s_-]+/);
   return t.length > 0 ? (t.forEach((r, n) => {
@@ -39,7 +39,7 @@ function te(e) {
   const t = {};
   for (let r = 0; r < e.length; r++) {
     const n = e[r];
-    n.name !== "class" && (t[n.name] = E(n.value));
+    n.name !== "class" && (t[n.name] = y(n.value));
   }
   return t;
 }
@@ -98,7 +98,7 @@ function ne(e, t) {
 function oe(e) {
   return e.replace(/^\w|[A-Z]|\b\w/g, (t, r) => r === 0 ? t.toLowerCase() : t.toUpperCase()).replace(/\s+/g, "");
 }
-function E(e) {
+function y(e) {
   return e.toLowerCase().split("-").reduce((t, r) => t + (r.charAt(0).toUpperCase() + r.slice(1)));
 }
 const ae = (e) => e.replace(/([A-Z])/g, "-$1").toLowerCase(), ie = (e) => e.charAt(0).toUpperCase() + e.slice(1);
@@ -120,12 +120,12 @@ const le = () => Math.floor(Math.random() * 16777215).toString(16), ce = () => {
   let r = e.split(",");
   return r = r.map((n) => parseFloat(n.trim()).toString()), e = "background-color: rgba(" + parseInt(r[0]) + "," + parseInt(r[1]) + "," + parseInt(r[2]) + "," + t + ");", e;
 };
-function y(e) {
+function E(e) {
   e.reduce(
     (t, r) => Object.keys(r).reduce(
       (n, o) => ({
         ...n,
-        [o]: o in t && typeof t[o] == "object" && t[o] !== null && typeof r[o] == "object" && r[o] !== null ? y([t[o], r[o]]) : r[o]
+        [o]: o in t && typeof t[o] == "object" && t[o] !== null && typeof r[o] == "object" && r[o] !== null ? E([t[o], r[o]]) : r[o]
       }),
       t
     ),
@@ -165,10 +165,10 @@ function p(e, t) {
 function $(e, t, r) {
   return Object.keys(t).sort().reduce(n, e);
   function n(o, a) {
-    return L(o, t[a], a, r);
+    return v(o, t[a], a, r);
   }
 }
-function L(e, t, r, n) {
+function v(e, t, r, n) {
   const o = p(p(p(e, r), C(t)), typeof t);
   if (t === null)
     return p(o, "null");
@@ -193,7 +193,7 @@ function C(e) {
   return Object.prototype.toString.call(e);
 }
 function he(e) {
-  return k(L(0, e, "", []).toString(16), 8);
+  return k(v(0, e, "", []).toString(16), 8);
 }
 const De = (e) => {
   let t = "";
@@ -250,9 +250,9 @@ const De = (e) => {
   return t;
 }, R = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/, P = /^<\/([-A-Za-z0-9_]+)[^>]*>/, U = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g, S = b(
   "area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr"
-), B = b(
-  "a,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video"
 ), G = b(
+  "a,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video"
+), B = b(
   "abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var"
 ), T = b("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr"), H = b(
   "checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected"
@@ -293,8 +293,8 @@ const De = (e) => {
   }
   i();
   function u(c, s, d, f) {
-    if (s = s.toLowerCase(), B[s])
-      for (; a.at(-1) && G[a.at(-1)]; )
+    if (s = s.toLowerCase(), G[s])
+      for (; a.at(-1) && B[a.at(-1)]; )
         i("", a.at(-1));
     if (T[s] && a.at(-1) == s && i("", s), f = S[s] || !!f, f || a.push(s), t.start) {
       const _ = [];
@@ -313,11 +313,11 @@ const De = (e) => {
 function F(e) {
   return `"${e}"`;
 }
-function K(e) {
+function Y(e) {
   return e.replace(/<\?xml.*\?>\n/, "").replace(/<!doctype.*\>\n/, "").replace(/<!DOCTYPE.*\>\n/, "");
 }
 const xe = (e) => {
-  e = K(e);
+  e = Y(e);
   const t = [], r = {
     node: "root",
     child: []
@@ -368,7 +368,7 @@ const xe = (e) => {
       a.child === void 0 && (a.child = []), a.child.push(o);
     }
   }), r;
-}, Y = (e) => {
+}, Z = (e) => {
   const t = [
     "area",
     "base",
@@ -387,7 +387,7 @@ const xe = (e) => {
   ];
   let r = "";
   e.child && (r = e.child.map(function(o) {
-    return Y(o);
+    return Z(o);
   }).join(""));
   let n = "";
   if (e.attr && (n = Object.keys(e.attr).map(function(o) {
@@ -420,12 +420,14 @@ const xe = (e) => {
     return (Math.round(e * 100) / 100).toFixed(t);
   e = e.toString().replace(/[^0-9.]/g, "");
   let o = [
-    { v: 1e3, s: "K" },
+    { v: 1e3, s: "k" },
     { v: 1e6, s: "M" },
-    { v: 1e9, s: "B" },
+    { v: 1e9, s: "G" },
     { v: 1e12, s: "T" },
     { v: 1e15, s: "P" },
-    { v: 1e18, s: "E" }
+    { v: 1e18, s: "E" },
+    { v: 1e21, s: "Z" },
+    { v: 1e24, s: "Y" }
   ], a;
   for (a = o.length - 1; a > 0 && !(e >= o[a].v); a--)
     ;
@@ -440,20 +442,22 @@ const xe = (e) => {
     action: "list",
     message: ["%capp%c %clogging", g.APP, g.NONE, g.OK]
   })
-}, Le = (e) => e.replace(/\<\!--\s*?[^\s?\[][\s\S]*?--\>/g, "").replace(/\>\s*\</g, "><").replace(/\t/g, ""), Ie = (e) => e.replace(/\>\</g, `>
-<`), ve = (e) => e.replace(/\/\*.*\*\/|\/\*[\s\S]*?\*\/|\n|\t|\v|\s{2,}/g, "").replace(/\s*\{\s*/g, "{").replace(/\s*\}\s*/g, "}").replace(/\s*\:\s*/g, ":").replace(/\s*\;\s*/g, ";").replace(/\s*\,\s*/g, ",").replace(/\s*\~\s*/g, "~").replace(/\s*\>\s*/g, ">").replace(/\s*\+\s*/g, "+").replace(/\s*\!\s*/g, "!"), Ee = (e) => e.replace(/\,/g, ", ").replace(/\{/g, ` {
+}, ve = (e) => e.replace(/\<\!--\s*?[^\s?\[][\s\S]*?--\>/g, "").replace(/\>\s*\</g, "><").replace(/\t/g, ""), Le = (e) => e.replace(/\>\</g, `>
+<`), Ie = (e) => e.replace(/\/\*.*\*\/|\/\*[\s\S]*?\*\/|\n|\t|\v|\s{2,}/g, "").replace(/\s*\{\s*/g, "{").replace(/\s*\}\s*/g, "}").replace(/\s*\:\s*/g, ":").replace(/\s*\;\s*/g, ";").replace(/\s*\,\s*/g, ",").replace(/\s*\~\s*/g, "~").replace(/\s*\>\s*/g, ">").replace(/\s*\+\s*/g, "+").replace(/\s*\!\s*/g, "!"), ye = (e) => e.replace(/\,/g, ", ").replace(/\{/g, ` {
 	`).replace(/\}/g, `}
 `).replace(/\;/g, `;
 	`);
-function ye(e, t) {
+function Ee(e, t) {
   const r = [
     { value: 1, symbol: "" },
-    { value: 1e3, symbol: "K" },
+    { value: 1e3, symbol: "k" },
     { value: 1e6, symbol: "M" },
-    { value: 1e9, symbol: "MM" },
+    { value: 1e9, symbol: "G" },
     { value: 1e12, symbol: "T" },
     { value: 1e15, symbol: "P" },
-    { value: 1e18, symbol: "E" }
+    { value: 1e18, symbol: "E" },
+    { value: 1e21, symbol: "Z" },
+    { value: 1e24, symbol: "Y" }
   ], n = /\.0+$|(\.\d*[1-9])0+$/;
   let o;
   for (o = r.length - 1; o > 0 && !(e >= r[o].value); o--)
@@ -530,7 +534,7 @@ function Se(e, t, r, n) {
     props: { data: r, options: n }
   });
 }
-function Be(e) {
+function Ge(e) {
   const t = [...e];
   for (let r = t.length - 1; r > 0; r--) {
     const n = Math.floor(Math.random() * (r + 1));
@@ -538,7 +542,7 @@ function Be(e) {
   }
   return t;
 }
-function Ge() {
+function Be() {
   let e = "";
   const t = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   for (let r = 0; r < 7; r++) e += t.charAt(Math.floor(Math.random() * t.length));
@@ -555,12 +559,12 @@ const Te = (e) => {
     default:
       return g.NO_UPDATES;
   }
-}, Z = (e = 6) => Math.random().toString(36).substring(2, e + 2), X = (e, t = []) => !t.find(function(n) {
+}, K = (e = 6) => Math.random().toString(36).substring(2, e + 2), X = (e, t = []) => !t.find(function(n) {
   return n === e;
 }), He = (e, t = []) => {
   let n = 0, o = "";
   for (; o == "" && n < 100; )
-    o = Z(e), X(o, t) || (o = "", n++);
+    o = K(e), X(o, t) || (o = "", n++);
   return o;
 }, We = (e) => {
   switch (!0) {
@@ -572,18 +576,18 @@ const Te = (e) => {
       return "text-white text-xs";
   }
 }, Fe = (e, t, r) => Promise.race([e, Q(t, r)]), Q = (e, t) => new Promise((r, n) => setTimeout(() => t === void 0 ? r("ok") : n(t), e));
-function Ke(e) {
+function Ye(e) {
   let t = `${e.type}.${e.topics}`;
   return e.order && (t += `.${e.order}`), e.period && (t += `.${e.period}`), t;
 }
-function Ye(e) {
+function Ze(e) {
   if (e.widget === void 0) {
     const t = e.topics?.split("-");
     t && t.length > 1 ? (e.dashboard = t ? t[0] : "", e.widget = t ? t[1] : "") : (e.widget = e.topics, e.dashboard = e.slide);
   }
   return e;
 }
-function Ze(e, t) {
+function Ke(e, t) {
   let r, n, o, a, l;
   switch (e.moderation) {
     case A.BEFORE:
@@ -604,33 +608,33 @@ var J = /* @__PURE__ */ ((e) => (e.MultiPolygon = "MultiPolygon", e.Polygon = "P
 export {
   D as API,
   g as CSS,
-  I as EVENTS,
+  L as EVENTS,
   J as GeoType,
   O as HTMLParser,
   Ae as HTMLtoDOM,
   De as HTMLtoXML,
   A as MODERATION,
   pe as RGBAchangeA,
-  v as STORAGE,
+  I as STORAGE,
   j as ShapeType,
   q as anonymize,
   N as attachedMedia,
   V as attrs,
   re as awaitElement,
   ne as brandLogo,
-  E as camelCase,
+  y as camelCase,
   te as camelCasedProps,
   ae as camelToHyphen,
   oe as camelize,
   ie as capitalizeFirstLetter,
   se as clearContents,
-  y as deepMerge,
+  E as deepMerge,
   ge as escape,
   ee as filterAttributes,
   M as flatten,
   be as formatContent,
   me as getGuid,
-  Ke as getKey,
+  Ye as getKey,
   Me as getParameterByName,
   ke as getQueryParam,
   Oe as hasHWA,
@@ -638,15 +642,15 @@ export {
   xe as html2json,
   _e as intToString,
   we as isEmpty,
-  Y as json2html,
+  Z as json2html,
   Re as log,
   Pe as logging,
-  Ee as maxifyCss,
-  Ie as maxifyHtml,
-  ve as minifyCss,
-  Le as minifyHtml,
-  Ze as moderation,
-  ye as numberFormatter,
+  ye as maxifyCss,
+  Le as maxifyHtml,
+  Ie as minifyCss,
+  ve as minifyHtml,
+  Ke as moderation,
+  Ee as numberFormatter,
   le as randomColor,
   ue as randomRGB,
   de as randomRGBA,
@@ -655,12 +659,12 @@ export {
   Ce as rtl,
   Ue as sanitize,
   Se as showModal,
-  Be as shuffleMessages,
-  Ge as stringGen,
+  Ge as shuffleMessages,
+  Be as stringGen,
   Te as typeCss,
   He as uniq,
   fe as unique,
   We as upDownColor,
-  Ye as widgetParams,
+  Ze as widgetParams,
   Fe as wrapPromise
 };

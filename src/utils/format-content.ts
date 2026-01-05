@@ -2,11 +2,11 @@ import type { IMessage } from "..";
 
 export function formatContent(
   message: IMessage,
-  titleCss: string = "font-bold"
+  headingCss: string = "font-bold"
 ): string {
   return `${
     message?.title !== null
-      ? `<div class="${titleCss}">${message.title}</div>`
+      ? `<div title="heading" class="${headingCss}">${message.title}</div>`
       : ""
   }${
     message?.content
