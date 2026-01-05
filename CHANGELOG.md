@@ -1,4 +1,20 @@
 
+## v1.11.0
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.10.2...v1.11.0)
+
+### 🚀 Enhancements
+
+- Add content formatting + deps ([c4c705e](https://github.com/TouchFlows/buzzcasting-utils/commit/c4c705e))
+
+### 🏡 Chore
+
+- **release:** V1.10.2 ([1ca7b6f](https://github.com/TouchFlows/buzzcasting-utils/commit/1ca7b6f))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.10.2
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.10.0...v1.10.2)
