@@ -1,4 +1,20 @@
 
+## v1.12.0
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.11.0...v1.12.0)
+
+### 🚀 Enhancements
+
+- Interfaces update ([cf5b15f](https://github.com/TouchFlows/buzzcasting-utils/commit/cf5b15f))
+
+### 🏡 Chore
+
+- **release:** V1.11.0 ([716b26e](https://github.com/TouchFlows/buzzcasting-utils/commit/716b26e))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.11.0
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.10.2...v1.11.0)
