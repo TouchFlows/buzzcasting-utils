@@ -21,6 +21,9 @@ export interface IShowCloud {
   date: boolean;
   gradient: boolean;
   hashtags: boolean;
+  labels: true;
+  legend: true;
+  title: true;
   trend: boolean;
   debug?: boolean;
 }

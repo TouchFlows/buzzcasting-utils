@@ -2,7 +2,7 @@ export const intToString = (
   num: any,
   digits: number = 0,
   abbreviate: boolean = true,
-  locale: string = "en"
+  locale: string = "en",
 ): string => {
   if (num === undefined) return "";
   num =
@@ -16,7 +16,8 @@ export const intToString = (
 
   if (num < 1000) {
     // MTM: remove .toString())
-    return (Math.round(num * 100) / 100).toFixed(digits);
+    return num;
+    //return (Math.round(num * 100) / 100).toFixed(digits);
     //return (num = ("" + num).replace(/[^0-9.]/g, ""));
   }
 

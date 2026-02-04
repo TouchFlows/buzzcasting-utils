@@ -5,6 +5,7 @@ import { ICssCard, ICssContents, ICssCloud, ICssSeries } from "./ICss";
 import { IDate, IDateFormat, ITime } from "./IDateTime";
 import { IDimensions } from "./IDimensions";
 import { IGlobe } from "./IGlobe";
+import { IGridLayout } from "./IGridLayout";
 import { ILegend } from "./ILegend";
 import { IPie } from "./IPie";
 import { IShowCard, IShowCloud, IShowSeries } from "./IShow";
@@ -18,6 +19,7 @@ export interface ICardOptions {
   debug?: boolean;
   delay?: number;
   globe?: IGlobe;
+  grid?: IGridLayout;
   locale?: string;
   show?: IShowCard;
 }

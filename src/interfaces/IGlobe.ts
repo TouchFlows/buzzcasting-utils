@@ -18,13 +18,13 @@ export interface IMapHighlight {
 }
 
 export interface IGlobe {
-  width: number;
-  height: number;
-  arc: IGlobeArc;
-  border: IGlobeBorder;
-  country: IGlobeCountry;
-  land: IGlobeLand;
-  sphere: IGlobeSphere;
+  width?: number;
+  height?: number;
+  arc?: IGlobeArc;
+  border?: IGlobeBorder;
+  country?: IGlobeCountry;
+  land?: IGlobeLand;
+  sphere?: IGlobeSphere;
 }
 
 export interface IGlobeArc {

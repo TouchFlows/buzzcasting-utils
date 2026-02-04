@@ -11,6 +11,7 @@ export interface ICssCard {
   date?: string;
   dynamics?: string;
   globe?: string;
+  grid?: string;
   handle?: string;
   heading?: string;
   host?: string;
@@ -32,6 +33,7 @@ export interface ICssCloud {
   arrowup: string;
   arrowdown: string;
   chart: string;
+  container: string;
   backdrop: string;
   body: string;
   brand: string;
@@ -67,6 +69,7 @@ export interface ICssSeries {
   count: string;
   down: string;
   host: string;
+  key: string;
   label: string;
   table: string;
   title: string;

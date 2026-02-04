@@ -225,7 +225,7 @@ export declare function filterAttributes(attributes: NamedNodeMap): IFilteredAtt
 
 export declare const flatten: (obj: any, res?: {}, parentKey?: string) => {};
 
-export declare function formatContent(message: IMessage, titleCss?: string): string;
+export declare function formatContent(message: IMessage, headingCss?: string): string;
 
 export declare interface GeoCountries {
     type: string;
@@ -508,6 +508,7 @@ export declare interface ICssCard {
     dynamics?: string;
     globe?: string;
     handle?: string;
+    heading?: string;
     host?: string;
     image?: string;
     kpi?: string;

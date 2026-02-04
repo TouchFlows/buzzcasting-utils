@@ -134,7 +134,7 @@ function E(e) {
 }
 const fe = (e) => [...new Set(e)], ge = (e) => e.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 function be(e, t = "font-bold") {
-  return `${e?.title !== null ? `<div class="${t}">${e.title}</div>` : ""}${e?.content ? e.content.replace(/\n\n/g, `
+  return `${e?.title !== null ? `<div title="heading" class="${t}">${e.title}</div>` : ""}${e?.content ? e.content.replace(/\n\n/g, `
 `).replace(/\n/g, "<br/>") : ""}`;
 }
 const M = (e, t = {}, r = "") => {
@@ -218,10 +218,10 @@ const De = (e) => {
   const r = b("html,head,body,title"), n = { link: "head", base: "head" };
   t ? t = t.ownerDocument || t.getOwnerDocument && t.getOwnerDocument() || t : typeof t < "u" ? t = new Document() : typeof document < "u" && document.implementation && document.implementation.createDocument && (t = document.implementation.createDocument("", "", null));
   const o = [];
-  if (!(t.documentElement || t.getDocumentElement && t.getDocumentElement()) && t.createElement && function() {
+  if (!(t.documentElement || t.getDocumentElement && t.getDocumentElement()) && t.createElement && (function() {
     const i = t.createElement("html"), u = t.createElement("head");
     u.appendChild(t.createElement("title")), i.appendChild(u), i.appendChild(t.createElement("body")), t.appendChild(i);
-  }(), t.getElementsByTagName)
+  })(), t.getElementsByTagName)
     for (let i in r) r[i] = t.getElementsByTagName(i)[0];
   let l = r.body;
   return O(e, {
@@ -476,15 +476,10 @@ function $e(e) {
   return e[Math.floor(Math.random() * e.length)];
 }
 function Ce(e) {
-  switch (e.language) {
-    case "ar":
-      return {
-        direction: "rtl",
-        textAlign: "right"
-      };
-    default:
-      return {};
-  }
+  return e.language === "ar" ? {
+    direction: "rtl",
+    textAlign: "right"
+  } : {};
 }
 function Ue(e) {
   const t = e.filter(
