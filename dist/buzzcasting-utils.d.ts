@@ -139,6 +139,8 @@ export declare interface Data {
 
 export declare function deepMerge(objs: any): void;
 
+export declare const dir: (message: IMessage) => "rtl" | "ltr";
+
 declare const escape_2: (htmlStr: string) => string;
 export { escape_2 as escape }
 
@@ -380,6 +382,7 @@ export declare interface ICardOptions {
     debug?: boolean;
     delay?: number;
     globe?: IGlobe;
+    grid?: IGridLayout;
     locale?: string;
     show?: IShowCard;
 }
@@ -507,6 +510,7 @@ export declare interface ICssCard {
     date?: string;
     dynamics?: string;
     globe?: string;
+    grid?: string;
     handle?: string;
     heading?: string;
     host?: string;
@@ -528,6 +532,7 @@ export declare interface ICssCloud {
     arrowup: string;
     arrowdown: string;
     chart: string;
+    container: string;
     backdrop: string;
     body: string;
     brand: string;
@@ -563,6 +568,7 @@ export declare interface ICssSeries {
     count: string;
     down: string;
     host: string;
+    key: string;
     label: string;
     table: string;
     title: string;
@@ -715,13 +721,13 @@ export declare interface IGeo {
 }
 
 declare interface IGlobe {
-    width: number;
-    height: number;
-    arc: IGlobeArc;
-    border: IGlobeBorder;
-    country: IGlobeCountry;
-    land: IGlobeLand;
-    sphere: IGlobeSphere;
+    width?: number;
+    height?: number;
+    arc?: IGlobeArc;
+    border?: IGlobeBorder;
+    country?: IGlobeCountry;
+    land?: IGlobeLand;
+    sphere?: IGlobeSphere;
 }
 
 declare interface IGlobeArc {
@@ -746,6 +752,11 @@ declare interface IGlobeSphere {
     stroke: string;
     line: number;
     fill: string;
+}
+
+declare interface IGridLayout {
+    rows?: number;
+    cols?: number;
 }
 
 export declare interface IHighlight {
@@ -1024,6 +1035,7 @@ export declare const intToString: (num: any, digits?: number, abbreviate?: boole
 export declare interface IPie {
     radius: IPieRadius;
     animation: IPieAnimation;
+    boder: IPieBorder;
 }
 
 /**
@@ -1033,10 +1045,18 @@ export declare interface IPieAnimation {
     duration: number;
 }
 
+export declare interface IPieBorder {
+    radius: number;
+    width: number;
+    color: string;
+}
+
 /**
  * inner and outer radius in px
  */
 export declare interface IPieRadius {
+    inside: number;
+    outside: number;
     inner: number;
     outer: number;
 }
@@ -1191,6 +1211,9 @@ export declare interface IShowCloud {
     date: boolean;
     gradient: boolean;
     hashtags: boolean;
+    labels: true;
+    legend: true;
+    title: true;
     trend: boolean;
     debug?: boolean;
 }
