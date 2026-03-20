@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "docs": "npx typedoc src ",
+     "docs": "typedoc",
     "build": "tsc && vite build",
     "changelog": "changelogen --release",
     "release": "npm test && npm run build && changelogen --release && npm publish && git push --follow-tags",
@@ -43,6 +43,7 @@
     "eslint": "^9.39.2",
     "lint-staged": "^16.2.7",
     "typedoc": "^0.28.17",
+    "typedoc-plugin-markdown": "^4.11.0",
     "typescript": "^5.9.3",
     "vite": "^8.0.1",
     "vite-plugin-dts": "^4.5.4",
