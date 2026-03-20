@@ -1,4 +1,17 @@
 
+## v1.12.3
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.12.2...v1.12.3)
+
+### 🏡 Chore
+
+- **release:** V1.12.2 ([acbee59](https://github.com/TouchFlows/buzzcasting-utils/commit/acbee59))
+- Vite to 8.0, add docs generation ([b770eca](https://github.com/TouchFlows/buzzcasting-utils/commit/b770eca))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.12.2
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.12.0...v1.12.2)
