@@ -1,4 +1,20 @@
 
+## v1.13.0
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.12.3...v1.13.0)
+
+### 🚀 Enhancements
+
+- Markdown docs ([65632f3](https://github.com/TouchFlows/buzzcasting-utils/commit/65632f3))
+
+### 🏡 Chore
+
+- **release:** V1.12.3 ([60c715a](https://github.com/TouchFlows/buzzcasting-utils/commit/60c715a))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.12.3
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.12.2...v1.12.3)

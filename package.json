@@ -1,7 +1,7 @@
 {
   "name": "buzzcasting-utils",
   "type": "module",
-  "version": "1.12.3",
+  "version": "1.13.0",
   "private": false,
   "author": {
     "name": "Mark Tamis, TouchFlows SAS",
@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "dev": "vite",
-     "docs": "typedoc",
+    "docs": "typedoc",
     "build": "tsc && vite build",
     "changelog": "changelogen --release",
     "release": "npm test && npm run build && changelogen --release && npm publish && git push --follow-tags",
