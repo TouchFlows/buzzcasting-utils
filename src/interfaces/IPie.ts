@@ -1,7 +1,7 @@
 export interface IPie {
   radius: IPieRadius;
   animation: IPieAnimation;
-  boder: IPieBorder;
+  border: IPieBorder;
 }
 
 /**

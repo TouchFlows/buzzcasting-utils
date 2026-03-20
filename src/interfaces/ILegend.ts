@@ -7,6 +7,7 @@ export interface ILegend {
   width: string;
   position: string;
   show: IShowLegend;
+  title?: string;
   gap: ILegendGap;
 }
 

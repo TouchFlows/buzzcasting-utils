@@ -23,7 +23,10 @@ export default defineConfig({
         return name;
       },
     },
-    minify: "esbuild",
+    rolldownOptions: {
+      output: { minify: true },
+    },
+    //minify: "esbuild",
   },
   plugins: [dts({ rollupTypes: true })],
 });

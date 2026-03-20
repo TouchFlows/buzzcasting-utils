@@ -6,6 +6,8 @@ export interface ICssCard {
   brand?: string;
   canvas?: string;
   card?: string;
+  cardbackdrop: string;
+  cardimage: string;
   container?: string;
   dark?: boolean;
   date?: string;
@@ -39,6 +41,7 @@ export interface ICssCloud {
   brand: string;
   count: string;
   change: string;
+  date: string;
   highlight: string;
   highlighted: string;
   key: string;

@@ -1,3 +1,5 @@
+export declare const abbr: (num: any, digits?: number, abbreviate?: boolean, locale?: string) => string;
+
 export declare function anonymize(name: string): string;
 
 export declare enum API {
@@ -14,6 +16,7 @@ export declare enum API {
     SERIES = "series",
     SLIDE = "slide",
     SLIDES = "slides",
+    TEMPLATES = "templates",
     TOPICS = "topics",
     WIDGET = "widget",
     WIDGETS = "widgets"
@@ -136,6 +139,8 @@ export declare interface Data {
     type: string;
     widget: string;
 }
+
+export declare const debounce: (func: Function, timeout?: number) => (...args: any[]) => void;
 
 export declare function deepMerge(objs: any): void;
 
@@ -374,6 +379,12 @@ export declare interface ICardAttributes {
     speed?: string;
 }
 
+declare interface ICardImage {
+    width: string;
+    height: string;
+    show: boolean;
+}
+
 export declare interface ICardOptions {
     animation?: IAnimation;
     brand?: IBrand;
@@ -387,6 +398,11 @@ export declare interface ICardOptions {
     show?: IShowCard;
 }
 
+declare interface ICardsGrid {
+    rows: number;
+    cols: number;
+}
+
 export declare interface ICategory {
     type: string;
     data: string[];
@@ -396,6 +412,7 @@ export declare interface ICategory {
  * Cloud
  */
 export declare interface ICloud {
+    items?: IItemData;
     labels: ILabel[];
     current: any[];
     previous: any[];
@@ -459,7 +476,9 @@ export declare interface ICloudOptions {
     debug?: boolean;
     dimensions?: IDimensions;
     globe?: IGlobe;
+    grid: ICardsGrid;
     highlight?: IHighlight;
+    image: ICardImage;
     kpi?: Kpi;
     legend?: ILegend;
     pie?: IPie;
@@ -505,6 +524,8 @@ export declare interface ICssCard {
     brand?: string;
     canvas?: string;
     card?: string;
+    cardbackdrop: string;
+    cardimage: string;
     container?: string;
     dark?: boolean;
     date?: string;
@@ -538,6 +559,7 @@ export declare interface ICssCloud {
     brand: string;
     count: string;
     change: string;
+    date: string;
     highlight: string;
     highlighted: string;
     key: string;
@@ -754,6 +776,31 @@ declare interface IGlobeSphere {
     fill: string;
 }
 
+declare interface IGraph {
+    graph: {
+        type: string;
+        smooth: boolean;
+        area: {
+            fill: string;
+            colors: string[];
+            opacity: number;
+        };
+        line: {
+            color: string;
+            width: number;
+        };
+        mark: {
+            show: boolean;
+            symbol: string;
+        };
+        split: {
+            line: string;
+            x: boolean;
+            y: boolean;
+        };
+    };
+}
+
 declare interface IGridLayout {
     rows?: number;
     cols?: number;
@@ -779,6 +826,10 @@ export declare interface IImages {
 
 export declare interface IIndicators {
     value: number;
+}
+
+declare interface IItemData {
+    data: Item[];
 }
 
 export declare interface IJsonWidget {
@@ -943,6 +994,7 @@ export declare interface ILegend {
     width: string;
     position: string;
     show: IShowLegend;
+    title?: string;
     gap: ILegendGap;
 }
 
@@ -1035,7 +1087,7 @@ export declare const intToString: (num: any, digits?: number, abbreviate?: boole
 export declare interface IPie {
     radius: IPieRadius;
     animation: IPieAnimation;
-    boder: IPieBorder;
+    border: IPieBorder;
 }
 
 /**
@@ -1160,6 +1212,7 @@ export declare interface ISender {
 export declare interface ISeries {
     topic: string;
     title: string;
+    items?: IItemData;
     series: ISeriesData[];
     category: ICategory;
     metrics?: IMetrics;
@@ -1180,12 +1233,15 @@ export declare interface ISeriesData {
 
 export declare interface ISeriesOptions {
     colors?: string;
+    config?: IConfig;
     css?: ICssSeries;
     time?: ITime;
     date?: IDate;
     dimensions?: IDimensions;
+    graph: IGraph;
+    legend: ILegend;
+    pie?: IPie;
     show?: IShowSeries;
-    config?: IConfig;
 }
 
 export declare interface IShowCard {
@@ -1196,9 +1252,11 @@ export declare interface IShowCard {
     date?: boolean;
     dynamics?: boolean;
     handle?: boolean;
+    heading?: boolean;
     kpi?: boolean;
     name?: boolean;
     play?: boolean;
+    role: boolean;
     sender?: boolean;
     star?: boolean;
     visible?: boolean;
@@ -1211,9 +1269,14 @@ export declare interface IShowCloud {
     date: boolean;
     gradient: boolean;
     hashtags: boolean;
-    labels: true;
-    legend: true;
-    title: true;
+    labels: boolean;
+    legend: boolean;
+    other: boolean;
+    parenthesized: boolean;
+    percentage: {
+        count: boolean;
+    };
+    title: boolean;
     trend: boolean;
     debug?: boolean;
 }
@@ -1223,13 +1286,17 @@ export declare interface IShowContents {
 }
 
 export declare interface IShowLegend {
+    parenthesized: boolean;
     percentage: boolean;
     debug?: boolean;
 }
 
 export declare interface IShowSeries {
     brand: boolean;
-    percentage: boolean;
+    percentage: {
+        change: boolean;
+        count: boolean;
+    };
     date: boolean;
     kpi: boolean;
     debug?: boolean;
@@ -1283,6 +1350,11 @@ export declare interface IStorageOptions {
     token?: string;
     version: string;
     workers?: boolean;
+}
+
+declare interface Item {
+    label: string;
+    count?: number;
 }
 
 declare interface ITime {
@@ -1516,6 +1588,8 @@ export declare enum ShapeType {
 export declare function showModal(e: MouseEvent, widget: any, message: IMessage, options: any): void;
 
 export declare function shuffleMessages(messages: IMessage[]): IMessage[];
+
+export declare const stall: (func: Function, timeout?: number) => (...args: any[]) => void;
 
 export declare enum STORAGE {
     KEYVAL = "keyval",

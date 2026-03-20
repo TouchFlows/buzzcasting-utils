@@ -12,6 +12,7 @@ export enum API {
   SERIES = "series",
   SLIDE = "slide",
   SLIDES = "slides",
+  TEMPLATES = "templates",
   TOPICS = "topics",
   WIDGET = "widget",
   WIDGETS = "widgets",

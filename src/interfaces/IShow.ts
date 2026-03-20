@@ -6,9 +6,11 @@ export interface IShowCard {
   date?: boolean;
   dynamics?: boolean;
   handle?: boolean;
+  heading?: boolean;
   kpi?: boolean;
   name?: boolean;
   play?: boolean;
+  role: boolean;
   sender?: boolean;
   star?: boolean;
   visible?: boolean;
@@ -21,9 +23,12 @@ export interface IShowCloud {
   date: boolean;
   gradient: boolean;
   hashtags: boolean;
-  labels: true;
-  legend: true;
-  title: true;
+  labels: boolean;
+  legend: boolean;
+  other: boolean;
+  parenthesized: boolean;
+  percentage: { count: boolean };
+  title: boolean;
   trend: boolean;
   debug?: boolean;
 }
@@ -33,13 +38,14 @@ export interface IShowContents {
 }
 
 export interface IShowLegend {
+  parenthesized: boolean;
   percentage: boolean;
   debug?: boolean;
 }
 
 export interface IShowSeries {
   brand: boolean;
-  percentage: boolean;
+  percentage: { change: boolean; count: boolean };
   date: boolean;
   kpi: boolean;
   debug?: boolean;

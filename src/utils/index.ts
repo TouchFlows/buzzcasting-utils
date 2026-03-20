@@ -8,6 +8,7 @@ export * from "./camel-to-hyphen";
 export * from "./capitalize-first-letter";
 export * from "./clear-contents";
 export * from "./color";
+export * from "./debounce";
 export * from "./deep-merge";
 export * from "./escape";
 export * from "./format-content";

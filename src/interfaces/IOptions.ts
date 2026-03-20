@@ -1,10 +1,13 @@
 import { IAnimation } from "./IAnimation";
 import { IBubbles } from "./IBubbles";
+import { ICardImage } from "./ICardImage";
+import { ICardsGrid } from "./ICatrdsGrid";
 import { IConfig } from "./IConfig";
 import { ICssCard, ICssContents, ICssCloud, ICssSeries } from "./ICss";
 import { IDate, IDateFormat, ITime } from "./IDateTime";
 import { IDimensions } from "./IDimensions";
 import { IGlobe } from "./IGlobe";
+import { IGraph } from "./IGraph";
 import { IGridLayout } from "./IGridLayout";
 import { ILegend } from "./ILegend";
 import { IPie } from "./IPie";
@@ -47,7 +50,9 @@ export interface ICloudOptions {
   debug?: boolean;
   dimensions?: IDimensions;
   globe?: IGlobe;
+  grid: ICardsGrid;
   highlight?: IHighlight;
+  image: ICardImage;
   kpi?: Kpi;
   legend?: ILegend;
   pie?: IPie;
@@ -57,12 +62,15 @@ export interface ICloudOptions {
 
 export interface ISeriesOptions {
   colors?: string;
+  config?: IConfig;
   css?: ICssSeries;
   time?: ITime;
   date?: IDate;
   dimensions?: IDimensions;
+  graph: IGraph;
+  legend: ILegend;
+  pie?: IPie;
   show?: IShowSeries;
-  config?: IConfig;
 }
 
 /**

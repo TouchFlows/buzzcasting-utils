@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "dev": "vite",
+    "docs": "npx typedoc src ",
     "build": "tsc && vite build",
     "changelog": "changelogen --release",
     "release": "npm test && npm run build && changelogen --release && npm publish && git push --follow-tags",
@@ -29,23 +30,23 @@
     "test:watch": "vitest",
     "test:coverage": "vitest --coverage"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@antfu/eslint-config": "^7.2.0",
-    "@commitlint/cli": "^20.4.1",
-    "@commitlint/config-conventional": "^20.4.1",
-    "@types/node": "^24.10.10",
-    "@typescript-eslint/eslint-plugin": "^8.54.0",
-    "@typescript-eslint/parser": "^8.54.0",
-    "@vitest/coverage-v8": "^4.0.1",
+    "@antfu/eslint-config": "^7.7.3",
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@types/node": "^24.12.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
+    "@vitest/coverage-v8": "^4.1.0",
     "camelcase": "^9.0.0",
     "changelogen": "^0.6.2",
     "eslint": "^9.39.2",
     "lint-staged": "^16.2.7",
+    "typedoc": "^0.28.17",
     "typescript": "^5.9.3",
-    "vite": "^7.3.1",
+    "vite": "^8.0.1",
     "vite-plugin-dts": "^4.5.4",
-    "vitest": "^4.0.1"
+    "vitest": "^4.1.0"
   },
   "lint-staged": {
     "*.ts": "npm run lint"

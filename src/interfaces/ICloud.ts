@@ -1,7 +1,10 @@
+import { IItemData } from "./IItemData";
+
 /**
  * Cloud
  */
 export interface ICloud {
+  items?: IItemData;
   labels: ILabel[];
   current: any[];
   previous: any[];

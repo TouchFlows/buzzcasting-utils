@@ -1,9 +1,12 @@
+import { IItemData } from "./IItemData";
+
 /**
  * Series Data
  */
 export interface ISeries {
   topic: string;
   title: string;
+  items?: IItemData;
   series: ISeriesData[];
   category: ICategory;
   metrics?: IMetrics;
