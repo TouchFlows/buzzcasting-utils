@@ -1,7 +1,7 @@
 {
   "name": "buzzcasting-utils",
   "type": "module",
-  "version": "1.13.0",
+  "version": "1.13.3",
   "private": false,
   "author": {
     "name": "Mark Tamis, TouchFlows SAS",
@@ -31,23 +31,19 @@
     "test:coverage": "vitest --coverage"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^7.7.3",
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
-    "@types/node": "^24.12.0",
-    "@typescript-eslint/eslint-plugin": "^8.57.1",
-    "@typescript-eslint/parser": "^8.57.1",
-    "@vitest/coverage-v8": "^4.1.0",
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@types/node": "^24.13.2",
+    "@vitest/coverage-v8": "^4.1.9",
     "camelcase": "^9.0.0",
     "changelogen": "^0.6.2",
-    "eslint": "^9.39.2",
-    "lint-staged": "^16.2.7",
-    "typedoc": "^0.28.17",
-    "typedoc-plugin-markdown": "^4.11.0",
+    "lint-staged": "^16.4.0",
+    "typedoc": "^0.28.19",
+    "typedoc-plugin-markdown": "^4.12.0",
     "typescript": "^5.9.3",
-    "vite": "^8.0.1",
+    "vite": "^8.1.2",
     "vite-plugin-dts": "^4.5.4",
-    "vitest": "^4.1.0"
+    "vitest": "^4.1.9"
   },
   "lint-staged": {
     "*.ts": "npm run lint"
