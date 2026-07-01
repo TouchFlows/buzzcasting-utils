@@ -50,9 +50,9 @@ export interface ICloudOptions {
   debug?: boolean;
   dimensions?: IDimensions;
   globe?: IGlobe;
-  grid: ICardsGrid;
+  grid?: ICardsGrid;
   highlight?: IHighlight;
-  image: ICardImage;
+  image?: ICardImage;
   kpi?: Kpi;
   legend?: ILegend;
   pie?: IPie;
@@ -67,8 +67,8 @@ export interface ISeriesOptions {
   time?: ITime;
   date?: IDate;
   dimensions?: IDimensions;
-  graph: IGraph;
-  legend: ILegend;
+  graph?: IGraph;
+  legend?: ILegend;
   pie?: IPie;
   show?: IShowSeries;
 }
