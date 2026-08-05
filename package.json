@@ -1,7 +1,7 @@
 {
   "name": "buzzcasting-utils",
   "type": "module",
-  "version": "1.13.5",
+  "version": "1.13.6",
   "private": false,
   "author": {
     "name": "Mark Tamis, TouchFlows SAS",
@@ -33,15 +33,15 @@
   "devDependencies": {
     "@commitlint/cli": "^20.5.3",
     "@commitlint/config-conventional": "^20.5.3",
-    "@types/node": "^24.13.2",
+    "@types/node": "^24.13.3",
     "@vitest/coverage-v8": "^4.1.9",
     "camelcase": "^9.0.0",
     "changelogen": "^0.6.2",
     "lint-staged": "^16.4.0",
-    "typedoc": "^0.28.19",
+    "typedoc": "^0.28.20",
     "typedoc-plugin-markdown": "^4.12.0",
     "typescript": "^5.9.3",
-    "vite": "^8.1.2",
+    "vite": "^8.2.0",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.1.9"
   },
