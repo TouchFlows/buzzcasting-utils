@@ -3,14 +3,14 @@ import { resolve } from "node:path";
 import camelCase from "camelcase";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
-import packageJson from "./package.json";
+import packageJson from "./package.json" with { type: "json" };
 
 const packageName = packageJson.name.split("/").pop() || packageJson.name;
 
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: resolve(import.meta.dirname, "src/index.ts"),
       formats: ["es"],
       name: `${camelCase(packageName, { pascalCase: true })}`,
       fileName: (format) => {
