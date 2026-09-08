@@ -7,7 +7,7 @@ import { ICssCard, ICssContents, ICssCloud, ICssSeries } from "./ICss";
 import { IDate, IDateFormat, ITime } from "./IDateTime";
 import { IDimensions } from "./IDimensions";
 import { IGlobe } from "./IGlobe";
-import { IGraph } from "./IGraph";
+import { IGraphStyle } from "./IGraphStyle";
 import { IGridLayout } from "./IGridLayout";
 import { ILegend } from "./ILegend";
 import { IPie } from "./IPie";
@@ -67,9 +67,20 @@ export interface ISeriesOptions {
   time?: ITime;
   date?: IDate;
   dimensions?: IDimensions;
-  graph?: IGraph;
+  graph?: IGraphStyle;
   legend?: ILegend;
   pie?: IPie;
+  show?: IShowSeries;
+}
+
+export interface IGraphOptions {
+  colors?: string;
+  config?: IConfig;
+  css?: ICssSeries;
+  time?: ITime;
+  date?: IDate;
+  dimensions?: IDimensions;
+  graph?: IGraphStyle;
   show?: IShowSeries;
 }
 

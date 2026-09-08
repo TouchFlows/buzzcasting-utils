@@ -12,6 +12,8 @@ export * from "./IDashboards";
 export * from "./ID3Options";
 export * from "./IDynamics";
 export * from "./IEchartsLine";
+export * from "./IGraph";
+export * from "./IGraphStyle";
 export * from "./IImages";
 export * from "./IJsonWidget";
 export * from "./ILayout";

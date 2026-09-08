@@ -13,6 +13,7 @@ export * from "./deep-merge";
 export * from "./escape";
 export * from "./format-content";
 export * from "./flatten";
+export * from "./graph-normalize";
 export * from "./guid";
 export * from "./hash-sum";
 export * from "./hex-rgba";

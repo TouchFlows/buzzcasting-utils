@@ -73,6 +73,13 @@ export declare interface CloudAttr {
     class?: string | string[];
 }
 
+/**
+ * Normalizes an ICloud response into the unified IGraph shape: every label
+ * becomes a single-item graph with one point per label (category, not
+ * time-series) — there is no "points over time" concept in cloud data today.
+ */
+export declare const cloudToGraph: (cloud: ICloud) => IGraph;
+
 export declare interface Component {
     path: string;
     query: string;
@@ -792,7 +799,38 @@ declare interface IGlobeSphere {
     fill: string;
 }
 
-declare interface IGraph {
+export declare interface IGraph {
+    topic?: string;
+    title?: string;
+    timestamp?: number;
+    items: IGraphItem[];
+}
+
+export declare interface IGraphItem {
+    name?: string;
+    label?: string;
+    color?: string;
+    points: IGraphPoint[];
+}
+
+export declare interface IGraphOptions {
+    colors?: string;
+    config?: IConfig;
+    css?: ICssSeries;
+    time?: ITime;
+    date?: IDate;
+    dimensions?: IDimensions;
+    graph?: IGraphStyle;
+    show?: IShowSeries;
+}
+
+export declare interface IGraphPoint {
+    x?: number | string;
+    y: number;
+    label?: string;
+}
+
+export declare interface IGraphStyle {
     graph: {
         type: string;
         smooth: boolean;
@@ -1254,7 +1292,7 @@ export declare interface ISeriesOptions {
     time?: ITime;
     date?: IDate;
     dimensions?: IDimensions;
-    graph?: IGraph;
+    graph?: IGraphStyle;
     legend?: ILegend;
     pie?: IPie;
     show?: IShowSeries;
@@ -1590,6 +1628,22 @@ export declare interface SeriesAttr {
     "css-up"?: string | string[];
     class?: string | string[];
 }
+
+/**
+ * Normalizes an ISeries response into the unified IGraph shape.
+ *
+ * Only covers the `series-echarts` convention (`series.items[i].data[]` as an
+ * array of `{ timestamp, count }` points) — the runtime shape actually used
+ * by that component, despite `ISeries.items` being typed as a single
+ * `IItemData` object rather than an array (a pre-existing mismatch in
+ * buzzcasting-utils, not introduced here).
+ *
+ * Series data that instead follows one of the other known-divergent
+ * `ISeries` conventions (e.g. `series[].current`, `series[].metrics.*`) is
+ * NOT covered — `items` will be empty/undefined for those, silently, rather
+ * than throwing.
+ */
+export declare const seriesToGraph: (series: ISeries) => IGraph;
 
 export declare interface Settings {
     contents: Content[];
