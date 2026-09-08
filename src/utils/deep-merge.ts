@@ -1,5 +1,5 @@
 export function deepMerge(objs: any) {
-  objs.reduce(
+  return objs.reduce(
     (acc: any, obj: any) =>
       Object.keys(obj).reduce(
         (innerAcc, key) => ({

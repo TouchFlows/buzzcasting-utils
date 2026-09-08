@@ -24,7 +24,7 @@ export enum EVENTS {
   IMAGE_GET = "getImage",
   IMAGE_SET = "setImage",
   IMAGE_STORED = "imageStored",
-  LAUPPUT_UPDATE = "layoutUpdate",
+  LAYOUT_UPDATE = "layoutUpdate",
   PREV_SLIDE = "prevSlide",
   RELOAD_PRESENTATION = "reloadPresentation",
   STAR_MESSAGE = "starMessage",
@@ -74,5 +74,5 @@ export enum EVENTS {
   WIDGET_UPDATE = "widgetUpdate",
   WS_API_REQUEST = "wsApiRequest",
   WS_API_RESPONSE = "wsApiResponse",
-  WS_API_UPDATE = "wsApiRUpdate",
+  WS_API_UPDATE = "wsApiUpdate",
 }
