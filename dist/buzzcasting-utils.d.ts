@@ -194,7 +194,6 @@ export declare enum EVENTS {
     DASHBOARD_UPDATED = "dashboardUpdated",
     ERROR = "error",
     HIDE_MESSAGE = "hideMessage",
-    HIDE_LABELS = "hideLabels",
     IMAGE_GET = "getImage",
     IMAGE_SET = "setImage",
     IMAGE_STORED = "imageStored",
