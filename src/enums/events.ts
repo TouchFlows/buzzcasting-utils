@@ -59,6 +59,7 @@ export enum EVENTS {
   STORAGE_INIT = "storageInit",
   STREAM = "stream",
   SUBSCRIBE = "subscribe",
+  UNSUBSCRIBE = "unsubscribe",
   SUSPEND_ACCOUNT = "suspendAccount",
   SWITCH_PRESENTATION = "switchPresentation",
   REMOVE_CLOUD = "removeCloud",
