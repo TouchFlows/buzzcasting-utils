@@ -1,4 +1,28 @@
 
+## v1.14.0
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.13.6...v1.14.0)
+
+### 🚀 Enhancements
+
+- Add unified IGraph shape + series/cloud normalizers for graph-widget ([4aad6f9](https://github.com/TouchFlows/buzzcasting-utils/commit/4aad6f9))
+- Add EVENTS.UNSUBSCRIBE ([19ddfa7](https://github.com/TouchFlows/buzzcasting-utils/commit/19ddfa7))
+
+### 🩹 Fixes
+
+- DeepMerge missing return, two EVENTS enum typos; add architecture docs ([431a4e2](https://github.com/TouchFlows/buzzcasting-utils/commit/431a4e2))
+- Remove unused EVENTS.HIDE_LABELS enum member ([64b85df](https://github.com/TouchFlows/buzzcasting-utils/commit/64b85df))
+
+### 🏡 Chore
+
+- **release:** V1.13.7 ([165b70b](https://github.com/TouchFlows/buzzcasting-utils/commit/165b70b))
+- **release:** V1.13.8 ([df3811a](https://github.com/TouchFlows/buzzcasting-utils/commit/df3811a))
+- Deps ([c240704](https://github.com/TouchFlows/buzzcasting-utils/commit/c240704))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.13.8
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.13.7...v1.13.8)
