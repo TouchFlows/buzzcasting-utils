@@ -20,7 +20,7 @@ Publishing to npm is CI-driven, triggered by pushing a version tag - not a local
 
 **Important**: npm's Trusted Publisher config lets you restrict a linked workflow to `npm stage publish` only, or also allow direct `npm publish` (the default changed for configurations created after 2026-09-03). This workflow runs plain `npm publish`, so direct publish must be permitted on the Trusted Publisher entry, or every release run will fail at the publish step with a permissions error.
 
-If `release.yml` ever fails with an auth/permission error and nothing else changed, check that link first - it's the one piece of this that isn't in version control and can go stale (e.g. after a package transfer, or if the workflow file is ever renamed).
+This link was configured on npmjs.com on 2026-09-11 (found under the package's own Settings/Access page, not account-level settings). If `release.yml` ever fails with an auth/permission error and nothing else changed, check that link first - it's the one piece of this that isn't in version control and can go stale (e.g. after a package transfer, or if the workflow file is ever renamed). Note that as of this writing the publish leg itself hasn't been exercised by a real release yet - `main.yml` (build+test) is verified green on real pushes, but no tag has actually been pushed through `release.yml` to confirm the OIDC handshake and `npm publish` step work end-to-end. Treat the next genuine version bump as the real first test of this path.
 
 ## What's unchanged
 
