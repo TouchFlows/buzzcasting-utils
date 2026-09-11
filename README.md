@@ -29,6 +29,7 @@ import { html2json, json2html, uniq, log, hashSum } from 'buzzcasting-utils' // 
 - [documentation/html-json-conversion.md](documentation/html-json-conversion.md) — `html2json`/`json2html` (`window.__bc.h2j`/`.j2h`), the algorithm behind how a slide's builder-authored JSON round-trips to real HTML.
 - [documentation/type-inconsistencies.md](documentation/type-inconsistencies.md) — where a declared type disagrees with how it's actually used at runtime (most importantly `ISeries.items`), and which of several overlapping "same concept" interfaces (response envelopes, layout trees) is the one that actually matters.
 - [documentation/known-issues.md](documentation/known-issues.md) — confirmed bugs (e.g. `rtl()`/`dir()` disagreeing about Malayalam) and utility functions that have been forked and quietly diverged elsewhere in the stack (`flatten`, `intToString`, `sendEvent`).
+- [documentation/release-process.md](documentation/release-process.md) — `npm run release` bumps/tags/pushes locally, but the actual `npm publish` now happens in CI on that tag push (via npm Trusted Publishing/OIDC, no stored token) - what to do if a release run fails.
 
 ## Development
 
@@ -40,6 +41,7 @@ npm run test:watch
 npm run test:coverage
 npm run lint             # eslint . --fix
 npm run docs             # regenerate docs/ (typedoc)
+npm run release         # bump version, changelog, tag, push - CI publishes to npm
 ```
 
 ### Git Clone

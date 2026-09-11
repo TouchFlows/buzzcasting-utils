@@ -24,7 +24,7 @@
     "docs": "typedoc",
     "build": "tsc && vite build",
     "changelog": "changelogen --release",
-    "release": "npm test && npm run build && changelogen --release && npm publish && git push --follow-tags",
+    "release": "npm test && npm run build && changelogen --release && git push --follow-tags",
     "lint": "eslint . --fix",
     "test": "vitest --run",
     "test:watch": "vitest",
