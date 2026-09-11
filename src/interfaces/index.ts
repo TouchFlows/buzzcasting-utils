@@ -27,6 +27,11 @@ export * from "./IResponse";
 export * from "./IRotatingGlobe";
 export * from "./ISeries";
 export * from "./IShow";
+// Named (not wildcard) re-export: ISlideLayout.ts declares its own generic
+// Settings/Content/Component helper interfaces that collide with
+// IJsonWidget.ts's identically-named ones - only the one type actually
+// needed outside this file is exported here.
+export type { ISlideLayout } from "./ISlideLayout";
 export * from "./ISlides";
 export * from "./IStorageOptions";
 export * from "./IQuery";

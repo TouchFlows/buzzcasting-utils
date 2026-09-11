@@ -29,6 +29,11 @@ export declare interface AreaStyle {
 
 export declare function attachedMedia(message: IMessage): IAttachedMedia_2;
 
+declare interface Attr_2 {
+    class: string[];
+    edit?: string;
+}
+
 export declare function attrs(attributes: NamedNodeMap): any;
 
 export declare const awaitElement: (selector: string) => Promise<unknown>;
@@ -54,6 +59,13 @@ export declare function camelize(str: string): string;
 export declare const camelToHyphen: (str: string) => string;
 
 export declare const capitalizeFirstLetter: (prop: string) => string;
+
+declare interface Child {
+    node: string;
+    tag: string;
+    attr?: Attr_2;
+    child: Child[];
+}
 
 /**
  * Clear Container range contents of template code when the web component is connected to the DOM
@@ -95,6 +107,15 @@ export declare interface Content {
     text: string;
     node: string;
     attr: MessagesAttr;
+}
+
+declare interface Content_2 {
+    editable: boolean;
+    path: string;
+    query: string;
+    text: string;
+    node: string;
+    attr: Attr_2;
 }
 
 export declare interface CountriesGeometry {
@@ -1356,6 +1377,16 @@ export declare interface IShowSeries {
     debug?: boolean;
 }
 
+export declare interface ISlideLayout {
+    sections: Sections;
+    slide: Slide;
+    widgets: Widgets;
+    zones: Zones;
+    animation: number;
+    interval: number;
+    label: string;
+}
+
 export declare interface ISlides {
     presentation: string;
     slides: any;
@@ -1608,6 +1639,16 @@ export declare function rtl(message: IMessage): {
 
 export declare function sanitize(messages: IMessage[]): IMessage[];
 
+declare interface Section {
+    area: string;
+    "grid-area": string;
+    widgets: string[];
+}
+
+declare interface Sections {
+    [x: string]: Section;
+}
+
 export declare interface Series {
     data: number[];
     type: string;
@@ -1650,6 +1691,11 @@ export declare interface Settings {
     component: Component;
 }
 
+declare interface Settings_2 {
+    contents: Content_2[];
+    components: any[];
+}
+
 export declare enum ShapeType {
     MultiPolygon = "MultiPolygon",
     Polygon = "Polygon"
@@ -1658,6 +1704,20 @@ export declare enum ShapeType {
 export declare function showModal(e: MouseEvent, widget: any, message: IMessage, options: any): void;
 
 export declare function shuffleMessages(messages: IMessage[]): IMessage[];
+
+declare interface Slide {
+    id: string;
+    label: string;
+    cols: number;
+    rows: number;
+    width: string;
+    height: string;
+    backgrounds: string[];
+    zones: string[];
+    interval: string;
+    animation: string;
+    "animation-speed": string;
+}
 
 export declare class Snowflake {
     /**
@@ -1755,7 +1815,20 @@ export declare const unique: (arr: any) => unknown[];
 
 export declare const upDownColor: (change: number) => "text-down text-xs" | "text-up text-xs" | "text-white text-xs";
 
+declare interface Widget {
+    node: string;
+    child: Child[];
+    settings: Settings_2;
+    template: string;
+    label: string;
+    type?: string;
+}
+
 export declare function widgetParams(query: IQuery): IQuery;
+
+declare interface Widgets {
+    [x: string]: Widget;
+}
 
 export declare const wrapPromise: (promise: any, delay: number, reason: string) => Promise<any>;
 
@@ -1772,6 +1845,22 @@ export declare interface YAxis {
 export declare interface Youtube {
     list: string;
     title: string;
+}
+
+declare interface Zone {
+    label: string;
+    area: string;
+    "grid-area": string;
+    "grid-rows": string;
+    "grid-cols": string;
+    "gap-x": string;
+    "gap-y": string;
+    padding: string;
+    sections: string[];
+}
+
+declare interface Zones {
+    [x: string]: Zone;
 }
 
 export { }
