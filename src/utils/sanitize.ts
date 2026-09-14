@@ -36,7 +36,7 @@ export function sanitize(messages: IMessage[]): IMessage[] {
         title: "",
         name: "",
         id: "",
-        avatar: "default",
+        avatar: "",
         bio: "",
         location: "",
         following: 0,
