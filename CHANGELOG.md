@@ -1,4 +1,32 @@
 
+## v1.14.2
+
+[compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.14.0...v1.14.2)
+
+### 🩹 Fixes
+
+- Export ISlideLayout from the package - it existed but was never wired up ([04ecb65](https://github.com/TouchFlows/buzzcasting-utils/commit/04ecb65))
+- Stop synthesizing a broken "default" avatar placeholder ([31fcfd8](https://github.com/TouchFlows/buzzcasting-utils/commit/31fcfd8))
+- OIDC Trusted Publishing - upgrade npm, add repository field ([29aee6c](https://github.com/TouchFlows/buzzcasting-utils/commit/29aee6c))
+
+### 📖 Documentation
+
+- Note Trusted Publisher link is now configured on npmjs.com ([e2c8384](https://github.com/TouchFlows/buzzcasting-utils/commit/e2c8384))
+
+### 🏡 Chore
+
+- Bump vitest/fast-uri/js-yaml to close Dependabot dev-dependency alerts ([d69102a](https://github.com/TouchFlows/buzzcasting-utils/commit/d69102a))
+- Migrate to pnpm ([08323df](https://github.com/TouchFlows/buzzcasting-utils/commit/08323df))
+- Use pnpm in the release script, not npm ([0f366f5](https://github.com/TouchFlows/buzzcasting-utils/commit/0f366f5))
+
+### 🤖 CI
+
+- Add CI, move npm publish into a tag-triggered release workflow ([0c8993d](https://github.com/TouchFlows/buzzcasting-utils/commit/0c8993d))
+
+### ❤️ Contributors
+
+- Mark Tamis ([@marktamis](https://github.com/marktamis))
+
 ## v1.14.0
 
 [compare changes](https://github.com/TouchFlows/buzzcasting-utils/compare/v1.13.6...v1.14.0)
