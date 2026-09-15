@@ -4,6 +4,10 @@
   "version": "1.14.1",
   "packageManager": "pnpm@11.5.2",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TouchFlows/buzzcasting-utils.git"
+  },
   "author": {
     "name": "Mark Tamis, TouchFlows SAS",
     "email": "mark.tamis@touchflows.com"

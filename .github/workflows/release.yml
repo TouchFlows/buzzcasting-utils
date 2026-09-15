@@ -37,4 +37,11 @@ jobs:
             echo "Tag $GITHUB_REF_NAME does not match package.json version $PKG_VERSION - refusing to publish."
             exit 1
           fi
+      # actions/setup-node's bundled npm (whatever ships in that Node version's
+      # toolcache - 10.9.8 on node 22.23.2, confirmed) predates npm's OIDC
+      # Trusted Publishing support (needs npm >=11.5.1). Without this, `npm
+      # publish` silently falls back to an unauthenticated attempt and fails
+      # with a 404, not a clear auth error - confirmed live 2026-09-15 in
+      # buzzcasting-storage's identical workflow.
+      - run: npm install -g npm@latest
       - run: npm publish
