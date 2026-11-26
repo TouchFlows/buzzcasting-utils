@@ -5,7 +5,11 @@ export function formatContent(
   headingCss: string = "font-bold"
 ): string {
   return `${
-    message?.title !== null
+    /* the title is printed only when there is one: it used `!== null`, which is
+     * true for `undefined` too, so a payload without a title rendered the word
+     * "undefined" into the body - and that word is text, so every report
+     * readiness check counted the card as painted */
+    message?.title
       ? `<div title="heading" class="${headingCss}">${message.title}</div>`
       : ""
   }${
