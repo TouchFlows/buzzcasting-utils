@@ -7,7 +7,7 @@ export function sanitize(messages: IMessage[]): IMessage[] {
   filteredMessages.forEach((message: IMessage) => {
     // remove all links
     //
-    if (window.__bc.opts.suspended === true) {
+    if (typeof window !== "undefined" && window.__bc?.opts?.suspended === true) {
       message.content =
         "License suspended, please contact your Sales Representative to restore service";
     } else {
@@ -18,7 +18,11 @@ export function sanitize(messages: IMessage[]): IMessage[] {
         ) || ""; /* eslint-disable-line regexp/no-misleading-capturing-group */
     }
 
-    if (message.sender !== null) {
+    /* `!== null` let a payload with no sender field at all through to
+     * `message.sender.title`, which threw inside cards-widget's render and took
+     * every card on the widget with it. `== null` covers undefined and null; the
+     * empty sender below is what a message without one is meant to get. */
+    if (message.sender != null) {
       switch (true) {
         case message.sender.title === "Unknown author":
           message.sender.title = "";
@@ -49,9 +53,16 @@ export function sanitize(messages: IMessage[]): IMessage[] {
       };
     }
 
-    if (message.sender.title === "" && message.link !== "") {
-      const domain = new URL(message.link);
-      message.sender.title = domain.hostname.replace("www.", "");
+    /* `link !== ""` treated "not the empty string" as "a URL": a payload with no
+     * link at all (undefined or null) threw `Invalid URL`, and so did a link that
+     * is not a URL. A message with no domain to show keeps its empty title. */
+    const link = typeof message.link === "string" ? message.link.trim() : "";
+    if (message.sender.title === "" && link !== "") {
+      try {
+        message.sender.title = new URL(link).hostname.replace("www.", "");
+      } catch {
+        /* not a URL, so there is no domain to print */
+      }
     }
   });
   return filteredMessages;
