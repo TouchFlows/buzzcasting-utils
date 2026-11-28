@@ -13,6 +13,6 @@ on:
 jobs:
   guard-pin:
     name: guard pin
-    uses: TouchFlows/buzzcasting-storage/.github/workflows/guard-pin.yml@adf3628f6104c5444bfb9c38949b82bf863a7f6b
+    uses: TouchFlows/buzzcasting-storage/.github/workflows/guard-pin.yml@c1cf66ac2e30ecca5942c29afb560714e2f68b2d
     with:
-      guard-ref: adf3628f6104c5444bfb9c38949b82bf863a7f6b
+      guard-ref: c1cf66ac2e30ecca5942c29afb560714e2f68b2d
