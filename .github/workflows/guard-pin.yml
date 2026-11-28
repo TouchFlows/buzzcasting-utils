@@ -1,0 +1,18 @@
+# This repository pins the shared secret scan to a commit, so a guard fix in
+# buzzcasting-storage reaches it only when the pin is bumped. This check fails -
+# red scheduled run, notification to the repository's watchers - when the pin is
+# behind the guard's main, and when the two pins disagree. Manual run: Actions ->
+# Guard pin -> Run workflow. Scheduled workflows only run from the default branch.
+name: Guard pin
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  guard-pin:
+    name: guard pin
+    uses: TouchFlows/buzzcasting-storage/.github/workflows/guard-pin.yml@adf3628f6104c5444bfb9c38949b82bf863a7f6b
+    with:
+      guard-ref: adf3628f6104c5444bfb9c38949b82bf863a7f6b
